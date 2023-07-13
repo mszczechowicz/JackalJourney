@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameState State;
 
     public static event Action<GameState> GameStateChanged;
+
     private void Awake()
     {
         Instance = this; 
@@ -51,9 +52,6 @@ public enum GameState
 {
     Gameplay,
     OpenedMenu,   
-    Loading
-    
-    
-
+    Loading   
 
 }

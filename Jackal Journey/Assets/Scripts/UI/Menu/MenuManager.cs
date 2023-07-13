@@ -3,37 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UIManager : MonoBehaviour
+public class MenuManager : MonoBehaviour
 {
     [field: SerializeField] public UIHandler UIHandler { get; private set; }
     [field: SerializeField] public GameObject PauseCanvas { get; private set; }
 
-    [field: SerializeField] public GameObject Player{ get; private set; }
+    //[field: SerializeField] public GameObject Player{ get; private set; }
 
     private void Awake()
     {
-        UIHandler.PauseEvent += Pause;
+       
+        GameManager.GameStateChanged += GameplayState;
        
     }
     
 
-    public void Pause()
+    public void PauseState(GameState state)
     {
         PauseCanvas.SetActive(true);
         Time.timeScale = 0f;
-        Player.GetComponent<CameraMovement>().enabled = false;
-        UIHandler.PauseEvent -= Pause;
-        UIHandler.PauseEvent += Resume;
+        //Player.GetComponent<CameraMovement>().enabled = false;
+         
+      
 
     }
-    public void Resume()
+    public void GameplayState(GameState state)
     {
         PauseCanvas.SetActive(false);
         Time.timeScale = 1f;
-        Player.GetComponent<CameraMovement>().enabled = true;
-        UIHandler.PauseEvent -= Resume;
-        UIHandler.PauseEvent += Pause;
+        //Player.GetComponent<CameraMovement>().enabled = true;
 
+       
 
 
     }
