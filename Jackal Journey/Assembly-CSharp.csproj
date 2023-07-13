@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerBaseState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerDeadState.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\Attack.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\State.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\UIManager.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerDodgeState.cs" />
