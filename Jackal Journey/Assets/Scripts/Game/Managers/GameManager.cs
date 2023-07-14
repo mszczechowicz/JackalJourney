@@ -9,13 +9,19 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    [field: SerializeField] public UIHandler UIHandler { get; private set; }
+    [field: SerializeField] public GameObject PauseCanvas { get; private set; }
+
+
     public GameState State;
 
     public static event Action<GameState> GameStateChanged;
 
     private void Awake()
     {
-        Instance = this; 
+        Instance = this;
+        UIHandler.PauseEvent += Gameplay;
+       
     }
 
     private void Start()
@@ -29,9 +35,10 @@ public class GameManager : MonoBehaviour
         switch (newState)
         {
             case GameState.Gameplay:
-                Pause();
+                Gameplay();
                 break;
             case GameState.OpenedMenu:
+                Pause();
                 break;
             case GameState.Loading:               
                 break;
@@ -41,9 +48,15 @@ public class GameManager : MonoBehaviour
         GameStateChanged?.Invoke(newState);
     }
 
+    private void Gameplay()
+    {
+        PauseCanvas.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
     private void Pause()
     {
-        throw new NotImplementedException();
+      
     }
 }
 
