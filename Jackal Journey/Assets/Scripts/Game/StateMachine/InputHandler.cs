@@ -19,19 +19,7 @@ public class InputHandler : MonoBehaviour, Controls.IPlayerActions
 
     private Controls controls;
 
-    [Header("Mouse Cursor Settings")]
-    public bool cursorLocked = true;
-    public bool cursorInputForLook = true;
-
-    private void OnApplicationFocus(bool hasFocus)
-    {
-        SetCursorState(cursorLocked);
-    }
-
-    private void SetCursorState(bool newState)
-    {
-        Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
-    }
+    
 
     private void Start()
     {

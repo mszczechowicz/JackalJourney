@@ -15,9 +15,5 @@ public abstract class StateMachine : MonoBehaviour
     {
         currentState?.Tick(Time.deltaTime);
     }
-    //Widzialnoœækursora
-    private void Start()
-    {
-        Cursor.visible = false;
-    }
+   
 }

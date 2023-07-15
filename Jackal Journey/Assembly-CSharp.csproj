@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Art\Shaders\SwordSlash\SlashEnable.cs" />
     <Compile Include="Assets\Art\Shaders\Dissolve\DissolverController.cs" />
+    <Compile Include="Assets\Scripts\UI\Menu\MainMenuManager.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyBaseState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerMidAirJumpingState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerFreeLookState.cs" />
@@ -70,16 +71,19 @@
     <Compile Include="Assets\Scripts\Game\Combat\WeaponHandler.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerJumpingState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerFallingState.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Controls.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyDeadState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\InputHandler.cs" />
+    <Compile Include="Assets\Scripts\UI\Menu\UIHandler.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyImpactState.cs" />
-    <Compile Include="Assets\Scripts\Game\StateMachine\Player\Controls.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerBaseState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerDeadState.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\Attack.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\State.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerDodgeState.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\WeaponDamage.cs" />
+    <Compile Include="Assets\Scripts\UI\Menu\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerAttackingState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyAttackingState.cs" />
@@ -88,6 +92,29 @@
     <Compile Include="Assets\Scripts\Game\StateMachine\ForceReceiver.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerImpactState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyChasingState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
