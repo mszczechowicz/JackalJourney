@@ -500,7 +500,7 @@ Transform:
   - {fileID: 4496239006705362695}
   - {fileID: 4117188577798414924}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7059745865420459451
 MonoBehaviour:
@@ -587,7 +587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165c468aa74dcfd4fb35b0c29c454feb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 50
 --- !u!95 &3788337141506730566
 Animator:
   serializedVersion: 5

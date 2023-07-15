@@ -7,15 +7,20 @@ public class SlashEnable : MonoBehaviour
 
     [SerializeField] private VisualEffect SlashVFX;
 
-    public void OnSlash()
-    {
+    //public void OnSlash()
+    //{
         
-        PlayParticle();
+    //    PlayParticle();
+       
 
         
+    //}
+    public void OffSlash()
+    {
+        SlashVFX.Stop();
     }
 
-    private void PlayParticle()
+    public void PlayParticle()
     {
         
         SlashVFX.Play();
