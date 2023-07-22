@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: efabd924652d9de42aad8ba5c2b6b19b
+guid: 6b20df0c8a9832e419c4f02c3c103e5c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -26,18 +26,18 @@ ModelImporter:
     importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
-    animationPositionError: 0
+    animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Run
+      name: WalkInPlace
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 21
+      lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

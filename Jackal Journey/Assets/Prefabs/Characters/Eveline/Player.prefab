@@ -61,17 +61,17 @@ MonoBehaviour:
   <Animator>k__BackingField: {fileID: 3916589758629888578}
   <ForceReceiver>k__BackingField: {fileID: 2136471320906593272}
   <Health>k__BackingField: {fileID: 6888203433811934244}
-  <FreeLookMovementSpeed>k__BackingField: 8
+  <FreeLookMovementSpeed>k__BackingField: 5
   <RotationDamping>k__BackingField: 13
-  <JumpForce>k__BackingField: 15
-  <MidAirJumpForce>k__BackingField: 20
-  <DodgeForce>k__BackingField: 2
-  <DodgeDuration>k__BackingField: 0.7
-  <DodgeLength>k__BackingField: 7
-  <AirMovementSpeed>k__BackingField: 7
+  <JumpForce>k__BackingField: 13
+  <MidAirJumpForce>k__BackingField: 15
+  <DodgeForce>k__BackingField: 0
+  <DodgeDuration>k__BackingField: 0.5
+  <DodgeLength>k__BackingField: 0
+  <AirMovementSpeed>k__BackingField: 4
   <Attacks>k__BackingField:
   - <AnimationName>k__BackingField: FirstStrike
-    <TransitionDuration>k__BackingField: 0.4
+    <TransitionDuration>k__BackingField: 0.1
     <ComboStateIndex>k__BackingField: 1
     <ComboAttackTime>k__BackingField: 0.6
     <ForceTime>k__BackingField: 0.1
@@ -79,7 +79,7 @@ MonoBehaviour:
     <Damage>k__BackingField: 25
     <KnockBack>k__BackingField: 5
   - <AnimationName>k__BackingField: SecondStrike
-    <TransitionDuration>k__BackingField: 0.4
+    <TransitionDuration>k__BackingField: 0.1
     <ComboStateIndex>k__BackingField: 2
     <ComboAttackTime>k__BackingField: 0.6
     <ForceTime>k__BackingField: 0.1
@@ -87,7 +87,7 @@ MonoBehaviour:
     <Damage>k__BackingField: 25
     <KnockBack>k__BackingField: 5
   - <AnimationName>k__BackingField: ThirdStrike
-    <TransitionDuration>k__BackingField: 0.4
+    <TransitionDuration>k__BackingField: 0.5
     <ComboStateIndex>k__BackingField: 3
     <ComboAttackTime>k__BackingField: 1
     <ForceTime>k__BackingField: 0.1
@@ -188,7 +188,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1.62
+  m_Height: 1.7
   m_Radius: 0.25
   m_SlopeLimit: 43
   m_StepOffset: 0.3
