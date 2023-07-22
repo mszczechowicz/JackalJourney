@@ -31,7 +31,7 @@ public class PlayerFreeLookState : PlayerBaseState
 
     public override void Enter()
     {
-    
+        
         stateMachine.Animator.CrossFadeInFixedTime(FreeLookHash, CrossFadeDuration);
 
         stateMachine.InputHandler.JumpEvent += OnJump;
@@ -73,13 +73,14 @@ public class PlayerFreeLookState : PlayerBaseState
 
         if (stateMachine.InputHandler.MovementValue == Vector2.zero)
         {
-            stateMachine.Animator.SetFloat(VelocityHash, 0, AnimatorDampTime, deltaTime);
 
+            stateMachine.Animator.SetFloat(VelocityHash, 0, AnimatorDampTime, deltaTime);
+            stateMachine.IK.enabled = true;
             return;
         }
         stateMachine.Animator.SetFloat(VelocityHash, 1, AnimatorDampTime, deltaTime);
+        stateMachine.IK.enabled = false;
 
-        
 
         FaceMovementDirection(movement, deltaTime);
 
@@ -91,6 +92,7 @@ public class PlayerFreeLookState : PlayerBaseState
     #endregion
     public override void Exit()
     {
+        
         stateMachine.InputHandler.JumpEvent -= OnJump;
         stateMachine.InputHandler.DashEvent -= OnDodge;
 

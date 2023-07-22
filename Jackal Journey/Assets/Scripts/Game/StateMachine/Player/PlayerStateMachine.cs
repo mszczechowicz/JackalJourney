@@ -1,3 +1,4 @@
+using FischlWorks;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,7 +42,7 @@ public class PlayerStateMachine : StateMachine
 
     public Transform MainCameraTransform { get; private set; }
 
-    
+    [field: SerializeField] public csHomebrewIK IK { get; private set; }
 
 
 

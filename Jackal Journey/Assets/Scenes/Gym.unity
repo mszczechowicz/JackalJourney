@@ -6974,6 +6974,48 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &459254137 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 24011024088496003, guid: 4a323e9eca51bd24ea354b4356e550f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 271939443381461172}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &459254148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459254137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726325959c0cb064597e2f1bd5eb6b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lengthFromHeelToToes: 0.1
+  maxRotationAngle: 45
+  ankleHeightOffset: 0
+  enableIKPositioning: 1
+  enableIKRotating: 1
+  globalWeight: 1
+  leftFootWeight: 1
+  rightFootWeight: 1
+  smoothTime: 0
+  raySphereRadius: 0.08
+  rayCastRange: 2
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  ignoreTriggers: 1
+  leftFootRayStartHeight: 0.3
+  rightFootRayStartHeight: 0.3
+  enableFootLifting: 1
+  floorRange: 0.25
+  enableBodyPositioning: 0
+  crouchRange: 0.25
+  stretchRange: 0
+  giveWorldHeightOffset: 0
+  worldHeightOffset: 0
 --- !u!1 &460218708
 GameObject:
   m_ObjectHideFlags: 0
@@ -48052,6 +48094,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2136471320906593272, guid: 4a323e9eca51bd24ea354b4356e550f2,
         type: 3}
+      propertyPath: sphereRadius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136471320906593272, guid: 4a323e9eca51bd24ea354b4356e550f2,
+        type: 3}
       propertyPath: <GravityPower>k__BackingField
       value: 3
       objectReference: {fileID: 0}
@@ -48115,11 +48162,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2687948164371282070, guid: 4a323e9eca51bd24ea354b4356e550f2,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2720841055761735479, guid: 4a323e9eca51bd24ea354b4356e550f2,
         type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2855573790061556334, guid: 4a323e9eca51bd24ea354b4356e550f2,
+        type: 3}
+      propertyPath: <IK>k__BackingField
+      value: 
+      objectReference: {fileID: 459254148}
     - target: {fileID: 2965800439090040218, guid: 4a323e9eca51bd24ea354b4356e550f2,
         type: 3}
       propertyPath: m_Layer
@@ -48165,6 +48222,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 5baae12f7fd211145973e32263383ba2, type: 2}
+    - target: {fileID: 3916589758629888578, guid: 4a323e9eca51bd24ea354b4356e550f2,
+        type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3916589758629888578, guid: 4a323e9eca51bd24ea354b4356e550f2,
         type: 3}
       propertyPath: m_WarningMessage
@@ -48605,7 +48667,11 @@ PrefabInstance:
     - {fileID: 4472299157657102955, guid: 4a323e9eca51bd24ea354b4356e550f2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 24011024088496003, guid: 4a323e9eca51bd24ea354b4356e550f2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 459254148}
   m_SourcePrefab: {fileID: 100100000, guid: 4a323e9eca51bd24ea354b4356e550f2, type: 3}
 --- !u!1001 &773889150702184172
 PrefabInstance:
