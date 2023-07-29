@@ -166,14 +166,14 @@ public class PlayerFreeLookState : PlayerBaseState
 
     private void OnDodge()
     {
-        if (stateMachine.InputHandler.MovementValue == Vector2.zero)
-        {
-            return;
-        }
-        else
-        {
+        //if (stateMachine.InputHandler.MovementValue == Vector2.zero)
+        //{
+        //    return;
+        //}
+        //else
+        //{
             stateMachine.SwitchState(new PlayerDodgeState(stateMachine, stateMachine.InputHandler.MovementValue.normalized));
-        }
+        //}
     }
 
     #endregion

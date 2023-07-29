@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 6870832005693729678}
   - component: {fileID: 6888203433811934244}
   - component: {fileID: 5107948834946994211}
+  - component: {fileID: 4220712039279473166}
   m_Layer: 0
   m_Name: Eveline
   m_TagString: Player
@@ -65,9 +66,9 @@ MonoBehaviour:
   <RotationDamping>k__BackingField: 13
   <JumpForce>k__BackingField: 13
   <MidAirJumpForce>k__BackingField: 15
-  <DodgeForce>k__BackingField: 0
-  <DodgeDuration>k__BackingField: 0.5
-  <DodgeLength>k__BackingField: 0
+  <DodgeForce>k__BackingField: 1
+  <DodgeDuration>k__BackingField: 0.6
+  <DodgeLength>k__BackingField: 1
   <AirMovementSpeed>k__BackingField: 4
   <Attacks>k__BackingField:
   - <AnimationName>k__BackingField: FirstStrike
@@ -95,6 +96,7 @@ MonoBehaviour:
     <Damage>k__BackingField: 40
     <KnockBack>k__BackingField: 1
   <Weapon>k__BackingField: {fileID: 9136438425164507810}
+  <IK>k__BackingField: {fileID: 4220712039279473166}
 --- !u!114 &9060406227105383473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,8 +112,8 @@ MonoBehaviour:
   LockCameraPosition: 0
   CameraAngleOverride: 0
   TopClamp: 70
-  BottomClamp: -10
-  CinemachineCameraTarget: {fileID: 0}
+  BottomClamp: -30
+  CinemachineCameraTarget: {fileID: 7476798606724886839}
 --- !u!114 &2410414003160890881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,8 +148,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   GroundCheckDistanceTolerance: 0.4
-  sphereRadius: 0.25
-  <GravityPower>k__BackingField: 4
+  sphereRadius: 0.1
+  <GravityPower>k__BackingField: 3
 --- !u!95 &3916589758629888578
 Animator:
   serializedVersion: 5
@@ -157,8 +159,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24011024088496003}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5d42f70f2abc1a4448a3c1a0eaae916f, type: 2}
+  m_Avatar: {fileID: 9000000, guid: a400685075670fb439f524ca8c5a48df, type: 3}
+  m_Controller: {fileID: 9100000, guid: 5baae12f7fd211145973e32263383ba2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -189,7 +191,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 1.7
-  m_Radius: 0.25
+  m_Radius: 0.1
   m_SlopeLimit: 43
   m_StepOffset: 0.3
   m_SkinWidth: 0.025
@@ -234,6 +236,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SlashVFX: {fileID: 1959717015258502390}
+--- !u!114 &4220712039279473166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24011024088496003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726325959c0cb064597e2f1bd5eb6b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lengthFromHeelToToes: 0.1
+  maxRotationAngle: 45
+  ankleHeightOffset: 0
+  enableIKPositioning: 1
+  enableIKRotating: 1
+  globalWeight: 1
+  leftFootWeight: 1
+  rightFootWeight: 1
+  smoothTime: 0
+  raySphereRadius: 0.08
+  rayCastRange: 2
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  ignoreTriggers: 1
+  leftFootRayStartHeight: 0.3
+  rightFootRayStartHeight: 0.3
+  enableFootLifting: 1
+  floorRange: 0.25
+  enableBodyPositioning: 0
+  crouchRange: 0.25
+  stretchRange: 0
+  giveWorldHeightOffset: 0
+  worldHeightOffset: 0
 --- !u!1 &243892446782136353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,7 +1146,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
+  m_LookAt: {fileID: 3927460043497345614}
   m_Follow: {fileID: 3927460043497345614}
   m_Lens:
     FieldOfView: 40
