@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,7 @@ public class MenuManager : MonoBehaviour
     [field: SerializeField] public UIHandler UIHandler { get; private set; }
     [field: SerializeField] public GameObject PauseCanvas { get; private set; }
 
+    [field: SerializeField] public GameObject TravelWindowCanvas { get; private set; }
     [field: SerializeField] public GameObject Player { get; private set; }
 
     private void Awake()
@@ -69,4 +71,26 @@ public class MenuManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
+
+    //public void SceneSwitch()
+    //{
+    //    if (PauseCanvas.transform.GetChild(0).gameObject == true)
+    //        return;
+    //    PauseCanvas.transform.GetChild(0).gameObject.SetActive(true);
+
+       
+    //}
+
+    public void TravelYes()
+    {
+        SceneManager.LoadScene("Gym");
+
+    }
+    public void TravelNo()
+    {
+      TravelWindowCanvas.SetActive(false);
+
+    }
+
+
 }

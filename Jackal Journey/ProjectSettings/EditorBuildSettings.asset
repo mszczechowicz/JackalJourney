@@ -6,12 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Milky-WorkSpace/MainMenu.unity
     guid: dcf775825cb629c49adb346ce46a4df2
   - enabled: 1
     path: Assets/Scenes/FinalLevel.unity
     guid: 67116e97510d3a242a0ff2647da66cac
   - enabled: 0
-    path: Assets/Scenes/InGameMenu.unity
+    path: Assets/Scenes/Milky-WorkSpace/InGameMenu.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Milky-WorkSpace/LoadLevelPlayGround.unity
+    guid: c3a31dd5a5834bd429abb947da8e2960
+  - enabled: 1
+    path: Assets/Scenes/Milky-WorkSpace/Gym.unity
+    guid: 7f0525062f55e764e8fa15792ccd06d9
   m_configObjects: {}

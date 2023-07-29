@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Art\Shaders\SwordSlash\SlashEnable.cs" />
     <Compile Include="Assets\Art\Shaders\Dissolve\DissolverController.cs" />
+    <Compile Include="Assets\Scripts\Game\SceneManagement\SceneSwitcher.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\MainMenuManager.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyBaseState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerMidAirJumpingState.cs" />
