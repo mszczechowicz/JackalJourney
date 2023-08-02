@@ -12,7 +12,7 @@ public class ForceReceiver : MonoBehaviour
     [SerializeField] private bool isGroundedCheck;
     [SerializeField] private Transform GroundCheckLocation;
     [SerializeField] private float RayDistance = 5f;
-    [SerializeField] private LayerMask layers;
+    [SerializeField] public LayerMask layers;
     [SerializeField] private float GroundCheckDistanceTolerance = 0.2f;
     [SerializeField] private float sphereRadius = 0.5f;
     private RaycastHit hitInfo;

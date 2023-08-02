@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class InputHandler : MonoBehaviour, Controls.IPlayerActions
 {
     public bool IsAttacking { get; private set; }
+    public bool IsInteracting { get; private set; }
 
     public Vector2 MovementValue { get; private set; }
 
@@ -15,7 +16,7 @@ public class InputHandler : MonoBehaviour, Controls.IPlayerActions
     public event Action DashEvent;
 
     public event Action JumpEvent;
-    
+   
 
     private Controls controls;
 
@@ -75,5 +76,19 @@ public class InputHandler : MonoBehaviour, Controls.IPlayerActions
         }
 
         
+    }
+
+    public void OnInteraction(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            IsInteracting = true;
+        }
+
+        else if (context.canceled)
+        {
+            IsInteracting = false;
+        }
+
     }
 }

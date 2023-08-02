@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Game\Statistics\Health.cs" />
     <Compile Include="Assets\Art\Shaders\EntireScreenShader\Blit.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\WeaponHandler.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Interactable.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerJumpingState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerFallingState.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\Controls.cs" />

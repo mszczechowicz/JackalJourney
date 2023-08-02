@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
+
+interface IInteractable { public void Interact(); }
 
 public class PlayerFreeLookState : PlayerBaseState
 {
@@ -25,7 +28,8 @@ public class PlayerFreeLookState : PlayerBaseState
     private Vector2 dodgingDirectionInput;
     private float remainingDodgeTime;
 
-
+    public Transform InteractableObject;
+    public float InteractionRange =20f;
 
     public PlayerFreeLookState(PlayerStateMachine stateMachine) : base(stateMachine){}
 
@@ -42,8 +46,22 @@ public class PlayerFreeLookState : PlayerBaseState
     #region Tick
     public override void Tick(float deltaTime)
     {
-       
         
+        if (stateMachine.InputHandler.IsInteracting) 
+        {
+            
+            Ray r = new Ray(stateMachine.MainCameraTransform.position, stateMachine.MainCameraTransform.forward);
+            if (Physics.Raycast(r,out RaycastHit hitInfo, 100f, stateMachine.ForceReceiver.layers))
+            {
+                Debug.DrawRay(stateMachine.MainCameraTransform.position, stateMachine.MainCameraTransform.forward, Color.red,100f);
+                if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+                {
+                    interactObj.Interact();
+                }
+            }
+            return;
+
+        }
 
 
         if (stateMachine.InputHandler.IsAttacking)
@@ -178,4 +196,11 @@ public class PlayerFreeLookState : PlayerBaseState
 
     #endregion
 
+    #region Interactions
+
+
+
+
+
+    #endregion
 }
