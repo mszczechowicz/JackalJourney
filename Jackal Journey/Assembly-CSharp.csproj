@@ -70,11 +70,12 @@
     <Compile Include="Assets\Scripts\Game\Statistics\Health.cs" />
     <Compile Include="Assets\Art\Shaders\EntireScreenShader\Blit.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\WeaponHandler.cs" />
-    <Compile Include="Assets\Scripts\Game\Managers\Interactable.cs" />
+    <Compile Include="Assets\Scripts\Game\StateMachine\InteractionHandler.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerJumpingState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerFallingState.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\Controls.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyDeadState.cs" />
+    <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerInteractingState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\InputHandler.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\UIHandler.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyImpactState.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Assets\Scripts\Game\Combat\WeaponDamage.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerAttackingState.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\InteractableObject.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyAttackingState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\csHomebrewIK.cs" />

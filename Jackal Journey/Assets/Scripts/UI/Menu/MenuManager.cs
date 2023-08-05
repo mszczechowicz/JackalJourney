@@ -12,6 +12,8 @@ public class MenuManager : MonoBehaviour
     [field: SerializeField] public GameObject TravelWindowCanvas { get; private set; }
     [field: SerializeField] public GameObject Player { get; private set; }
 
+   
+
     private void Awake()
     {
         UIHandler.PauseEvent += Resume;
@@ -24,7 +26,7 @@ public class MenuManager : MonoBehaviour
         PauseCanvas.SetActive(true);
         Time.timeScale = 0f;
         Player.GetComponent<CameraMovement>().enabled = false;
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         UIHandler.PauseEvent -= Pause;
         UIHandler.PauseEvent += Resume;
@@ -63,11 +65,11 @@ public class MenuManager : MonoBehaviour
 
     private void SetCursorState(bool newState)
     {
-        Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.Confined;
     }
     //Widzialnoœækursora
     private void Start()
-    {
+    {   
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -89,6 +91,7 @@ public class MenuManager : MonoBehaviour
     public void TravelNo()
     {
       TravelWindowCanvas.SetActive(false);
+        Player.GetComponent<InteractionHandler>().IsInteracting = false;
 
     }
 

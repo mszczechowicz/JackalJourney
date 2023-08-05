@@ -4,24 +4,22 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
+//using static UnityEditor.Experimental.GraphView.GraphView;
 
-interface IInteractable { public void Interact(); }
-
+ 
 public class PlayerFreeLookState : PlayerBaseState
 {
 
 
     //Stringtohash Szybsze w obliczaniu ni¿ string
     private readonly int VelocityHash = Animator.StringToHash("Velocity");
-    private readonly int DodgeHash = Animator.StringToHash("Dodge");
-    private readonly int DashHash = Animator.StringToHash("Dash");
+    
 
     private const float AnimatorDampTime = 0.1f;
-    
+
 
     private readonly int FreeLookHash = Animator.StringToHash("PlayerFreeLookState");
-    
+
 
     private const float CrossFadeDuration = 0.1f;
 
@@ -29,13 +27,13 @@ public class PlayerFreeLookState : PlayerBaseState
     private float remainingDodgeTime;
 
     public Transform InteractableObject;
-    public float InteractionRange =20f;
+    public float InteractionRange = 10f;
 
-    public PlayerFreeLookState(PlayerStateMachine stateMachine) : base(stateMachine){}
+    public PlayerFreeLookState(PlayerStateMachine stateMachine) : base(stateMachine) { }
 
     public override void Enter()
     {
-        
+
         stateMachine.Animator.CrossFadeInFixedTime(FreeLookHash, CrossFadeDuration);
 
         stateMachine.InputHandler.JumpEvent += OnJump;
@@ -44,23 +42,15 @@ public class PlayerFreeLookState : PlayerBaseState
 
 
     #region Tick
+    
     public override void Tick(float deltaTime)
     {
-        
-        if (stateMachine.InputHandler.IsInteracting) 
-        {
-            
-            Ray r = new Ray(stateMachine.MainCameraTransform.position, stateMachine.MainCameraTransform.forward);
-            if (Physics.Raycast(r,out RaycastHit hitInfo, 100f, stateMachine.ForceReceiver.layers))
-            {
-                Debug.DrawRay(stateMachine.MainCameraTransform.position, stateMachine.MainCameraTransform.forward, Color.red,100f);
-                if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
-                {
-                    interactObj.Interact();
-                }
-            }
-            return;
 
+        if (stateMachine.InputHandler.IsInteracting && stateMachine.InteractionHandler.GetInteractableObject() != null)
+        {                 
+           stateMachine.InteractionHandler.GetInteractableObject().Interact();
+           stateMachine.SwitchState(new PlayerInteractingState(stateMachine));
+           return;
         }
 
 
@@ -72,12 +62,12 @@ public class PlayerFreeLookState : PlayerBaseState
 
         if (!stateMachine.ForceReceiver.IsGrounded)
         {
-            stateMachine.SwitchState(new PlayerFallingState(stateMachine,IsMidAirJumped));
+            stateMachine.SwitchState(new PlayerFallingState(stateMachine, IsMidAirJumped));
             return;
         }
 
 
-        Vector3 movement = CalculateMovement(deltaTime) ;
+        Vector3 movement = CalculateMovement(deltaTime);
 
 
 
@@ -102,7 +92,7 @@ public class PlayerFreeLookState : PlayerBaseState
 
         FaceMovementDirection(movement, deltaTime);
 
-       
+
 
 
 
@@ -110,7 +100,7 @@ public class PlayerFreeLookState : PlayerBaseState
     #endregion
     public override void Exit()
     {
-        
+
         stateMachine.InputHandler.JumpEvent -= OnJump;
         stateMachine.InputHandler.DashEvent -= OnDodge;
 
@@ -129,10 +119,10 @@ public class PlayerFreeLookState : PlayerBaseState
 
         forward.Normalize();
         right.Normalize();
-        
+
         //if (remainingDodgeTime > 0f)
         //{
-           
+
         //    //movement += stateMachine.MainCameraTransform.right * dodgingDirectionInput.x * stateMachine.DodgeLength / stateMachine.DodgeDuration;
         //    //movement += stateMachine.MainCameraTransform.forward * dodgingDirectionInput.y * stateMachine.DodgeLength / stateMachine.DodgeDuration;
         //    movement = forward * stateMachine.InputHandler.MovementValue.y + right * stateMachine.InputHandler.MovementValue.x;
@@ -146,27 +136,27 @@ public class PlayerFreeLookState : PlayerBaseState
         //        stateMachine.Animator.Play(DodgeHash);
         //        stateMachine.ForceReceiver.AddDodgeForce(stateMachine.transform.forward * stateMachine.DodgeForce);
         //    }
-           
-            
+
+
         //    //remainingDodgeTime = Mathf.Max(remainingDodgeTime - deltaTime, 0f);
         //    //Debug.Log(movement);
-                    
+
         //}
         //else
-        
-            movement = forward * stateMachine.InputHandler.MovementValue.y + right * stateMachine.InputHandler.MovementValue.x;
-            //Debug.Log("NORMAL STATE");
 
-           
-        
+        movement = forward * stateMachine.InputHandler.MovementValue.y + right * stateMachine.InputHandler.MovementValue.x;
+        //Debug.Log("NORMAL STATE");
+
+
+
         return movement;
 
-     
+
 
     }
     private void FaceMovementDirection(Vector3 movement, float deltatime)
-    {        
-        stateMachine.transform.rotation = Quaternion.Lerp(stateMachine.transform.rotation,Quaternion.LookRotation(movement),deltatime* stateMachine.RotationDamping);            
+    {
+        stateMachine.transform.rotation = Quaternion.Lerp(stateMachine.transform.rotation, Quaternion.LookRotation(movement), deltatime * stateMachine.RotationDamping);
     }
 
     private Vector3 CalculateSlope(Vector3 movement)
@@ -190,7 +180,7 @@ public class PlayerFreeLookState : PlayerBaseState
         //}
         //else
         //{
-            stateMachine.SwitchState(new PlayerDodgeState(stateMachine, stateMachine.InputHandler.MovementValue.normalized));
+        stateMachine.SwitchState(new PlayerDodgeState(stateMachine, stateMachine.InputHandler.MovementValue.normalized));
         //}
     }
 
