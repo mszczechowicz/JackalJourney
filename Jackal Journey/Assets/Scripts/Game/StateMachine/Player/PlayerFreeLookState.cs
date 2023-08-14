@@ -52,7 +52,7 @@ public class PlayerFreeLookState : PlayerBaseState
            stateMachine.SwitchState(new PlayerInteractingState(stateMachine));
            return;
         }
-
+        
 
         if (stateMachine.InputHandler.IsAttacking)
         {

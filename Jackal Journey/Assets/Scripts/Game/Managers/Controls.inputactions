@@ -58,6 +58,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "15459d21-c59e-40fb-8ae5-aff150bd0cbf",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -258,6 +267,28 @@
                     "action": "Interaction",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3e90ee96-a776-4eb2-bd02-4ea84662e721",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse & Keyboard",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "34223da1-6894-4d7b-8fa2-5a40c514b03a",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -266,7 +297,7 @@
             "id": "02b7546e-060d-436f-9f3d-f90d1368d542",
             "actions": [
                 {
-                    "name": "Escape",
+                    "name": "Pause",
                     "type": "Button",
                     "id": "1e5c7ce4-5cfd-447f-be7b-7569562ac404",
                     "expectedControlType": "Button",
@@ -283,7 +314,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Mouse & Keyboard",
-                    "action": "Escape",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -294,7 +325,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Mouse & Keyboard",
-                    "action": "Escape",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

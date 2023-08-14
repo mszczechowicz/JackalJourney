@@ -9,6 +9,8 @@ public class InputHandler : MonoBehaviour, Controls.IPlayerActions
     public bool IsAttacking { get; private set; }
     public bool IsInteracting { get; private set; }
 
+    public bool IsPausing { get; private set; }
+
     public Vector2 MovementValue { get; private set; }
 
     public Vector2 CameraValue { get; private set; }
@@ -91,4 +93,21 @@ public class InputHandler : MonoBehaviour, Controls.IPlayerActions
         }
 
     }
+    public void OnPause(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            IsPausing = true;
+            Debug.Log("PAUSE On");
+        }
+
+        else if (context.canceled)
+        {
+            IsPausing = false;
+            Debug.Log("PAUSE Off");
+        }
+
+    }
+
+
 }

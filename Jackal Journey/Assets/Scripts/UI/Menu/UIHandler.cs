@@ -9,7 +9,7 @@ public class UIHandler : MonoBehaviour, Controls.IUIActions
 
     private Controls controls;
 
-    public event Action PauseEvent;
+    public bool PausingOf { get; private set; }
 
     void Start()
     {
@@ -23,11 +23,21 @@ public class UIHandler : MonoBehaviour, Controls.IUIActions
         controls.UI.Disable();
     }
 
-    public void OnEscape(InputAction.CallbackContext context)
-    {
-        if (!context.performed) { return; }
+    
 
-        PauseEvent?.Invoke();
+
+    public void OnPause(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            PausingOf = true;
+        }
+
+        else if (context.canceled)
+        {
+            PausingOf = false;
+        }
+
     }
 
 }

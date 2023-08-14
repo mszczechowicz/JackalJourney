@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 6888203433811934244}
   - component: {fileID: 5107948834946994211}
   - component: {fileID: 4220712039279473166}
+  - component: {fileID: 2901449899281211478}
   m_Layer: 0
   m_Name: Eveline
   m_TagString: Player
@@ -62,6 +63,7 @@ MonoBehaviour:
   <Animator>k__BackingField: {fileID: 3916589758629888578}
   <ForceReceiver>k__BackingField: {fileID: 2136471320906593272}
   <Health>k__BackingField: {fileID: 6888203433811934244}
+  <InteractionHandler>k__BackingField: {fileID: 2901449899281211478}
   <FreeLookMovementSpeed>k__BackingField: 5
   <RotationDamping>k__BackingField: 13
   <JumpForce>k__BackingField: 13
@@ -272,6 +274,24 @@ MonoBehaviour:
   stretchRange: 0
   giveWorldHeightOffset: 0
   worldHeightOffset: 0
+--- !u!114 &2901449899281211478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24011024088496003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b83e0ac2cbf7b40affabd754e27fbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainCamera: {fileID: 0}
+  InteractionRange: 10
+  layers:
+    serializedVersion: 2
+    m_Bits: 64
+  containerInteractionWindow: {fileID: 0}
 --- !u!1 &243892446782136353
 GameObject:
   m_ObjectHideFlags: 0

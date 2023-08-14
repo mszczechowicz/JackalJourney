@@ -15,4 +15,10 @@ public class MainMenuManager : MonoBehaviour
         Debug.Log("QuitApplication");
         Application.Quit();
     }
+
+    public void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
 }

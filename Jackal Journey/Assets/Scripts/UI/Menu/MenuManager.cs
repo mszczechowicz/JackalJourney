@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,40 +13,16 @@ public class MenuManager : MonoBehaviour
     [field: SerializeField] public GameObject TravelWindowCanvas { get; private set; }
     [field: SerializeField] public GameObject Player { get; private set; }
 
-   
+
 
     private void Awake()
     {
-        UIHandler.PauseEvent += Resume;
         Cursor.visible = false;
-    }
-
-
-    public void Pause()
-    {
-        PauseCanvas.SetActive(true);
-        Time.timeScale = 0f;
-        Player.GetComponent<CameraMovement>().enabled = false;
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = true;
-        UIHandler.PauseEvent -= Pause;
-        UIHandler.PauseEvent += Resume;
-
-
-    }
-    public void Resume()
-    {
-        PauseCanvas.SetActive(false);
-        Time.timeScale = 1f;
-        Player.GetComponent<CameraMovement>().enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        UIHandler.PauseEvent -= Resume;
-        UIHandler.PauseEvent += Pause;
-
-       
-
     }
+
+
+    #region PauseMenuButtons
 
     public void BacktoMainMenuButton()
     {
@@ -53,47 +30,75 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-
-    [Header("Mouse Cursor Settings")]
-    public bool cursorLocked = true;
-    public bool cursorInputForLook = true;
-
-    private void OnApplicationFocus(bool hasFocus)
+    public void Quit()
     {
-        SetCursorState(cursorLocked);
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#else
+		    Application.Quit();
+#endif
     }
-
-    private void SetCursorState(bool newState)
+    public void PauseOff()
     {
-        Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.Confined;
+        Time.timeScale = 1;
+        Player.GetComponent<InputHandler>().enabled = true;
+        Player.GetComponent<CameraMovement>().enabled = true;
+        UIHandler.enabled = false;
+        Debug.Log("UIHANDLER OFF");
+        PauseCanvas.SetActive(false);
+        //----WIDOCZNOŒÆ MYSZY W MENU PAUZY----------------------
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
     }
-    //Widzialnoœækursora
-    private void Start()
-    {   
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
+    #endregion
 
-    //public void SceneSwitch()
+    #region TravelWindowButtons
+    //public void TravelYes()
     //{
-    //    if (PauseCanvas.transform.GetChild(0).gameObject == true)
-    //        return;
-    //    PauseCanvas.transform.GetChild(0).gameObject.SetActive(true);
+    //    SceneManager.LoadScene("Gym");
 
-       
+    //}
+    //public void TravelNo()
+    //{
+    //    TravelWindowCanvas.SetActive(false);
+    //    Player.GetComponent<InteractionHandler>().IsInteracting = false;
+
     //}
 
-    public void TravelYes()
-    {
-        SceneManager.LoadScene("Gym");
-
-    }
-    public void TravelNo()
-    {
-      TravelWindowCanvas.SetActive(false);
-        Player.GetComponent<InteractionHandler>().IsInteracting = false;
-
-    }
-
-
+    #endregion
 }
+
+//[Header("Mouse Cursor Settings")]
+//public bool cursorLocked = true;
+//public bool cursorInputForLook = true;
+
+//private void OnApplicationFocus(bool hasFocus)
+//{
+//    SetCursorState(cursorLocked);
+//}
+
+//private void SetCursorState(bool newState)
+//{
+//    Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.Confined;
+//}
+////Widzialnoœækursora
+//private void Start()
+//{
+//  //  UIHandler.PauseEvent += Pause;
+//    Cursor.lockState = CursorLockMode.Locked;
+//    Cursor.visible = false;
+//}
+
+//public void SceneSwitch()
+//{
+//    if (PauseCanvas.transform.GetChild(0).gameObject == true)
+//        return;
+//    PauseCanvas.transform.GetChild(0).gameObject.SetActive(true);
+
+
+//}
+
+
+
+
+//}

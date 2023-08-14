@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour, IInteractable
 {
@@ -8,7 +9,8 @@ public class SceneSwitcher : MonoBehaviour, IInteractable
     [SerializeField] private GameObject SceneLoadWindow;
     public void Interact()
     {
-        SceneLoadWindow.SetActive(true);
+        SceneManager.LoadScene("Gym");
+        //SceneLoadWindow.SetActive(true);
     }
 
 }
