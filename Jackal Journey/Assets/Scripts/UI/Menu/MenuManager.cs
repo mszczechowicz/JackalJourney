@@ -27,7 +27,8 @@ public class MenuManager : MonoBehaviour
     public void BacktoMainMenuButton()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        SceneLoader.Load(SceneLoader.Scene.MainMenu);
+       // SceneManager.LoadScene("MainMenu");
     }
 
     public void Quit()

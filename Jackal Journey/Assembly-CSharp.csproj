@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerDeadState.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\Attack.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\State.cs" />
+    <Compile Include="Assets\Scripts\UI\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerDodgeState.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\WeaponDamage.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\MenuManager.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Assets\Scripts\Game\StateMachine\ForceReceiver.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerImpactState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyChasingState.cs" />
+    <Compile Include="Assets\Scripts\UI\SceneLoaderCallback.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
