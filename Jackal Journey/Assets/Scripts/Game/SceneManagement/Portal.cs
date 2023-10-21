@@ -12,8 +12,8 @@ public class Portal : MonoBehaviour, IInteractable
     
     public void Interact()
     {
-        SceneManager.LoadScene(SceneName);
-        //SceneLoader.SceneToLoad(SceneName);
+        //SceneManager.LoadScene(SceneName);
+        SceneLoader.SceneToLoad(SceneName);
     }
 
 }
