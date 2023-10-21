@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IInteractable {
-
-    
+public interface IInteractable {  
     public void Interact();
-
 }
 
 public class InteractionHandler : MonoBehaviour
@@ -18,8 +15,6 @@ public class InteractionHandler : MonoBehaviour
     [SerializeField] public bool IsInteracting { get; set; } = false;
 
 
-
-    // Update is called once per frame
     void Update()
     {
         if (GetInteractableObject() != null)
@@ -35,8 +30,7 @@ public class InteractionHandler : MonoBehaviour
         }
         else
         {           
-                Hide();
-            
+                Hide();           
         }
 
     }
@@ -49,6 +43,7 @@ public class InteractionHandler : MonoBehaviour
         Debug.DrawRay(MainCamera.transform.position, MainCamera.transform.forward * InteractionRange, Color.blue, 1f);
         if (Physics.Raycast(r, out RaycastHit hitInfo, 10f, layers))
         {
+            //Rysowanie raycastów do testów
             //Debug.DrawRay(stateMachine.MainCameraTransform.position, stateMachine.MainCameraTransform.forward, Color.red,100f);
             if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
             {

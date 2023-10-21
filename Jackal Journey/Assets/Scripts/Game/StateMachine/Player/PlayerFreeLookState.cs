@@ -11,7 +11,7 @@ public class PlayerFreeLookState : PlayerBaseState
 {
 
 
-    //Stringtohash Szybsze w obliczaniu ni¿ string
+    //Stringtohash jest Szybsze w obliczaniu ni¿ string
     private readonly int VelocityHash = Animator.StringToHash("Velocity");
     
 
@@ -45,14 +45,16 @@ public class PlayerFreeLookState : PlayerBaseState
     
     public override void Tick(float deltaTime)
     {
+#region Interactions
 
         if (stateMachine.InputHandler.IsInteracting && stateMachine.InteractionHandler.GetInteractableObject() != null)
         {                 
-           stateMachine.InteractionHandler.GetInteractableObject().Interact();
+          
            stateMachine.SwitchState(new PlayerInteractingState(stateMachine));
            return;
         }
-        
+
+#endregion
 
         if (stateMachine.InputHandler.IsAttacking)
         {
@@ -120,6 +122,9 @@ public class PlayerFreeLookState : PlayerBaseState
         forward.Normalize();
         right.Normalize();
 
+        // STARY KOD DO DASHOWANIA BEZ U¯YCIA DASHA JAKO STANU
+        //zostawiam na wszelki wypadek
+
         //if (remainingDodgeTime > 0f)
         //{
 
@@ -145,9 +150,6 @@ public class PlayerFreeLookState : PlayerBaseState
         //else
 
         movement = forward * stateMachine.InputHandler.MovementValue.y + right * stateMachine.InputHandler.MovementValue.x;
-        //Debug.Log("NORMAL STATE");
-
-
 
         return movement;
 
@@ -186,11 +188,5 @@ public class PlayerFreeLookState : PlayerBaseState
 
     #endregion
 
-    #region Interactions
-
-
-
-
-
-    #endregion
+    
 }

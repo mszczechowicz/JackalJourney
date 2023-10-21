@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     }
 
  
-
+    //RESET LEVELU PO ŒMIERCI
     //public void RestartLevel()
     //{
     //    m_InPause = true;
@@ -74,6 +74,7 @@ public class GameManager : MonoBehaviour
 }
 
 //--------------------STARY KOD NIE DZIALAJACY DO GAME MANAGERA--------------------------
+//      Nie usuwam na wszelki wypadek, ale nie bede z niego ju¿prawdopodobnie korzysta³
 
     //protected GameManager() { }
     //private static GameManager instance = null;

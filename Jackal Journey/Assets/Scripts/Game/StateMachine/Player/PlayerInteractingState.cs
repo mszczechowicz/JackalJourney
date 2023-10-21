@@ -13,18 +13,24 @@ public class PlayerInteractingState : PlayerBaseState
     public override void Enter()
     {
         stateMachine.Animator.CrossFadeInFixedTime(InteractionIdleHash, CrossFadeDuration);
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = true;
-
+        //CZY KURSOR MA BYÆ WIDOCZNY PRZY WCHODZENIU W INTERAKCJÊ? A JEŒLI TAK TO DLA JAKICH INTERAKCJI.
+        //Cursor.lockState = CursorLockMode.Confined;
+        //Cursor.visible = true;
+    //____________________________________________________________________________
         stateMachine.InteractionHandler.IsInteracting = true;
         stateMachine.GetComponent<CameraMovement>().enabled = false;
 
     }
     public override void Tick(float deltaTime)
     {
-
+        //Wyrzuci³em te linie z freelookstatu aby interakcja odby³¹ siê podczas interaction state
+        stateMachine.InteractionHandler.GetInteractableObject().Interact();
+        //-----------------
         if (stateMachine.InteractionHandler.IsInteracting == false)
         {
+
+            Debug.Log("KONIEC INTERAKCJI");
+
             stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
         }
 

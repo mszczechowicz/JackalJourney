@@ -8,6 +8,8 @@ public class Portal : MonoBehaviour, IInteractable
 
    
     [SerializeField] private string SceneName;
+
+    
     public void Interact()
     {
         SceneManager.LoadScene(SceneName);
