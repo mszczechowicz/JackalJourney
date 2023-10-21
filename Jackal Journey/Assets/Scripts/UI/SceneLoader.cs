@@ -8,17 +8,29 @@ public static class SceneLoader
     public enum Scene {
         MainMenu,
         LoadLevelPlayGround,
-        LoadingScene
+        LoadingScene,
         //ADDING THE NAME OF THE SCENE
-    
+        Level101,
+        Level102,
+        Level103
+
     }
 
     private static Action onLoaderCallback;
 
-    public static void Load(Scene scene)
+    public static void SceneToLoad(Scene scene)
     {
         //Set the loader callback action to load the target scene
         onLoaderCallback = () =>{SceneManager.LoadScene(scene.ToString());};
+
+        //Load the loading scene
+        SceneManager.LoadScene(Scene.LoadingScene.ToString());
+       
+    }
+    public static void SceneToLoad(string scene)
+    {
+        //Set the loader callback action to load the target scene
+        onLoaderCallback = () => { SceneManager.LoadScene(scene.ToString()); };
 
         //Load the loading scene
         SceneManager.LoadScene(Scene.LoadingScene.ToString());

@@ -60,7 +60,6 @@
   <ItemGroup>
     <Compile Include="Assets\Art\Shaders\SwordSlash\SlashEnable.cs" />
     <Compile Include="Assets\Art\Shaders\Dissolve\DissolverController.cs" />
-    <Compile Include="Assets\Scripts\Game\SceneManagement\SceneSwitcher.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\MainMenuManager.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyBaseState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerMidAirJumpingState.cs" />
@@ -75,6 +74,7 @@
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerJumpingState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerFallingState.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\Controls.cs" />
+    <Compile Include="Assets\Scripts\Game\SceneManagement\Portal.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyDeadState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerInteractingState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\InputHandler.cs" />

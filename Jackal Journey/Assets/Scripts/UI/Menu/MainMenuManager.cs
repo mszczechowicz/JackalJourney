@@ -6,9 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    //Tutaj musimy wprowadziæ kod który obsluzy nam wczytywanie sceny z ostatniego zapisu gry
+    [SerializeField] private string SavedSceneToLoadInGame;
+
+
     public void PlayButton()
     {
-        SceneLoader.Load(SceneLoader.Scene.LoadLevelPlayGround);
+        //Tutaj musimy wprowadziæ kod który obsluzy nam wczytywanie sceny z ostatniego zapisu gry
+        SceneLoader.SceneToLoad(SavedSceneToLoadInGame);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 
