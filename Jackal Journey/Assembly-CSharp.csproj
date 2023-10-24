@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\UI\Menu\MainMenuManager.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyBaseState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerMidAirJumpingState.cs" />
+    <Compile Include="Assets\HeathBar.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerFreeLookState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyStateMachine.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyIdleState.cs" />
