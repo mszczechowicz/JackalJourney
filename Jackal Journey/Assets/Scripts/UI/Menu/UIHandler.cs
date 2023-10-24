@@ -63,4 +63,8 @@ public class UIHandler : MonoBehaviour, Controls.IUIActions
 
     }
 
+    public void OnBackSpace(InputAction.CallbackContext context)
+    {
+        throw new NotImplementedException();
+    }
 }

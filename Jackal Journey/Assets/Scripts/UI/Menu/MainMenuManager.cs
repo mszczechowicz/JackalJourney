@@ -19,8 +19,17 @@ public class MainMenuManager : MonoBehaviour
 
     public void QuitButton()
     {
+#if UNITY_EDITOR
+        EditorApplication.ExitPlaymode();
+#endif
+
         Debug.Log("QuitApplication");
         Application.Quit();
+
+    }
+    public void BackToMain_Buttons()
+    {
+        
     }
 
     public void Start()

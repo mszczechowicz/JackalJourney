@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public static class SceneLoader
 {
+
+    
     public enum Scene {
         MainMenu,
         LoadLevelPlayGround,
