@@ -123,6 +123,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &197660424 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4293690042384086853, guid: 0857eaf8a70afe649b35770812f12504,
+    type: 3}
+  m_PrefabInstance: {fileID: 788153848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &321899402
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +227,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &365269440 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3148076100981562410, guid: 0857eaf8a70afe649b35770812f12504,
+    type: 3}
+  m_PrefabInstance: {fileID: 788153848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &442811935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -356,6 +380,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Core
       objectReference: {fileID: 0}
+    - target: {fileID: 7548802978842244909, guid: 0857eaf8a70afe649b35770812f12504,
+        type: 3}
+      propertyPath: easy_healthSlider
+      value: 
+      objectReference: {fileID: 197660424}
+    - target: {fileID: 7548802978842244909, guid: 0857eaf8a70afe649b35770812f12504,
+        type: 3}
+      propertyPath: true_healthSlider
+      value: 
+      objectReference: {fileID: 365269440}
     - target: {fileID: 8400950421894323361, guid: 0857eaf8a70afe649b35770812f12504,
         type: 3}
       propertyPath: m_RootOrder

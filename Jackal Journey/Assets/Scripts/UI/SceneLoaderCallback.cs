@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst;
 using UnityEngine;
 
 public class SceneLoaderCallback : MonoBehaviour
@@ -11,6 +12,7 @@ public class SceneLoaderCallback : MonoBehaviour
         if (isFirstUpdate) { 
         isFirstUpdate = false;
             SceneLoader.LoaderCallback();
+            Debug.Log("Scene has been Loaded");
         
         
         }

@@ -30,7 +30,7 @@ Transform:
   m_Children:
   - {fileID: 2570177197910193232}
   - {fileID: 4855820148922498275}
-  - {fileID: 6533267328027182580}
+  - {fileID: 3904831379991956066}
   - {fileID: 6549383746545150523}
   - {fileID: 399971409396936758}
   m_Father: {fileID: 0}
@@ -119,7 +119,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5883117807a768f4793b4ac9f960150e, type: 3}
---- !u!114 &5313086971926568059 stripped
+--- !u!114 &2675572510513271789 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 299904687971651181, guid: 5883117807a768f4793b4ac9f960150e,
     type: 3}
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c156260a4f65b479ab3b81667afc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &6533267328027182580 stripped
+--- !u!4 &3904831379991956066 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1673172816692762594, guid: 5883117807a768f4793b4ac9f960150e,
     type: 3}
@@ -266,6 +266,30 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3091148177638934289}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3148076100981562410 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 96194532997389115, guid: 7a40e8304d8a63844b80ba220a0605d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 3091148177638934289}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4293690042384086853 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1257549639061385300, guid: 7a40e8304d8a63844b80ba220a0605d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 3091148177638934289}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6549383746545150523 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8070981815051595050, guid: 7a40e8304d8a63844b80ba220a0605d6,
@@ -867,9 +891,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6888203433811934244, guid: 4a323e9eca51bd24ea354b4356e550f2,
         type: 3}
-      propertyPath: maxHealth
-      value: 100
-      objectReference: {fileID: 0}
+      propertyPath: easy_healthSlider
+      value: 
+      objectReference: {fileID: 4293690042384086853}
+    - target: {fileID: 6888203433811934244, guid: 4a323e9eca51bd24ea354b4356e550f2,
+        type: 3}
+      propertyPath: true_healthSlider
+      value: 
+      objectReference: {fileID: 3148076100981562410}
     - target: {fileID: 6996664488631180592, guid: 4a323e9eca51bd24ea354b4356e550f2,
         type: 3}
       propertyPath: m_Layer
@@ -1101,7 +1130,7 @@ PrefabInstance:
         type: 3}
       propertyPath: <MenuManager>k__BackingField
       value: 
-      objectReference: {fileID: 5313086971926568059}
+      objectReference: {fileID: 2675572510513271789}
     - target: {fileID: 8942940112527365049, guid: 1fca84589ccd36c4cae108fa7f064969,
         type: 3}
       propertyPath: m_RootOrder

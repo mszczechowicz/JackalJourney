@@ -10,7 +10,7 @@ public class Health : MonoBehaviour
     [SerializeField] private int maxHealth = 1000;
     [SerializeField] private Slider true_healthSlider;
     [SerializeField] private Slider easy_healthSlider;
-    private float easylerpingintoHeath = 0.01f;
+    private float easylerpingintoHealth = 0.01f;
 
     private int health;
     private bool isInvulnerable;
@@ -28,8 +28,8 @@ public class Health : MonoBehaviour
 
         if (true_healthSlider.value != easy_healthSlider.value)
         {
-            easy_healthSlider.value = Mathf.Lerp(easy_healthSlider.value, true_healthSlider.value, easylerpingintoHeath);
-            Debug.Log("EASYSLIDERONONON");
+            easy_healthSlider.value = Mathf.Lerp(easy_healthSlider.value, true_healthSlider.value, easylerpingintoHealth);
+           
         }
     }
 

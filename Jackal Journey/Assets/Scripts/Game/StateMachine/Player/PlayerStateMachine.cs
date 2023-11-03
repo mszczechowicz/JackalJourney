@@ -3,7 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStateMachine : StateMachine
+
+//IPLAYER DATA DO WPROWADZENIA PLATER PREFS, NIE IWME CZY BEDZIE TO U¯YWANE
+public interface IPlayerData
+{ 
+    Vector3 GetPosition();
+    void SetPosition(Vector3 position);
+
+    float GetHeath();
+    void SetHeath(float heath);
+
+
+}
+//__________________________________________________________-
+
+public class PlayerStateMachine : StateMachine , IPlayerData
 {
 
     [field: SerializeField] public InputHandler InputHandler { get; private set; }
@@ -80,21 +94,27 @@ public class PlayerStateMachine : StateMachine
     {
         SwitchState(new PlayerDeadState(this));
     }
+    //plAYER PREFS PRAWDOPODOBNIE NIE BEDZIE U¯WYANE
+    #region PlayerData
+    public Vector3 GetPosition()
+    {
+        //this.transform.position == PlayerPrefs.
+        throw new System.NotImplementedException();
+    }
 
+    public void SetPosition(Vector3 position)
+    {
+        throw new System.NotImplementedException();
+    }
 
+    public float GetHeath()
+    {
+        throw new System.NotImplementedException();
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-   
-   
+    public void SetHeath(float heath)
+    {
+        throw new System.NotImplementedException();
+    }
+    #endregion
 }

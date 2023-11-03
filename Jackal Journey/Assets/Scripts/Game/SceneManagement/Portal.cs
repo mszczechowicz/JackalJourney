@@ -29,8 +29,10 @@ public class Portal : MonoBehaviour, IInteractable
     //}
     public void Interact()
     {
+        DontDestroyOnLoad(gameObject);
         //SceneManager.LoadScene(SceneName);
         SceneLoader.SceneToLoad(SceneName);
+        
     }
 
 }
