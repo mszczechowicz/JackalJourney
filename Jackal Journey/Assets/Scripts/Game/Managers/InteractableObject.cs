@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractableObject : MonoBehaviour
+public class InteractableObject : MonoBehaviour, IInteractable
 {
+    [SerializeField] private GameObject savemanager;
+    [field: SerializeField] public GameObject Player { get; set; }
 
 
-
-    
-
-   
+    public void Interact()
+    {
+        savemanager.GetComponent<SaveManager>().SaveData();
+        Player.GetComponent<InteractionHandler>().IsInteracting = false;
+    }
 }

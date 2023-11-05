@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
     [SerializeField] private Slider easy_healthSlider;
     private float easylerpingintoHealth = 0.01f;
 
-    private int health;
+    public int health { get; set; } 
     private bool isInvulnerable;
     //--ImpactStateLogic komentujê do czas a¿ zaimplementujemy "HeavyAttack dla bossów"
     public event Action OnTakeDamage;
@@ -36,9 +36,10 @@ public class Health : MonoBehaviour
     public bool IsDead => health == 0;
     private void Start()
     {
-        
 
-        health = maxHealth;
+        if (PlayerPrefs.HasKey("PlayerHealth")!)
+            health = maxHealth;
+
         true_healthSlider.maxValue = maxHealth;
         true_healthSlider.minValue = 0;
 
@@ -67,5 +68,9 @@ public class Health : MonoBehaviour
         { OnDie?.Invoke(); }
 
         Debug.Log(health);
+    }
+    public void SetHealth(int savedhealth)
+    {
+        health = savedhealth;
     }
 }

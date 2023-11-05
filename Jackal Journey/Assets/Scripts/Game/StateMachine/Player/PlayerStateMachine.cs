@@ -1,6 +1,7 @@
 using FischlWorks;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -10,8 +11,8 @@ public interface IPlayerData
     Vector3 GetPosition();
     void SetPosition(Vector3 position);
 
-    float GetHeath();
-    void SetHeath(float heath);
+    float GetHealth();
+    void SetHealth(float health);
 
 
 }
@@ -98,23 +99,30 @@ public class PlayerStateMachine : StateMachine , IPlayerData
     #region PlayerData
     public Vector3 GetPosition()
     {
-        //this.transform.position == PlayerPrefs.
-        throw new System.NotImplementedException();
+        return this.transform.position;
+      
     }
 
     public void SetPosition(Vector3 position)
     {
-        throw new System.NotImplementedException();
+        CharacterController.enabled = false;
+        ForceReceiver.enabled = false;
+        transform.position = position;
+        Debug.Log("Pozycja zmieniona");
+        SwitchState(new PlayerFreeLookState(this));
+        CharacterController.enabled = true;
+        ForceReceiver.enabled= true;
+
     }
 
-    public float GetHeath()
+    public float GetHealth()
     {
-        throw new System.NotImplementedException();
+        return Health.health;
     }
 
-    public void SetHeath(float heath)
+    public void SetHealth(float health)
     {
-        throw new System.NotImplementedException();
+        Health.SetHealth((int)health);
     }
     #endregion
 }

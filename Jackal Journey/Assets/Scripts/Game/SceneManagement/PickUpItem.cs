@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class PickUpItem : MonoBehaviour, IInteractable
 {
+    [SerializeField] private GameObject savemanager;
     [field: SerializeField] public GameObject Player { get; set; }
+
 
     public void Interact()
     {
-       
-       
-       Destroy(gameObject);
-        Debug.Log("Pickup: [ROCK]");
+        savemanager.GetComponent<SaveManager>().LoadData();
         Player.GetComponent<InteractionHandler>().IsInteracting = false;
     }
 

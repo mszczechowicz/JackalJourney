@@ -375,6 +375,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 27.740002
       objectReference: {fileID: 0}
+    - target: {fileID: 4926426634906653319, guid: 0857eaf8a70afe649b35770812f12504,
+        type: 3}
+      propertyPath: playerobject
+      value: 
+      objectReference: {fileID: 866925187}
     - target: {fileID: 7448283210562151085, guid: 0857eaf8a70afe649b35770812f12504,
         type: 3}
       propertyPath: m_Name
@@ -450,6 +455,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0857eaf8a70afe649b35770812f12504, type: 3}
+--- !u!1 &866925187 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3963204167711718538, guid: 0857eaf8a70afe649b35770812f12504,
+    type: 3}
+  m_PrefabInstance: {fileID: 788153848}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1439729996
 GameObject:
   m_ObjectHideFlags: 0
