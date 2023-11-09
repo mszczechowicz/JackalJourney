@@ -17,7 +17,8 @@ public class SaveManager : MonoBehaviour
     }
     private void Start()
     {
-        LoadData();
+        // LoadData();
+        PlayerPrefs.DeleteAll();
     }
     public void SaveData()
     { 

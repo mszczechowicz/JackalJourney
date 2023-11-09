@@ -10,7 +10,7 @@ public class PickUpItem : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        savemanager.GetComponent<SaveManager>().LoadData();
+        //savemanager.GetComponent<SaveManager>().LoadData();
         Player.GetComponent<InteractionHandler>().IsInteracting = false;
     }
 

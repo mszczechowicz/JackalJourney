@@ -13,8 +13,8 @@ public class MainMenuManager : MonoBehaviour
     public void PlayButton()
     {
         //Tutaj musimy wprowadziæ kod który obsluzy nam wczytywanie sceny z ostatniego zapisu gry
-        SceneLoader.SceneToLoad(SavedSceneToLoadInGame);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        //SceneLoader.SceneToLoad(SavedSceneToLoadInGame);
+        SceneManager.LoadScene(SavedSceneToLoadInGame);
     }
 
     public void QuitButton()

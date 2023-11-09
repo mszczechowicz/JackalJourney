@@ -14,12 +14,6 @@ using UnityEngine;  // Monobehaviour
 using UnityEditor;  // Handles
 
 
-
-namespace FischlWorks
-{
-
-
-
     public class csHomebrewIK : MonoBehaviour
     {
         private Animator playerAnimator = null;
@@ -682,156 +676,156 @@ namespace FischlWorks
 
 
 
-#if UNITY_EDITOR
-        private void OnDrawGizmos()
-        {
-            // Debug draw function relies on objects that are dynamically located during runtime
-            if (Application.isPlaying == false)
-            {
-                return;
-            }
+//#if UNITY_EDITOR
+//        private void OnDrawGizmos()
+//        {
+//            // Debug draw function relies on objects that are dynamically located during runtime
+//            if (Application.isPlaying == false)
+//            {
+//                return;
+//            }
 
-            /* Left Foot */
+//            /* Left Foot */
 
-            if (leftFootRayHitInfo.collider != null)
-            {
-                Handles.color = Color.yellow;
+//            if (leftFootRayHitInfo.collider != null)
+//            {
+//                Handles.color = Color.yellow;
 
-                // Just note that the normal vector of RayCastHit object is used here
-                Handles.DrawWireDisc(
-                    leftFootRayHitInfo.point,
-                    leftFootRayHitInfo.normal,
-                    0.1f);
-                Handles.DrawDottedLine(
-                    leftFootTransform.position,
-                    leftFootTransform.position + leftFootRayHitInfo.normal,
-                    2);
+//                // Just note that the normal vector of RayCastHit object is used here
+//                Handles.DrawWireDisc(
+//                    leftFootRayHitInfo.point,
+//                    leftFootRayHitInfo.normal,
+//                    0.1f);
+//                Handles.DrawDottedLine(
+//                    leftFootTransform.position,
+//                    leftFootTransform.position + leftFootRayHitInfo.normal,
+//                    2);
 
-                // Just note that the orientation of the parent transform is used here
-                Handles.color = Color.green;
-                Handles.DrawWireDisc(
-                    leftFootRayHitInfo.point,
-                    transform.up, 0.25f);
+//                // Just note that the orientation of the parent transform is used here
+//                Handles.color = Color.green;
+//                Handles.DrawWireDisc(
+//                    leftFootRayHitInfo.point,
+//                    transform.up, 0.25f);
 
-                Gizmos.color = Color.green;
+//                Gizmos.color = Color.green;
 
-                Gizmos.DrawSphere(
-                    leftFootRayHitInfo.point + transform.up * raySphereRadius,
-                    raySphereRadius);
-            }
-            else
-            {
-                Gizmos.color = Color.red;
-            }
+//                Gizmos.DrawSphere(
+//                    leftFootRayHitInfo.point + transform.up * raySphereRadius,
+//                    raySphereRadius);
+//            }
+//            else
+//            {
+//                Gizmos.color = Color.red;
+//            }
 
-            if (leftFootProjectedAngle > 0)
-            {
-                Handles.color = Color.blue;
-            }
-            else
-            {
-                Handles.color = Color.red;
-            }
+//            if (leftFootProjectedAngle > 0)
+//            {
+//                Handles.color = Color.blue;
+//            }
+//            else
+//            {
+//                Handles.color = Color.red;
+//            }
 
-            // Foot height correction related debug draws
-            Handles.DrawWireDisc(
-                leftFootTransform.position,
-                leftFootOrientationReference.rotation * transform.up,
-                0.15f);
-            Handles.DrawSolidArc(
-                leftFootTransform.position,
-                Vector3.Cross(leftFootDirectionVector, leftFootProjectionVector) * -1,
-                leftFootProjectionVector,
-                // Abs is needed here because the cross product will deal with axis direction
-                Mathf.Abs(leftFootProjectedAngle),
-                0.25f);
-            Handles.DrawDottedLine(
-                leftFootTransform.position,
-                leftFootTransform.position + leftFootDirectionVector.normalized,
-                2);
+//            // Foot height correction related debug draws
+//            Handles.DrawWireDisc(
+//                leftFootTransform.position,
+//                leftFootOrientationReference.rotation * transform.up,
+//                0.15f);
+//            Handles.DrawSolidArc(
+//                leftFootTransform.position,
+//                Vector3.Cross(leftFootDirectionVector, leftFootProjectionVector) * -1,
+//                leftFootProjectionVector,
+//                // Abs is needed here because the cross product will deal with axis direction
+//                Mathf.Abs(leftFootProjectedAngle),
+//                0.25f);
+//            Handles.DrawDottedLine(
+//                leftFootTransform.position,
+//                leftFootTransform.position + leftFootDirectionVector.normalized,
+//                2);
 
-            // SphereCast related debug draws
-            Gizmos.DrawWireSphere(
-                leftFootRayStartPosition,
-                0.1f);
-            Gizmos.DrawLine(
-                leftFootRayStartPosition,
-                leftFootRayStartPosition - rayCastRange * Vector3.up);
+//            // SphereCast related debug draws
+//            Gizmos.DrawWireSphere(
+//                leftFootRayStartPosition,
+//                0.1f);
+//            Gizmos.DrawLine(
+//                leftFootRayStartPosition,
+//                leftFootRayStartPosition - rayCastRange * Vector3.up);
 
-            // Indicator text
-            Handles.Label(leftFootTransform.position, "L", helperTextStyle);
+//            // Indicator text
+//            Handles.Label(leftFootTransform.position, "L", helperTextStyle);
 
-            /* Right foot */
+//            /* Right foot */
 
-            if (rightFootRayHitInfo.collider != null)
-            {
-                Handles.color = Color.yellow;
+//            if (rightFootRayHitInfo.collider != null)
+//            {
+//                Handles.color = Color.yellow;
 
-                // Just note that the normal vector of RayCastHit object is used here
-                Handles.DrawWireDisc(
-                    rightFootRayHitInfo.point,
-                    rightFootRayHitInfo.normal,
-                    0.1f);
-                Handles.DrawDottedLine(
-                    rightFootTransform.position,
-                    rightFootTransform.position + rightFootRayHitInfo.normal,
-                    2);
+//                // Just note that the normal vector of RayCastHit object is used here
+//                Handles.DrawWireDisc(
+//                    rightFootRayHitInfo.point,
+//                    rightFootRayHitInfo.normal,
+//                    0.1f);
+//                Handles.DrawDottedLine(
+//                    rightFootTransform.position,
+//                    rightFootTransform.position + rightFootRayHitInfo.normal,
+//                    2);
 
-                // Just note that the orientation of the parent transform is used here
-                Handles.color = Color.green;
-                Handles.DrawWireDisc(
-                    rightFootRayHitInfo.point,
-                    transform.up, 0.25f);
+//                // Just note that the orientation of the parent transform is used here
+//                Handles.color = Color.green;
+//                Handles.DrawWireDisc(
+//                    rightFootRayHitInfo.point,
+//                    transform.up, 0.25f);
 
-                Gizmos.color = Color.green;
+//                Gizmos.color = Color.green;
 
-                Gizmos.DrawSphere(
-                    rightFootRayHitInfo.point + transform.up * raySphereRadius,
-                    raySphereRadius);
-            }
-            else
-            {
-                Gizmos.color = Color.red;
-            }
+//                Gizmos.DrawSphere(
+//                    rightFootRayHitInfo.point + transform.up * raySphereRadius,
+//                    raySphereRadius);
+//            }
+//            else
+//            {
+//                Gizmos.color = Color.red;
+//            }
 
-            if (rightFootProjectedAngle > 0)
-            {
-                Handles.color = Color.blue;
-            }
-            else
-            {
-                Handles.color = Color.red;
-            }
+//            if (rightFootProjectedAngle > 0)
+//            {
+//                Handles.color = Color.blue;
+//            }
+//            else
+//            {
+//                Handles.color = Color.red;
+//            }
 
-            // Foot height correction related debug draws
-            Handles.DrawWireDisc(
-                rightFootTransform.position,
-                rightFootOrientationReference.rotation * transform.up,
-                0.15f);
-            Handles.DrawSolidArc(
-                rightFootTransform.position,
-                Vector3.Cross(rightFootDirectionVector, rightFootProjectionVector) * -1,
-                rightFootProjectionVector,
-                // Abs is needed here because the cross product will deal with axis direction
-                Mathf.Abs(rightFootProjectedAngle),
-                0.25f);
-            Handles.DrawDottedLine(
-                rightFootTransform.position,
-                rightFootTransform.position + rightFootDirectionVector.normalized,
-                2);
+//            // Foot height correction related debug draws
+//            Handles.DrawWireDisc(
+//                rightFootTransform.position,
+//                rightFootOrientationReference.rotation * transform.up,
+//                0.15f);
+//            Handles.DrawSolidArc(
+//                rightFootTransform.position,
+//                Vector3.Cross(rightFootDirectionVector, rightFootProjectionVector) * -1,
+//                rightFootProjectionVector,
+//                // Abs is needed here because the cross product will deal with axis direction
+//                Mathf.Abs(rightFootProjectedAngle),
+//                0.25f);
+//            Handles.DrawDottedLine(
+//                rightFootTransform.position,
+//                rightFootTransform.position + rightFootDirectionVector.normalized,
+//                2);
 
-            // SphereCast related debug draws
-            Gizmos.DrawWireSphere(
-                rightFootRayStartPosition,
-                0.1f);
-            Gizmos.DrawLine(
-                rightFootRayStartPosition,
-                rightFootRayStartPosition - rayCastRange * Vector3.up);
+//            // SphereCast related debug draws
+//            Gizmos.DrawWireSphere(
+//                rightFootRayStartPosition,
+//                0.1f);
+//            Gizmos.DrawLine(
+//                rightFootRayStartPosition,
+//                rightFootRayStartPosition - rayCastRange * Vector3.up);
 
-            // Indicator text
-            Handles.Label(rightFootTransform.position, "R", helperTextStyle);
-        }
-#endif
+//            // Indicator text
+//            Handles.Label(rightFootTransform.position, "R", helperTextStyle);
+//        }
+//#endif
     }
 
 
@@ -870,4 +864,3 @@ namespace FischlWorks
 
 
 
-}

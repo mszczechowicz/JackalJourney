@@ -19,7 +19,7 @@ public class InputHandler : MonoBehaviour, Controls.IPlayerActions
 
     public event Action JumpEvent;
    
-
+ 
     private Controls controls;
 
     
@@ -32,6 +32,7 @@ public class InputHandler : MonoBehaviour, Controls.IPlayerActions
         controls.Player.Enable();
     }
 
+    
     private void OnDestroy()
     {
         controls.Player.Disable();
@@ -79,32 +80,42 @@ public class InputHandler : MonoBehaviour, Controls.IPlayerActions
 
         
     }
-
+    private bool hasBeenPressed = false;
     public void OnInteraction(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && !hasBeenPressed && !IsInteracting)
         {
+            hasBeenPressed = true;
             IsInteracting = true;
+            Debug.Log("OnInteraction_context.performed");
         }
 
         else if (context.canceled)
         {
+          
+            hasBeenPressed = false;
             IsInteracting = false;
+            Debug.Log("OnInteraction_context.canceled");
+        
         }
 
     }
+
+    
+
+
     public void OnPause(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
             IsPausing = true;
-            Debug.Log("PAUSE On");
+           // Debug.Log("PauseButton");
         }
 
         else if (context.canceled)
         {
             IsPausing = false;
-            Debug.Log("PAUSE Off");
+           
         }
 
     }

@@ -19,19 +19,18 @@ public class PlayerInteractingState : PlayerBaseState
     //____________________________________________________________________________
         stateMachine.InteractionHandler.IsInteracting = true;
         stateMachine.GetComponent<CameraMovement>().enabled = false;
+        Debug.Log("stateMachine.InteractionHandler.GetInteractableObject().Interact();");
+        stateMachine.InteractionHandler.GetInteractableObject().Interact();
 
     }
     public override void Tick(float deltaTime)
     {
         //Wyrzuci³em te linie z freelookstatu aby interakcja odby³¹ siê podczas interaction state
-        stateMachine.InteractionHandler.GetInteractableObject().Interact();
+        
         //-----------------
         if (stateMachine.InteractionHandler.IsInteracting == false)
         {
-
-            Debug.Log("KONIEC INTERAKCJI");
-
-            stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
+           stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
         }
 
     }

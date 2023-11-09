@@ -37,7 +37,7 @@ public class Health : MonoBehaviour
     private void Start()
     {
 
-        if (PlayerPrefs.HasKey("PlayerHealth")!)
+       // if (PlayerPrefs.HasKey("PlayerHealth")!)
             health = maxHealth;
 
         true_healthSlider.maxValue = maxHealth;

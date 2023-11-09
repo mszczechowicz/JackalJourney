@@ -11,8 +11,8 @@ public class SceneLoaderCallback : MonoBehaviour
     {
         if (isFirstUpdate) { 
         isFirstUpdate = false;
-            SceneLoader.LoaderCallback();
-            Debug.Log("Scene has been Loaded");
+           // SceneLoader.LoaderCallback();
+           
         
         
         }
