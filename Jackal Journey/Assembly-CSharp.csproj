@@ -76,7 +76,9 @@
     <Compile Include="Assets\Scripts\Game\Managers\Controls.cs" />
     <Compile Include="Assets\Scripts\Game\SceneManagement\Portal.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyDeadState.cs" />
+    <Compile Include="Assets\PersistentObjectSpawner.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerInteractingState.cs" />
+    <Compile Include="Assets\Scripts\Game\SceneManagement\Fader.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\InputHandler.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\UIHandler.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyImpactState.cs" />
