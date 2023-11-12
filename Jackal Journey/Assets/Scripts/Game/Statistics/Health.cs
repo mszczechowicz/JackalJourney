@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,14 +6,15 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Health : MonoBehaviour
+public class Health : MonoBehaviour , IJsonSaveable
 {
     [SerializeField] private int maxHealth = 1000;
     [SerializeField] private Slider true_healthSlider;
     [SerializeField] private Slider easy_healthSlider;
+    [SerializeField] public int health;// { get; set; }
     private float easylerpingintoHealth = 0.01f;
 
-    public int health { get; set; } 
+   
     private bool isInvulnerable;
     //--ImpactStateLogic komentujê do czas a¿ zaimplementujemy "HeavyAttack dla bossów"
     public event Action OnTakeDamage;
@@ -34,11 +36,13 @@ public class Health : MonoBehaviour
     }
 
     public bool IsDead => health == 0;
-    private void Start()
+    private void Awake()
     {
+       if(health==0)
+            OnDie?.Invoke();
 
-       // if (PlayerPrefs.HasKey("PlayerHealth")!)
-            health = maxHealth;
+
+        health = maxHealth;
 
         true_healthSlider.maxValue = maxHealth;
         true_healthSlider.minValue = 0;
@@ -69,8 +73,21 @@ public class Health : MonoBehaviour
 
         Debug.Log(health);
     }
-    public void SetHealth(int savedhealth)
+   
+
+    public JToken CaptureAsJToken()
     {
-        health = savedhealth;
+        return JToken.FromObject(health);
+    }
+
+    public void RestoreFromJToken(JToken state)
+    {
+       health = state.ToObject<int>();
+        if(health ==0)
+        {
+            OnDie?.Invoke();
+
+        }
+        
     }
 }

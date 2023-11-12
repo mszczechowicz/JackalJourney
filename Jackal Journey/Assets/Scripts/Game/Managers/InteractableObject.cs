@@ -10,7 +10,7 @@ public class InteractableObject : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        savemanager.GetComponent<SaveManager>().SaveData();
+      
         Player.GetComponent<InteractionHandler>().IsInteracting = false;
     }
 }

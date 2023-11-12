@@ -70,13 +70,14 @@
     <Compile Include="Assets\Art\Shaders\EntireScreenShader\Blit.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\WeaponHandler.cs" />
     <Compile Include="Assets\Scripts\Game\GameInstances\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\PersistentObjectSpawner.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\InteractionHandler.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerJumpingState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerFallingState.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\Controls.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\SavingSystem\IJsonSaveable.cs" />
     <Compile Include="Assets\Scripts\Game\SceneManagement\Portal.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyDeadState.cs" />
-    <Compile Include="Assets\PersistentObjectSpawner.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerInteractingState.cs" />
     <Compile Include="Assets\Scripts\Game\SceneManagement\Fader.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\InputHandler.cs" />
@@ -97,12 +98,15 @@
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyAttackingState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\csHomebrewIK.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\StateMachine.cs" />
+    <Compile Include="Assets\Scripts\UI\Menu\SaveLoadUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\SavingSystem\SavingWrapper.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerStateMachine.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\SavingSystem\JsonSavingSystem.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\ForceReceiver.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerImpactState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyChasingState.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\SavingSystem\JsonSaveableEntity.cs" />
     <Compile Include="Assets\Scripts\UI\SceneLoaderCallback.cs" />
-    <Compile Include="Assets\Scripts\Game\GameInstances\SaveManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -376,6 +380,9 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>D:\Program Files\Unity\UnityEditor\2022.3.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>

@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 5107948834946994211}
   - component: {fileID: 4220712039279473166}
   - component: {fileID: 2901449899281211478}
+  - component: {fileID: 8550034506494218233}
   m_Layer: 0
   m_Name: Eveline
   m_TagString: Player
@@ -294,6 +295,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   containerInteractionWindow: {fileID: 0}
+--- !u!114 &8550034506494218233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24011024088496003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ea8b2683969404280a49ca9e3e9b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueIdentifier: player
 --- !u!1 &243892446782136353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,7 +1156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3190027811691328935}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 1.8000002, z: -8.000001}
+  m_LocalPosition: {x: 1.0000002, y: 1.8, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -1,24 +1,14 @@
 
+using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
 
-//IPLAYER DATA DO WPROWADZENIA PLATER PREFS, NIE IWME CZY BEDZIE TO U¯YWANE
-public interface IPlayerData
-{ 
-    Vector3 GetPosition();
-    void SetPosition(Vector3 position);
-
-    float GetHealth();
-    void SetHealth(float health);
 
 
-}
-//__________________________________________________________-
-
-public class PlayerStateMachine : StateMachine , IPlayerData
+public class PlayerStateMachine : StateMachine, IJsonSaveable
 {
 
     [field: SerializeField] public InputHandler InputHandler { get; private set; }
@@ -95,34 +85,23 @@ public class PlayerStateMachine : StateMachine , IPlayerData
     {
         SwitchState(new PlayerDeadState(this));
     }
-    //plAYER PREFS PRAWDOPODOBNIE NIE BEDZIE U¯WYANE
-    #region PlayerData
-    public Vector3 GetPosition()
+    
+    
+    
+    public JToken CaptureAsJToken()
     {
-        return this.transform.position;
-      
+        return transform.position.ToToken();
+       
     }
 
-    public void SetPosition(Vector3 position)
+    public void RestoreFromJToken(JToken state)
     {
         CharacterController.enabled = false;
         ForceReceiver.enabled = false;
-        transform.position = position;
-        Debug.Log("Pozycja zmieniona");
-        SwitchState(new PlayerFreeLookState(this));
+        transform.position = state.ToVector3();
         CharacterController.enabled = true;
-        ForceReceiver.enabled= true;
+        ForceReceiver.enabled = true;
 
     }
-
-    public float GetHealth()
-    {
-        return Health.health;
-    }
-
-    public void SetHealth(float health)
-    {
-        Health.SetHealth((int)health);
-    }
-    #endregion
+   
 }

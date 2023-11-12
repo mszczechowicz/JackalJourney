@@ -12,7 +12,10 @@ public class Fader : MonoBehaviour
        canvasGroup = GetComponent<CanvasGroup>();
       
     }
-
+    public void FadeOutImmediate()
+    {
+        canvasGroup.alpha = 1;
+    }
     public IEnumerator FadeOutIn()
     {     
         yield return FadeOut(2f);

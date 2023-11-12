@@ -46,13 +46,17 @@ public class Portal : MonoBehaviour, IInteractable
 
         Fader fader = FindObjectOfType<Fader>();
         yield return fader.FadeOut(fadeOutTime);
-
-
+        //Save current level
+        SavingWrapper wrapper = FindObjectOfType<SavingWrapper>();
+        wrapper.Save();
         yield return SceneManager.LoadSceneAsync(destMapIndex);                
 
-        Portal otherPortal = GetOtherPortal();
+        //Load current level
+        wrapper.Load();
 
+        Portal otherPortal = GetOtherPortal();
         UpdatePlayerPosition(otherPortal);
+        wrapper.Save();
 
         yield return new WaitForSeconds(fadeWaitTime);
         yield return fader.FadeIn(fadeInTime);
