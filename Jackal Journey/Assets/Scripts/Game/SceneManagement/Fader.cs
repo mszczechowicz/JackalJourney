@@ -6,42 +6,46 @@ using UnityEngine;
 public class Fader : MonoBehaviour
 {
     CanvasGroup canvasGroup;
+    Coroutine currentActiveFade = null;
 
-    private void Start()
+    private void Awake()
     {
-       canvasGroup = GetComponent<CanvasGroup>();
-      
+        canvasGroup = GetComponent<CanvasGroup>();
     }
+
     public void FadeOutImmediate()
     {
         canvasGroup.alpha = 1;
     }
-    public IEnumerator FadeOutIn()
-    {     
-        yield return FadeOut(2f);
-        print("Faded out");
-        yield return FadeIn(2f);
-        print("Faded in");
+
+    public Coroutine FadeOut(float time)
+    {
+        return Fade(1, time);
     }
 
-    public IEnumerator FadeIn(float time)
+    public Coroutine FadeIn(float time)
     {
-        Debug.Log("FadeIn");
-        while (canvasGroup.alpha > 0)
+        return Fade(0, time);
+    }
+
+    public Coroutine Fade(float target, float time)
+    {
+        if (currentActiveFade != null)
         {
-            canvasGroup.alpha -= Time.deltaTime / time;
+            StopCoroutine(currentActiveFade);
+        }
+        currentActiveFade = StartCoroutine(FadeRoutine(target, time));
+        return currentActiveFade;
+    }
+
+    private IEnumerator FadeRoutine(float target, float time)
+    {
+        while (!Mathf.Approximately(canvasGroup.alpha, target))
+        {
+            canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, target, Time.unscaledDeltaTime / time);
             yield return null;
         }
     }
 
-    public IEnumerator FadeOut(float time)
-    {
-        Debug.Log("FadeOut");
-        while (canvasGroup.alpha < 1) 
-        {
-            canvasGroup.alpha += Time.deltaTime / time;
-            yield return null;
-        }
-    
-    }
+
 }
