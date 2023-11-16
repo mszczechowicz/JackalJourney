@@ -34,7 +34,7 @@ public class EnemyStateMachine : StateMachine, IJsonSaveable
 
         Agent.updatePosition = false;
         Agent.updateRotation = false;
-        if(Health.health==0)
+        if(Health.healthPoints==0)
             SwitchState(new EnemyDeadState(this));
         else
         SwitchState(new EnemyIdleState(this));

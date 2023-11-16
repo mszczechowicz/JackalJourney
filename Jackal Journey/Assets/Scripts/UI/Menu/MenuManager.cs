@@ -11,7 +11,7 @@ public class MenuManager : MonoBehaviour
     [field: SerializeField] public GameObject PauseMenuUI { get; private set; }
 
     [field: SerializeField] public GameObject TravelWindowCanvas { get; private set; }
-    [field: SerializeField] public GameObject Player { get; private set; }
+   
 
     
 
@@ -22,7 +22,11 @@ public class MenuManager : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
-
+    void Update()
+    {
+        if (UIHandler.IsPausing)
+            PauseOn();
+    }
 
     #region PauseMenuButtons
 
@@ -44,8 +48,13 @@ public class MenuManager : MonoBehaviour
     {
         PauseMenuUI.SetActive(false);       
     }
+
+    public void PauseOn()
+    {
+        PauseMenuUI.SetActive(true);
+    }
     #endregion
 
-   
+
 }
 

@@ -20,7 +20,7 @@ public class InputHandler : MonoBehaviour, Controls.IPlayerActions
     public event Action JumpEvent;
    
  
-    private Controls controls;
+    public Controls controls;
 
     
 
@@ -101,24 +101,24 @@ public class InputHandler : MonoBehaviour, Controls.IPlayerActions
 
     }
 
-    
 
 
-    public void OnPause(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            IsPausing = true;
-           // Debug.Log("PauseButton");
-        }
 
-        else if (context.canceled)
-        {
-            IsPausing = false;
-           
-        }
+    //public void OnPause(InputAction.CallbackContext context)
+    //{
+    //    if (context.performed)
+    //    {
+    //        IsPausing = true;
+    //        Debug.Log("PauseButton");
+    //    }
 
-    }
+    //    else if (context.canceled)
+    //    {
+    //        IsPausing = false;
+
+    //    }
+
+    //}
 
 
 }

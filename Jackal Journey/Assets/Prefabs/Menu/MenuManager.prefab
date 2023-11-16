@@ -1878,6 +1878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1673172816692762594}
   - component: {fileID: 299904687971651181}
+  - component: {fileID: 1929187689504565063}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -1915,10 +1916,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c156260a4f65b479ab3b81667afc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <UIHandler>k__BackingField: {fileID: 0}
-  <PauseMenuUI>k__BackingField: {fileID: 0}
+  <UIHandler>k__BackingField: {fileID: 1929187689504565063}
+  <PauseMenuUI>k__BackingField: {fileID: 2542463645425335667}
   <TravelWindowCanvas>k__BackingField: {fileID: 1987999104542347537}
-  <Player>k__BackingField: {fileID: 0}
+--- !u!114 &1929187689504565063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7091276522178015934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9817d0865db21a4abdea1467c2944d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8574058357761023691
 GameObject:
   m_ObjectHideFlags: 0

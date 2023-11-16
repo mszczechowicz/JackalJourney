@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 973957eee168538439cbd899df082466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  savemanager: {fileID: 1530721582}
+  savemanager: {fileID: 0}
   <Player>k__BackingField: {fileID: 179802244}
 --- !u!65 &255375617
 BoxCollider:
@@ -1220,19 +1220,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9008dcd2d90a6746b563d2bb10ea6ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  savemanager: {fileID: 1530721582}
+  savemanager: {fileID: 0}
   <Player>k__BackingField: {fileID: 179802244}
 --- !u!4 &1515386371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000013496182864, guid: b667959c85aac0840abd65af9a3e1517,
     type: 3}
   m_PrefabInstance: {fileID: 1045776460}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1530721582 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9213410358213261932, guid: 0857eaf8a70afe649b35770812f12504,
-    type: 3}
-  m_PrefabInstance: {fileID: 1890510783}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1782476419
 PrefabInstance:
@@ -1471,11 +1465,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7059745865420459451, guid: 513b05e09782d0146adcfdcbbfe4341e,
-        type: 3}
-      propertyPath: <AttackDamage>k__BackingField
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 8345746607152755075, guid: 513b05e09782d0146adcfdcbbfe4341e,
         type: 3}
       propertyPath: uniqueIdentifier
@@ -1654,6 +1643,11 @@ PrefabInstance:
       propertyPath: InteractingHandler
       value: 
       objectReference: {fileID: 179802245}
+    - target: {fileID: 1926871453444916145, guid: 0857eaf8a70afe649b35770812f12504,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2407275096172206897, guid: 0857eaf8a70afe649b35770812f12504,
         type: 3}
       propertyPath: m_Name
@@ -1859,6 +1853,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6775987657646929371, guid: 0857eaf8a70afe649b35770812f12504,
+        type: 3}
+      propertyPath: UIHandler
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7049834765154906876, guid: 0857eaf8a70afe649b35770812f12504,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1918,6 +1917,21 @@ PrefabInstance:
         type: 3}
       propertyPath: healthSlider
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548802978842244909, guid: 0857eaf8a70afe649b35770812f12504,
+        type: 3}
+      propertyPath: onDie_UnityEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548802978842244909, guid: 0857eaf8a70afe649b35770812f12504,
+        type: 3}
+      propertyPath: onDie_UnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042171448198854250, guid: 0857eaf8a70afe649b35770812f12504,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8082210060691004787, guid: 0857eaf8a70afe649b35770812f12504,
         type: 3}
@@ -1984,7 +1998,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9213410358213261932, guid: 0857eaf8a70afe649b35770812f12504,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7129030939719662522, guid: 0857eaf8a70afe649b35770812f12504, type: 3}
+    - {fileID: 73621585098259384, guid: 0857eaf8a70afe649b35770812f12504, type: 3}
+    - {fileID: 8042171448198854250, guid: 0857eaf8a70afe649b35770812f12504, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8796985315182375260, guid: 0857eaf8a70afe649b35770812f12504, type: 3}
     - {fileID: 2062956100632079793, guid: 0857eaf8a70afe649b35770812f12504, type: 3}

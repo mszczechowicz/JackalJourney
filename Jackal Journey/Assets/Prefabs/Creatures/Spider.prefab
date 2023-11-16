@@ -524,7 +524,7 @@ MonoBehaviour:
   <MovementSpeed>k__BackingField: 5
   <AttackRange>k__BackingField: 1
   <Weapon>k__BackingField: {fileID: 2086364184731437014}
-  <AttackDamage>k__BackingField: 20
+  <AttackDamage>k__BackingField: 100
   <AttackKnockback>k__BackingField: 4
 --- !u!114 &3027677452954739084
 MonoBehaviour:
@@ -591,6 +591,10 @@ MonoBehaviour:
   maxHealth: 100
   true_healthSlider: {fileID: 0}
   easy_healthSlider: {fileID: 0}
+  healthPoints: 0
+  onDie_UnityEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &3788337141506730566
 Animator:
   serializedVersion: 5

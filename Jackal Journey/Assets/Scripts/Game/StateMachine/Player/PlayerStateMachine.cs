@@ -29,14 +29,14 @@ public class PlayerStateMachine : StateMachine, IJsonSaveable
     [field: SerializeField] public float JumpForce { get; private set; }
     [field: SerializeField] public float MidAirJumpForce { get; private set; }
 
-
+    [field: SerializeField] public float AirMovementSpeed { get; private set; }
     [field: SerializeField] public float DodgeForce { get; private set; }
     [field: SerializeField] public float DodgeDuration { get; private set; }
 
     [field: SerializeField] public float DodgeLength { get; private set; }
 
   
-    [field: SerializeField] public float AirMovementSpeed { get; private set; }
+   
 
     public float PreviousDodgeTime { get; private set; } = Mathf.NegativeInfinity;
 
@@ -50,14 +50,23 @@ public class PlayerStateMachine : StateMachine, IJsonSaveable
 
     [field: SerializeField] public csHomebrewIK IK { get; private set; }
 
+    [field: Header("RespawnSettings")]
+    //[field: SerializeField] public Respawner Respawner { get; private set; }
 
+    [field: SerializeField]public Transform respawnLocation{ get; private set; }
+    [field: SerializeField]public float respawnDelay { get; private set; }
+    [field: SerializeField]public float fadeTime { get; private set; }
 
+    public Fader fader{ get; set; }
+    public UIHandler uiHandler { get; set; }    
 
     private void Start()
     {
         MainCameraTransform = Camera.main.transform;
-
+        fader = FindObjectOfType<Fader>();
+        uiHandler = FindObjectOfType<UIHandler>();
         SwitchState(new PlayerFreeLookState(this));
+
     }
 
     private void OnEnable()

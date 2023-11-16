@@ -45,35 +45,22 @@ public class GameManager : MonoBehaviour
         return instance;
     }
 
- 
-    //RESET LEVELU PO ŒMIERCI
-    //public void RestartLevel()
+   
+    //public void PauseOn()
     //{
-    //    m_InPause = true;
-    //    SwitchPauseState();
-    //    RestartZone();
+    //    PauseMenuUI.SetActive(true);
+
+
+    //    //Time.timeScale = 0;
+    //    //Player.GetComponent<InputHandler>().enabled = false;
+    //    //Player.GetComponent<CameraMovement>().enabled = false;
+    //    //UIHandler.enabled = true;
+    //    //MenuManager.PauseCanvas.SetActive(true);
+    //    //----WIDOCZNOŒÆ MYSZY W MENU PAUZY--------------------------
+    //    //Cursor.lockState = CursorLockMode.None;
+    //    //Cursor.visible = true;
+
     //}
-
-    void Update()
-    {
-        if (Player.GetComponent<InputHandler>().IsPausing)                         
-            PauseOn();            
-    }
-    public void PauseOn()
-    {
-        PauseMenuUI.SetActive(true);
-
-
-        //Time.timeScale = 0;
-        //Player.GetComponent<InputHandler>().enabled = false;
-        //Player.GetComponent<CameraMovement>().enabled = false;
-        //UIHandler.enabled = true;
-        //MenuManager.PauseCanvas.SetActive(true);
-        //----WIDOCZNOŒÆ MYSZY W MENU PAUZY--------------------------
-        //Cursor.lockState = CursorLockMode.None;
-        //Cursor.visible = true;
-
-    }
  
 
 }

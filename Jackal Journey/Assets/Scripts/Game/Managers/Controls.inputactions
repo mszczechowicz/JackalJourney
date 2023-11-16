@@ -58,15 +58,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Pause",
-                    "type": "Button",
-                    "id": "15459d21-c59e-40fb-8ae5-aff150bd0cbf",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -267,28 +258,6 @@
                     "action": "Interaction",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3e90ee96-a776-4eb2-bd02-4ea84662e721",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Mouse & Keyboard",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "34223da1-6894-4d7b-8fa2-5a40c514b03a",
-                    "path": "<Keyboard>/p",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         },
@@ -304,32 +273,12 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "BackSpace",
-                    "type": "Button",
-                    "id": "c540dab6-5316-4705-addf-d17bcc43ebe5",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "c9f18633-94f1-482d-9412-dd28679187e8",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Mouse & Keyboard",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9847fbf3-5c94-4b67-b0c6-5202166a9081",
                     "path": "<Keyboard>/p",
                     "interactions": "",
                     "processors": "",
@@ -340,12 +289,12 @@
                 },
                 {
                     "name": "",
-                    "id": "a1ed3e92-f700-409e-8fe0-501c2195f183",
-                    "path": "<Keyboard>/backspace",
+                    "id": "9847fbf3-5c94-4b67-b0c6-5202166a9081",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "Mouse & Keyboard",
-                    "action": "BackSpace",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
