@@ -5,7 +5,7 @@ using UnityEngine;
 public class PauseMenuUI : MonoBehaviour
 {
     [SerializeField] GameObject Player;
-    [SerializeField] UIHandler UIHandler;
+    
 
     private void Start()
     {
@@ -16,18 +16,18 @@ public class PauseMenuUI : MonoBehaviour
     {
         if (Player == null) return;
         Time.timeScale = 0;
-        //Player.GetComponent<InputHandler>().controls.Disable();
+        
         Player.GetComponent<CameraMovement>().enabled = false;
-       // UIHandler.enabled = false;
+       
     }
 
     private void OnDisable()
     {
         if (Player == null) return;
         Time.timeScale = 1;
-       // Player.GetComponent<InputHandler>().controls.Enable();
+       
         Player.GetComponent<CameraMovement>().enabled = true;
-       // UIHandler.enabled = true;
+    
     }
 
     public void Save()
