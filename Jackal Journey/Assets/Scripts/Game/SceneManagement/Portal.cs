@@ -13,37 +13,53 @@ public class Portal : MonoBehaviour, IInteractable
         StartCoroutine(GoToNextScene());
     }
 
-    enum PortalId:byte
+    enum PortalId : byte
     {
-        None,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,
+        None, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z,
     }
     public enum Map
     {
         None,
-       Level101,
-       Level103
+        Level101,
+        Level103
     }
-    
+
     [SerializeField] PortalId portalId = PortalId.None;
 
     [SerializeField] Map destinationMap = Map.None;
     [SerializeField] PortalId destinationPortalId = PortalId.None;
-   
+
     [SerializeField] private Transform SpawnPoint;
-    [SerializeField] private GameObject Player;      
+    [SerializeField] private GameObject Player;
+
+    [SerializeField] float fadeOutTime = 1f;
+    [SerializeField] float fadeInTime = 2f;
+    [SerializeField] float fadeWaitTime = 2f;
     private IEnumerator GoToNextScene()
     {
 
         string sceneName = SceneManager.GetActiveScene().name;
         string destMapIndex = destinationMap.ToString();
 
-        DontDestroyOnLoad(gameObject);            
-        
+       
+        DontDestroyOnLoad(gameObject);
+
+        Fader fader = FindObjectOfType<Fader>();
+        yield return fader.FadeOut(fadeOutTime);
+        //Save current level
+        SavingWrapper wrapper = FindObjectOfType<SavingWrapper>();
+        wrapper.Save();
         yield return SceneManager.LoadSceneAsync(destMapIndex);                
 
-        Portal otherPortal = GetOtherPortal();
+        //Load current level
+        wrapper.Load();
 
+        Portal otherPortal = GetOtherPortal();
         UpdatePlayerPosition(otherPortal);
+        wrapper.Save();
+
+        yield return new WaitForSeconds(fadeWaitTime);
+        yield return fader.FadeIn(fadeInTime);
 
         Destroy(gameObject);
       

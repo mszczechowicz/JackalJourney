@@ -1,9 +1,10 @@
+using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyStateMachine : StateMachine
+public class EnemyStateMachine : StateMachine, IJsonSaveable
 {
     [field: SerializeField] public CharacterController CharacterController { get; private set; }
     [field: SerializeField] public Animator Animator { get; private set; }
@@ -28,11 +29,14 @@ public class EnemyStateMachine : StateMachine
 
     private void Start()
     {
+
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
 
         Agent.updatePosition = false;
         Agent.updateRotation = false;
-
+        if(Health.healthPoints==0)
+            SwitchState(new EnemyDeadState(this));
+        else
         SwitchState(new EnemyIdleState(this));
     }
 
@@ -65,4 +69,17 @@ public class EnemyStateMachine : StateMachine
         Gizmos.DrawWireSphere(transform.position, PlayerChasingRange);
     }
 
+    public JToken CaptureAsJToken()
+    {
+        return transform.position.ToToken();
+    }
+
+    public void RestoreFromJToken(JToken state)
+    {
+        CharacterController.enabled = false;
+        ForceReceiver.enabled = false;
+        transform.position = state.ToVector3();
+        CharacterController.enabled = true;
+        ForceReceiver.enabled = true;
+    }
 }

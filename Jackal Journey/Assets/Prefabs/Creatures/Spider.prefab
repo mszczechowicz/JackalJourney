@@ -477,6 +477,7 @@ GameObject:
   - component: {fileID: 3788337141506730566}
   - component: {fileID: 1476775962889148204}
   - component: {fileID: 2850476419529541297}
+  - component: {fileID: 8345746607152755075}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Untagged
@@ -523,7 +524,7 @@ MonoBehaviour:
   <MovementSpeed>k__BackingField: 5
   <AttackRange>k__BackingField: 1
   <Weapon>k__BackingField: {fileID: 2086364184731437014}
-  <AttackDamage>k__BackingField: 20
+  <AttackDamage>k__BackingField: 100
   <AttackKnockback>k__BackingField: 4
 --- !u!114 &3027677452954739084
 MonoBehaviour:
@@ -587,7 +588,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165c468aa74dcfd4fb35b0c29c454feb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 100
+  true_healthSlider: {fileID: 0}
+  easy_healthSlider: {fileID: 0}
+  healthPoints: 0
+  onDie_UnityEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &3788337141506730566
 Animator:
   serializedVersion: 5
@@ -644,6 +651,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponLogic: {fileID: 9126096543833869049}
+--- !u!114 &8345746607152755075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378928488918808988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ea8b2683969404280a49ca9e3e9b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueIdentifier: 
 --- !u!1 &1406598938447021193
 GameObject:
   m_ObjectHideFlags: 0
