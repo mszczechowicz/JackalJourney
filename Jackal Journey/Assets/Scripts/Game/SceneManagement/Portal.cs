@@ -21,7 +21,13 @@ public class Portal : MonoBehaviour, IInteractable
     {
         None,
         Level101,
-        Level103
+        Level103,
+        Entrance,
+        FirstRoom,
+        TrapRoom,
+        ParkourRoom,
+        ElevatorRoom,
+        BossRoom
     }
 
     [SerializeField] PortalId portalId = PortalId.None;
