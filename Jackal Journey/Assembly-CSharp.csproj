@@ -60,9 +60,8 @@
     <Analyzer Include="D:\Program Files\Unity\UnityEditor\2022.3.4f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AnalyticsManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\AnalyticsManager.cs" />
     <Compile Include="Assets\Art\Shaders\SwordSlash\SlashEnable.cs" />
-    <Compile Include="Assets\Respawner.cs" />
     <Compile Include="Assets\Art\Shaders\Dissolve\DissolverController.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\MainMenuManager.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyBaseState.cs" />
@@ -70,9 +69,9 @@
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerFreeLookState.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\PauseMenuUI.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyStateMachine.cs" />
-    <Compile Include="Assets\UISwitcher.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyIdleState.cs" />
     <Compile Include="Assets\Scripts\Game\Statistics\Health.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Respawner.cs" />
     <Compile Include="Assets\Art\Shaders\EntireScreenShader\Blit.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\WeaponHandler.cs" />
     <Compile Include="Assets\Scripts\Game\GameInstances\GameManager.cs" />
@@ -97,6 +96,7 @@
     <Compile Include="Assets\Scripts\UI\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerDodgeState.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\WeaponDamage.cs" />
+    <Compile Include="Assets\Scripts\Game\Combat\Targeter.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerAttackingState.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\InteractableObject.cs" />
@@ -106,6 +106,7 @@
     <Compile Include="Assets\Scripts\Game\StateMachine\StateMachine.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\SaveLoadUI.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\SavingSystem\SavingWrapper.cs" />
+    <Compile Include="Assets\Scripts\Game\Combat\Target.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerStateMachine.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\SavingSystem\JsonSavingSystem.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\ForceReceiver.cs" />
