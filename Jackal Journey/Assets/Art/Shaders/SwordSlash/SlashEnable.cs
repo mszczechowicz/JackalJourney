@@ -6,26 +6,32 @@ public class SlashEnable : MonoBehaviour
 {
 
     [SerializeField] private VisualEffect SlashVFX;
+    [SerializeField] private ParticleSystem SlashParticle;
 
     //public void OnSlash()
     //{
-        
-    //    PlayParticle();
-       
 
-        
+    //    PlayParticle();
+
+
+
     //}
+    private void Start()
+    {
+        SlashParticle.Stop();
+    }
     public void OffSlash()
     {
         SlashVFX.Stop();
+        SlashParticle.Stop();
     }
 
     public void PlayParticle()
     {
         
         SlashVFX.Play();
-        Debug.Log("Tak");
-        
+        SlashParticle.Play();
+
     }
 }
 

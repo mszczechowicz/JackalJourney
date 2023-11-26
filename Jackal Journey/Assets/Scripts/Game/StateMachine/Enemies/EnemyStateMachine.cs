@@ -39,7 +39,7 @@ public class EnemyStateMachine : StateMachine, IJsonSaveable
         else
         SwitchState(new EnemyIdleState(this));
     }
-
+    
     private void OnEnable()
     {
         Health.OnTakeDamage += HandleTakeDamage;
