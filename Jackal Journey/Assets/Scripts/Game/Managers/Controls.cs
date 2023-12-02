@@ -80,6 +80,24 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Target"",
+                    ""type"": ""Button"",
+                    ""id"": ""919364fc-7c3d-4333-8c6b-a2a37128ddcd"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CancelTargeting"",
+                    ""type"": ""Button"",
+                    ""id"": ""8b674337-37d6-4b72-8b37-fff55d97e2e1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -280,6 +298,28 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""Interaction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0cb54b5d-13e5-47c9-bd43-86e7ce1f53ba"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": ""Mouse & Keyboard"",
+                    ""action"": ""Target"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""082c7b55-ee07-404f-af99-1ed3178bf44b"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": ""Mouse & Keyboard"",
+                    ""action"": ""CancelTargeting"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -361,6 +401,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         m_Player_Interaction = m_Player.FindAction("Interaction", throwIfNotFound: true);
+        m_Player_Target = m_Player.FindAction("Target", throwIfNotFound: true);
+        m_Player_CancelTargeting = m_Player.FindAction("CancelTargeting", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Pause = m_UI.FindAction("Pause", throwIfNotFound: true);
@@ -431,6 +473,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Attack;
     private readonly InputAction m_Player_Interaction;
+    private readonly InputAction m_Player_Target;
+    private readonly InputAction m_Player_CancelTargeting;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -441,6 +485,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
         public InputAction @Interaction => m_Wrapper.m_Player_Interaction;
+        public InputAction @Target => m_Wrapper.m_Player_Target;
+        public InputAction @CancelTargeting => m_Wrapper.m_Player_CancelTargeting;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -468,6 +514,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Interaction.started += instance.OnInteraction;
             @Interaction.performed += instance.OnInteraction;
             @Interaction.canceled += instance.OnInteraction;
+            @Target.started += instance.OnTarget;
+            @Target.performed += instance.OnTarget;
+            @Target.canceled += instance.OnTarget;
+            @CancelTargeting.started += instance.OnCancelTargeting;
+            @CancelTargeting.performed += instance.OnCancelTargeting;
+            @CancelTargeting.canceled += instance.OnCancelTargeting;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -490,6 +542,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Interaction.started -= instance.OnInteraction;
             @Interaction.performed -= instance.OnInteraction;
             @Interaction.canceled -= instance.OnInteraction;
+            @Target.started -= instance.OnTarget;
+            @Target.performed -= instance.OnTarget;
+            @Target.canceled -= instance.OnTarget;
+            @CancelTargeting.started -= instance.OnCancelTargeting;
+            @CancelTargeting.performed -= instance.OnCancelTargeting;
+            @CancelTargeting.canceled -= instance.OnCancelTargeting;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -579,6 +637,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnInteraction(InputAction.CallbackContext context);
+        void OnTarget(InputAction.CallbackContext context);
+        void OnCancelTargeting(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

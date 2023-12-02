@@ -74,7 +74,20 @@ public class AnalyticsManager : MonoBehaviour
     {
         AnalyticsService.Instance.StopDataCollection();       
     }
-   
+
+    public void SwitchAalyticsOn()
+    {
+        OptIn();
+        PlayerPrefs.SetInt(AgreeToCollectData, 1);
+    }
+    public void SwitchAalyticsOff()
+    {
+        OptOut();
+        PlayerPrefs.SetInt(AgreeToCollectData, 0);
+    }
+
+
+
     public void RequestDataDeletion()
     {
         AnalyticsService.Instance.RequestDataDeletion();

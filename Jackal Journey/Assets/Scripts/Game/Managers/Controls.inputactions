@@ -58,6 +58,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Target",
+                    "type": "Button",
+                    "id": "919364fc-7c3d-4333-8c6b-a2a37128ddcd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CancelTargeting",
+                    "type": "Button",
+                    "id": "8b674337-37d6-4b72-8b37-fff55d97e2e1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -256,6 +274,28 @@
                     "processors": "",
                     "groups": "Mouse & Keyboard",
                     "action": "Interaction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0cb54b5d-13e5-47c9-bd43-86e7ce1f53ba",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "Mouse & Keyboard",
+                    "action": "Target",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "082c7b55-ee07-404f-af99-1ed3178bf44b",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "Mouse & Keyboard",
+                    "action": "CancelTargeting",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

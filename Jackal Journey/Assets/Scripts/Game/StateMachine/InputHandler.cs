@@ -18,6 +18,10 @@ public class InputHandler : MonoBehaviour, Controls.IPlayerActions
     public event Action DashEvent;
 
     public event Action JumpEvent;
+
+    public event Action TargetEvent;
+
+    public event Action TargetCancelEvent;
    
  
     public Controls controls;
@@ -99,6 +103,19 @@ public class InputHandler : MonoBehaviour, Controls.IPlayerActions
         
         }
 
+    }
+
+    public void OnTarget(InputAction.CallbackContext context)
+    {
+        if (!context.performed) { return; }
+
+        TargetEvent?.Invoke();
+    }
+
+    public void OnCancelTargeting(InputAction.CallbackContext context)
+    {
+        if (!context.performed) { return; }
+        TargetCancelEvent?.Invoke();
     }
 
 

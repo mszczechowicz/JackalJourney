@@ -113,6 +113,7 @@
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerImpactState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyChasingState.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\SavingSystem\JsonSaveableEntity.cs" />
+    <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerTargetingState.cs" />
     <Compile Include="Assets\Scripts\UI\SceneLoaderCallback.cs" />
   </ItemGroup>
   <ItemGroup>

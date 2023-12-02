@@ -4,14 +4,11 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
-//using static UnityEditor.Experimental.GraphView.GraphView;
 
  
 public class PlayerFreeLookState : PlayerBaseState
 {
 
-
-    //Stringtohash jest Szybsze w obliczaniu ni¿ string
     private readonly int VelocityHash = Animator.StringToHash("Velocity");
     
 
@@ -20,6 +17,7 @@ public class PlayerFreeLookState : PlayerBaseState
 
     private readonly int FreeLookHash = Animator.StringToHash("PlayerFreeLookState");
 
+    
 
     private const float CrossFadeDuration = 0.1f;
 
@@ -38,6 +36,7 @@ public class PlayerFreeLookState : PlayerBaseState
 
         stateMachine.InputHandler.JumpEvent += OnJump;
         stateMachine.InputHandler.DashEvent += OnDodge;
+        stateMachine.InputHandler.TargetEvent += OnTarget;
     }
 
 
@@ -77,10 +76,6 @@ public class PlayerFreeLookState : PlayerBaseState
         Move(CalculateSlope(movement) * stateMachine.FreeLookMovementSpeed, deltaTime);
 
 
-
-
-
-
         if (stateMachine.InputHandler.MovementValue == Vector2.zero)
         {
 
@@ -95,9 +90,6 @@ public class PlayerFreeLookState : PlayerBaseState
         FaceMovementDirection(movement, deltaTime);
 
 
-
-
-
     }
     #endregion
     public override void Exit()
@@ -105,6 +97,7 @@ public class PlayerFreeLookState : PlayerBaseState
 
         stateMachine.InputHandler.JumpEvent -= OnJump;
         stateMachine.InputHandler.DashEvent -= OnDodge;
+        stateMachine.InputHandler.TargetEvent -= OnTarget;
 
     }
     #region Movement_Data
@@ -122,39 +115,9 @@ public class PlayerFreeLookState : PlayerBaseState
         forward.Normalize();
         right.Normalize();
 
-        // STARY KOD DO DASHOWANIA BEZ U¯YCIA DASHA JAKO STANU
-        //zostawiam na wszelki wypadek
-
-        //if (remainingDodgeTime > 0f)
-        //{
-
-        //    //movement += stateMachine.MainCameraTransform.right * dodgingDirectionInput.x * stateMachine.DodgeLength / stateMachine.DodgeDuration;
-        //    //movement += stateMachine.MainCameraTransform.forward * dodgingDirectionInput.y * stateMachine.DodgeLength / stateMachine.DodgeDuration;
-        //    movement = forward * stateMachine.InputHandler.MovementValue.y + right * stateMachine.InputHandler.MovementValue.x;
-        //    if (movement == Vector3.zero)
-        //    {
-        //        stateMachine.Animator.Play(DashHash);
-        //        stateMachine.ForceReceiver.AddDodgeForce(stateMachine.transform.forward * stateMachine.DodgeForce);
-        //    }
-        //    else
-        //    {
-        //        stateMachine.Animator.Play(DodgeHash);
-        //        stateMachine.ForceReceiver.AddDodgeForce(stateMachine.transform.forward * stateMachine.DodgeForce);
-        //    }
-
-
-        //    //remainingDodgeTime = Mathf.Max(remainingDodgeTime - deltaTime, 0f);
-        //    //Debug.Log(movement);
-
-        //}
-        //else
-
         movement = forward * stateMachine.InputHandler.MovementValue.y + right * stateMachine.InputHandler.MovementValue.x;
 
         return movement;
-
-
-
     }
     private void FaceMovementDirection(Vector3 movement, float deltatime)
     {
@@ -176,17 +139,18 @@ public class PlayerFreeLookState : PlayerBaseState
 
     private void OnDodge()
     {
-        //if (stateMachine.InputHandler.MovementValue == Vector2.zero)
-        //{
-        //    return;
-        //}
-        //else
-        //{
-        stateMachine.SwitchState(new PlayerDodgeState(stateMachine, stateMachine.InputHandler.MovementValue.normalized));
-        //}
+        stateMachine.SwitchState(new PlayerDodgeState(stateMachine, stateMachine.InputHandler.MovementValue.normalized));      
     }
 
     #endregion
 
+    private void OnTarget()
+    {
+
+        if (!stateMachine.Targeter.SelectTarget()) { return; }
+
+        stateMachine.SwitchState(new PlayerTargetingState(stateMachine));
+    
+    }
     
 }
