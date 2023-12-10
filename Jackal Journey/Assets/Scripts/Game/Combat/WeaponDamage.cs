@@ -19,6 +19,8 @@ public class WeaponDamage : MonoBehaviour
     {
         if(other == myCollider) { return; }
 
+        if(other.tag == myCollider.tag) { return; }
+
         if(alreadyCollideWith.Contains(other)) { return; }
 
         alreadyCollideWith.Add(other);

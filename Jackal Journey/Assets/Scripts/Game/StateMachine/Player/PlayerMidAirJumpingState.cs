@@ -16,7 +16,8 @@ public class PlayerMidAirJumpingState : PlayerBaseState
     public override void Enter()
     {
         IsMidAirJumped = true;
-
+     
+        stateMachine.MomentumVFX.Play();
         stateMachine.ForceReceiver.VerticalVelocity = 0f;
 
         stateMachine.ForceReceiver.AddForce(stateMachine.transform.forward * 10f);
@@ -60,6 +61,8 @@ public class PlayerMidAirJumpingState : PlayerBaseState
     public override void Exit()
     {
         IsMidAirJumped = true;
+        stateMachine.MomentumVFX.Stop();
+       
     }
 
     private Vector3 CalculateMovementInAir()

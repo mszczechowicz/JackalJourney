@@ -6,7 +6,7 @@ public class SlashEnable : MonoBehaviour
 {
 
     [SerializeField] private VisualEffect SlashVFX;
-    [SerializeField] private ParticleSystem SlashParticle;
+    //[SerializeField] private ParticleSystem SlashParticle;
 
     //public void OnSlash()
     //{
@@ -18,19 +18,19 @@ public class SlashEnable : MonoBehaviour
     //}
     private void Start()
     {
-        SlashParticle.Stop();
+      //  SlashParticle.Stop();
     }
     public void OffSlash()
     {
         SlashVFX.Stop();
-        SlashParticle.Stop();
+       // SlashParticle.Stop();
     }
 
     public void PlayParticle()
     {
         
         SlashVFX.Play();
-        SlashParticle.Play();
+       // SlashParticle.Play();
 
     }
 }

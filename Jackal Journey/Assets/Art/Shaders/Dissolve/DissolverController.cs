@@ -10,48 +10,50 @@ public class DissolverController : MonoBehaviour
     public float refreshRate = 0.025f;
 
     private Material[] skinnedMaterials;
-    Animator m_Animator;
-    
 
 
-
-    // Start is called before the first frame update
     void Start()
     {
-        m_Animator = gameObject.GetComponent<Animator>();
-        if (skinnedMesh != null) 
+
+        if (skinnedMesh != null)
         {
-            skinnedMaterials  = skinnedMesh.materials;
+            skinnedMaterials = skinnedMesh.materials;
+        }
+        else
+        {
+            Debug.LogError("SkinnedMeshRenderer is not assigned to DissolverController.");
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public IEnumerator DissolveCo()
     {
-        if(Input.GetKeyDown(KeyCode.E))
-            {
-                StartCoroutine(DissolveCo());
-            }
-        //if (m_Animator.GetCurrentAnimatorStateInfo(0).IsName("SpiderDeath"))
-        //{
-        //    StartCoroutine(DissolveCo());
-        //}
-    }
-    IEnumerator DissolveCo()
-    {
-        if(VFXGraph != null)
+        if (VFXGraph != null)
         {
+            Debug.Log("Play particle enemy");
             VFXGraph.Play();
         }
-        float counter = 0;
-        while (skinnedMaterials[0].GetFloat("_DissolveAmmount") < 1)
+        else
         {
-            counter += dissolveRate;
-            for(int i = 0; i < skinnedMaterials.Length; i++)
-            {
-                skinnedMaterials[i].SetFloat("_DissolveAmmount", counter);
-            }
-            yield return new WaitForSeconds(refreshRate);
+            Debug.LogWarning("VFXGraph is not assigned to DissolverController.");
         }
+
+        if (skinnedMaterials == null || skinnedMaterials.Length == 0)
+        {
+            Debug.LogError("No materials found on SkinnedMeshRenderer.");
+            yield break; // Exit the coroutine if no materials are found.
+        }
+
+
+        float counter = 0;
+            while (skinnedMaterials[0].GetFloat("_DissolveAmmount") < 1)
+            {
+                counter += dissolveRate;
+                for (int i = 0; i < skinnedMaterials.Length; i++)
+                {
+                    skinnedMaterials[i].SetFloat("_DissolveAmmount", counter);
+                }
+                yield return new WaitForSeconds(refreshRate);
+            }
+        Debug.Log("DissolveCo completed.");
     }
 }

@@ -18,6 +18,7 @@ public class PlayerDeadState : PlayerBaseState
         stateMachine.Animator.CrossFadeInFixedTime(DeadHash, CrossFadeDuration);
         stateMachine.Weapon.gameObject.SetActive(false);
         stateMachine.Health.onDie_UnityEvent.AddListener(Respawn);
+       
     }
 
     public override void Tick(float deltaTime) { }

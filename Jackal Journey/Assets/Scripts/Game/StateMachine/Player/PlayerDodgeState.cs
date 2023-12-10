@@ -23,7 +23,8 @@ public class PlayerDodgeState : PlayerBaseState
     {
         remainingDodgeTime = stateMachine.DodgeDuration;
         stateMachine.Health.SetInvulnerable(true);
-
+       
+        stateMachine.MomentumVFX.Play();
         stateMachine.Animator.CrossFadeInFixedTime(DodgeHash, CrossFadeDuration);
 
     }
@@ -58,6 +59,8 @@ public class PlayerDodgeState : PlayerBaseState
     public override void Exit()
     {
         stateMachine.Health.SetInvulnerable(false);
+        stateMachine.MomentumVFX.Stop();
+       
     }
     
 

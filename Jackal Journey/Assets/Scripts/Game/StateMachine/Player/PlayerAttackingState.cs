@@ -21,15 +21,9 @@ public class PlayerAttackingState : PlayerBaseState
 
     public override void Enter()
     {
-
         stateMachine.Weapon.SetAttack(attack.Damage,attack.KnockBack);
         stateMachine.Animator.CrossFadeInFixedTime(attack.AnimationName, attack.TransitionDuration);
-
-        
-       
     }
-
-   
 
     public override void Tick(float deltaTime)
     {
@@ -37,6 +31,7 @@ public class PlayerAttackingState : PlayerBaseState
         Move(deltaTime);
 
         CalculateAttackDirection(deltaTime);
+        
 
         float normalizedTime = GetNormalizedTime(stateMachine.Animator);
 
@@ -44,9 +39,7 @@ public class PlayerAttackingState : PlayerBaseState
         {
             if (normalizedTime >= attack.ForceTime)
             {
-                TryApplyForce();
-              
-               
+                TryApplyForce();             
             }
 
 
@@ -57,8 +50,15 @@ public class PlayerAttackingState : PlayerBaseState
         }
         else
         {
-            stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
-            
+            if (stateMachine.Targeter.CurrentTarget != null)
+            {
+                stateMachine.SwitchState(new PlayerTargetingState(stateMachine));
+            }
+            else
+            {
+                stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
+            }
+
         }
 
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyDeadState : EnemyBaseState
@@ -12,6 +13,11 @@ public class EnemyDeadState : EnemyBaseState
     {
         stateMachine.Animator.CrossFadeInFixedTime(DeadHash, CrossFadeDuration);
         stateMachine.Weapon.gameObject.SetActive(false);
+       
+        stateMachine.Health.onDie_UnityEvent.AddListener(DissolveEnemy);
+       
+        
+        
     }
 
     public override void Tick(float deltaTime)
@@ -23,5 +29,22 @@ public class EnemyDeadState : EnemyBaseState
         
     }
 
+    private void DissolveEnemy()
+    {
+        stateMachine.StartCoroutine(DissolveRoutine());
 
+    }
+
+    private IEnumerator DissolveRoutine()
+    {
+
+        Debug.Log("DisssolveENEMY)");
+        //yield return new WaitForSeconds(5f);
+        yield return stateMachine.DissolverController.DissolveCo();
+        stateMachine.PermamentDead();
+
+    }
+
+   
 }
+

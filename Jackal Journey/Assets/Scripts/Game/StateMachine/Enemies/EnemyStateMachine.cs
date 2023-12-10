@@ -24,6 +24,7 @@ public class EnemyStateMachine : StateMachine, IJsonSaveable
 
     [field: SerializeField] public int AttackKnockback { get; private set; }
 
+    [field: SerializeField] public DissolverController DissolverController { get; private set; }
     public Health Player { get; private set; }
 
 
@@ -82,4 +83,9 @@ public class EnemyStateMachine : StateMachine, IJsonSaveable
         CharacterController.enabled = true;
         ForceReceiver.enabled = true;
     }
+    public void PermamentDead()
+    {
+        Destroy(this.gameObject);
+    }
+
 }

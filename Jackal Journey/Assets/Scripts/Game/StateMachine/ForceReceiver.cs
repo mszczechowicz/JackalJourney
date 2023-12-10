@@ -78,10 +78,7 @@ public class ForceReceiver : MonoBehaviour
     }
     public void AddDodgeForce(Vector3 force)
     {
-        
-
         impact += force;
-
     }
 
 

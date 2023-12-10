@@ -57,8 +57,8 @@ public class EnemyChasingState : EnemyBaseState
             Move(stateMachine.Agent.desiredVelocity.normalized * stateMachine.MovementSpeed, deltatime);
         }
 
-    
 
+        stateMachine.Agent.nextPosition = stateMachine.transform.position;
         stateMachine.Agent.velocity = stateMachine.CharacterController.velocity;
     }
 

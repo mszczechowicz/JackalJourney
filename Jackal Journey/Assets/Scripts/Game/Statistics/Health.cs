@@ -10,33 +10,17 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour , IJsonSaveable
 {
     [SerializeField] private int maxHealth = 1000;
-    [SerializeField] private Slider true_healthSlider;
-    [SerializeField] private Slider easy_healthSlider;
     [SerializeField] public int healthPoints;
-    private float easylerpingintoHealth = 0.01f;
 
-   
     private bool isInvulnerable;
     //--ImpactStateLogic komentujê do czas a¿ zaimplementujemy "HeavyAttack dla bossów"
     public event Action OnTakeDamage;
     
+
     public event Action OnDie;
     
     [HideInInspector] public UnityEvent onDie_UnityEvent;
-
-
-    private void Update()
-    {
-        //do przeniesienia te wartoœci tam gdzie bedzie zadawane obra¿enie a nie w updacie wszystko na si³ê robione
-        true_healthSlider.value = healthPoints;
-        
-
-        if (true_healthSlider.value != easy_healthSlider.value)
-        {
-            easy_healthSlider.value = Mathf.Lerp(easy_healthSlider.value, true_healthSlider.value, easylerpingintoHealth);
-           
-        }
-    }
+ 
 
     public bool IsDead => GetHealthPoints() == 0;
 
@@ -59,11 +43,11 @@ public class Health : MonoBehaviour , IJsonSaveable
 
         healthPoints = maxHealth;
 
-        true_healthSlider.maxValue = maxHealth;
-        true_healthSlider.minValue = 0;
+        //true_healthSlider.maxValue = maxHealth;
+        //true_healthSlider.minValue = 0;
 
-        easy_healthSlider.maxValue = maxHealth;
-        easy_healthSlider.minValue = 0;
+        //easy_healthSlider.maxValue = maxHealth;
+        //easy_healthSlider.minValue = 0;
     }
 
     public void SetInvulnerable(bool isInvulnerable)
@@ -91,7 +75,7 @@ public class Health : MonoBehaviour , IJsonSaveable
             onDie_UnityEvent.Invoke();
         }
 
-        Debug.Log(healthPoints);
+        //Debug.Log(healthPoints);
     }
     public JToken CaptureAsJToken()
     {

@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class PlayerStateMachine : StateMachine, IJsonSaveable
 {
-
+    [field: Header("Components")]
     [field: SerializeField] public InputHandler InputHandler { get; private set; }
 
     [field: SerializeField] public CharacterController CharacterController { get; private set; }
@@ -21,47 +21,56 @@ public class PlayerStateMachine : StateMachine, IJsonSaveable
 
     [field: SerializeField] public Health Health { get; private set; }
 
-    [field: SerializeField] public InteractionHandler InteractionHandler { get; private set; }
-    [field: SerializeField] public float FreeLookMovementSpeed { get; private set; }
-    [field: SerializeField] public float TargetingLookMovementSpeed { get; private set; }
+    [field: SerializeField] public WeaponDamage Weapon { get; private set; }
 
+    [field: SerializeField] public csHomebrewIK IK { get; private set; }
+
+    [field: SerializeField] public InteractionHandler InteractionHandler { get; private set; }
+   
     [field: SerializeField] public Targeter Targeter { get; private set; }
 
+
+    [field: Header("MovementSettings")]
+    [field: SerializeField] public float FreeLookMovementSpeed { get; private set; }
+    [field: SerializeField] public float TargetingLookMovementSpeed { get; private set; }
     [field: SerializeField] public float RotationDamping { get; private set; }
 
+
+    [field: Header("JumpingSettings")]
     [field: SerializeField] public float JumpForce { get; private set; }
     [field: SerializeField] public float MidAirJumpForce { get; private set; }
 
     [field: SerializeField] public float AirMovementSpeed { get; private set; }
-    [field: SerializeField] public float DodgeForce { get; private set; }
-    [field: SerializeField] public float DodgeDuration { get; private set; }
 
+
+    [field: Header("VFXSettings")]
+    [field: SerializeField] public ParticleSystem MomentumVFX { get; private set; }
+
+
+    [field: Header("DodgingSettings")]
+   
+    
+    [field: SerializeField] public float DodgeDuration { get; private set; }
     [field: SerializeField] public float DodgeLength { get; private set; }
 
-  
-   
+    [field: SerializeField] public float DashForce { get; private set; }
+    [field: SerializeField] public float DashDuration { get; private set; }
+    [field: SerializeField] public float DashLength { get; private set; }
 
     public float PreviousDodgeTime { get; private set; } = Mathf.NegativeInfinity;
 
-
-
+    [field: Header("CombatSettings")]
     [field: SerializeField] public Attack[] Attacks { get; private set; }
 
-    [field: SerializeField] public WeaponDamage Weapon { get; private set; }
-
-    public Transform MainCameraTransform { get; private set; }
-
-    [field: SerializeField] public csHomebrewIK IK { get; private set; }
+  
 
     [field: Header("RespawnSettings")]
-    //[field: SerializeField] public Respawner Respawner { get; private set; }
-
     [field: SerializeField]public Transform respawnLocation{ get; private set; }
     [field: SerializeField]public float respawnDelay { get; private set; }
     [field: SerializeField]public float fadeTime { get; private set; }
-
     public Fader fader{ get; set; }
-    public UIHandler uiHandler { get; set; }    
+    public UIHandler uiHandler { get; set; }
+    public Transform MainCameraTransform { get; private set; }
 
     private void Start()
     {
