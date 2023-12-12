@@ -124,5 +124,7 @@ public class PlayerStateMachine : StateMachine, IJsonSaveable
         ForceReceiver.enabled = true;
 
     }
+
+    
    
 }

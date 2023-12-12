@@ -107,4 +107,11 @@ public class PlayerAttackingState : PlayerBaseState
       
     }
 
+    
+
+    public void PlayVFXSlash()
+    {
+        attack.VFXAttack.Play();
+    }
+
 }
