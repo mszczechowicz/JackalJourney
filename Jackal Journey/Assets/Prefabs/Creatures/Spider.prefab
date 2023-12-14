@@ -555,6 +555,7 @@ GameObject:
   - component: {fileID: 2850476419529541297}
   - component: {fileID: 8345746607152755075}
   - component: {fileID: 2010088435351246610}
+  - component: {fileID: 2180166884241302442}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Untagged
@@ -600,10 +601,10 @@ MonoBehaviour:
   <PlayerChasingRange>k__BackingField: 10
   <Agent>k__BackingField: {fileID: 1476775962889148204}
   <Health>k__BackingField: {fileID: 386725315527438162}
-  <MovementSpeed>k__BackingField: 5
+  <MovementSpeed>k__BackingField: 2
   <AttackRange>k__BackingField: 1
   <Weapon>k__BackingField: {fileID: 2086364184731437014}
-  <AttackDamage>k__BackingField: 20
+  <AttackDamage>k__BackingField: 50
   <AttackKnockback>k__BackingField: 4
   <DissolverController>k__BackingField: {fileID: 0}
 --- !u!114 &3027677452954739084
@@ -668,7 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165c468aa74dcfd4fb35b0c29c454feb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 300
   healthPoints: 0
   onDie_UnityEvent:
     m_PersistentCalls:
@@ -754,6 +755,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e2951de6d598f43a4a4b42b45ea0ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2180166884241302442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378928488918808988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6beb23f363f994243b9dfe0953f682be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {fileID: 386725315527438162}
+  true_healthSlider: {fileID: 6857415826743379980}
+  easy_healthSlider: {fileID: 3505690696693604798}
 --- !u!1 &1406598938447021193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2457,6 +2473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4496239006705362695}
   - component: {fileID: 3990128359403914448}
+  - component: {fileID: 6363004586487064926}
   m_Layer: 0
   m_Name: spider
   m_TagString: Untagged
@@ -2598,6 +2615,22 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0026221003, y: -0.0008623386, z: -0.0021275233}
     m_Extent: {x: 0.0077521866, y: 0.011074731, z: 0.007891395}
   m_DirtyAABB: 0
+--- !u!114 &6363004586487064926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5380652058411799972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af384dfb099f144ea2015c42a0ad16b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinnedMesh: {fileID: 3990128359403914448}
+  VFXGraph: {fileID: 0}
+  dissolveRate: 0.0125
+  refreshRate: 0.025
 --- !u!1 &5624381121091592347
 GameObject:
   m_ObjectHideFlags: 0
@@ -3670,6 +3703,7 @@ GameObject:
   - component: {fileID: 2782637542716853286}
   - component: {fileID: 1504555656341496866}
   - component: {fileID: 2369082291179068297}
+  - component: {fileID: 8279955312673985288}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -3761,6 +3795,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8279955312673985288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7566097344954519938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bd5093237041c43af93ddcf988af87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7592228810771457952
 GameObject:
   m_ObjectHideFlags: 0
