@@ -554,7 +554,6 @@ GameObject:
   - component: {fileID: 1476775962889148204}
   - component: {fileID: 2850476419529541297}
   - component: {fileID: 8345746607152755075}
-  - component: {fileID: 2010088435351246610}
   - component: {fileID: 2180166884241302442}
   m_Layer: 0
   m_Name: Spider
@@ -606,7 +605,7 @@ MonoBehaviour:
   <Weapon>k__BackingField: {fileID: 2086364184731437014}
   <AttackDamage>k__BackingField: 50
   <AttackKnockback>k__BackingField: 4
-  <DissolverController>k__BackingField: {fileID: 0}
+  <DissolverController>k__BackingField: {fileID: 6363004586487064926}
 --- !u!114 &3027677452954739084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,18 +742,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueIdentifier: 
---- !u!114 &2010088435351246610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378928488918808988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17e2951de6d598f43a4a4b42b45ea0ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2180166884241302442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2628,7 +2615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinnedMesh: {fileID: 3990128359403914448}
-  VFXGraph: {fileID: 0}
+  VFXGraph: {fileID: 5165110962647901576}
   dissolveRate: 0.0125
   refreshRate: 0.025
 --- !u!1 &5624381121091592347

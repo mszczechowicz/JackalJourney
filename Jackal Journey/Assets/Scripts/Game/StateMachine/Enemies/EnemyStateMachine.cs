@@ -43,15 +43,21 @@ public class EnemyStateMachine : StateMachine, IJsonSaveable
     
     private void OnEnable()
     {
-        Health.OnTakeDamage += HandleTakeDamage;
+        //DO POPRAWIENIA LOGIKA SPRWADZANIA CZY PRZECIWNIK MA IMPACTSTATE
+        if(this.GetComponent<Target>() == null)
+            Health.OnTakeDamage += HandleTakeDamage;
+
         Health.OnDie += HandleIsDead;
     }
 
     private void OnDisable()
     {
-        Health.OnTakeDamage -= HandleTakeDamage;
+        if (this.GetComponent<Target>() == null)
+            Health.OnTakeDamage -= HandleTakeDamage;
+
         Health.OnDie -= HandleIsDead;
     }
+
 
     private void HandleTakeDamage()
     { 

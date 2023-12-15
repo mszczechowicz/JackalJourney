@@ -40,8 +40,8 @@ public class PlayerDashState : PlayerBaseState
        
             movement += stateMachine.MainCameraTransform.right * dashingDirectionInput.x * stateMachine.DashLength / stateMachine.DashDuration;
             movement += stateMachine.MainCameraTransform.forward * dashingDirectionInput.y * stateMachine.DashLength / stateMachine.DashDuration;
-           
 
+        movement.y = 0f;
         Move(movement, deltaTime);
 
         FaceTarget();
@@ -62,6 +62,8 @@ public class PlayerDashState : PlayerBaseState
                 return;
             }
         }
+
+       
     }
 
     public override void Exit()
