@@ -19,6 +19,7 @@ public class PlayerFallingState : PlayerBaseState
 
     public override void Enter()
     {
+        stateMachine.CharacterController.excludeLayers += LayerMask.GetMask("Spider");
         stateMachine.InputHandler.JumpEvent += OnJump;
         
         stateMachine.Animator.CrossFadeInFixedTime(IdleFallHash, CrossFadeDuration);
@@ -47,7 +48,8 @@ public class PlayerFallingState : PlayerBaseState
     public override void Exit()
     {
         stateMachine.InputHandler.JumpEvent -= OnJump;
-       
+        stateMachine.CharacterController.excludeLayers -= LayerMask.GetMask("Spider");
+
     }
 
     private Vector3 CalculateMovementInAir()
