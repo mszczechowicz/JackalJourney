@@ -414,6 +414,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monument (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 90879f101e15d07438ffba37e3fa62ff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -495,6 +500,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crystal (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -583,6 +593,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crystal
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -795,6 +810,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Amforav2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92ec7e1268302d446847e049e02e1873,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -926,6 +946,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LightPE
+      objectReference: {fileID: 0}
+    - target: {fileID: 2130174774914751980, guid: 57c9609e46c450a4fab036363ec132f1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1145,6 +1170,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Amfora (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da4eaf6a378a2ee499eb8b1cd8613eb0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1163,7 +1193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 155888562}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnubisShrine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1379,6 +1409,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LightPE
+      objectReference: {fileID: 0}
+    - target: {fileID: 2130174774914751980, guid: 57c9609e46c450a4fab036363ec132f1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1601,7 +1636,7 @@ MonoBehaviour:
   destinationMap: 4
   destinationPortalId: 1
   SpawnPoint: {fileID: 418276535}
-  Player: {fileID: 0}
+  Player: {fileID: 895338047}
   fadeOutTime: 1
   fadeInTime: 2
   fadeWaitTime: 2
@@ -1928,6 +1963,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightPE
       objectReference: {fileID: 0}
+    - target: {fileID: 2130174774914751980, guid: 57c9609e46c450a4fab036363ec132f1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2059,6 +2099,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BigTorch (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 247035a290c411240a7a1b8bd6d1b8c0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2362,6 +2407,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Amforav2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92ec7e1268302d446847e049e02e1873,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2564,6 +2614,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigTorch (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 247035a290c411240a7a1b8bd6d1b8c0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2666,6 +2721,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DestroyyedCollumn
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a45830d64a782d4489e75c269eafd6ca,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2759,6 +2819,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigBox (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5609e37ef5c351d4cbbac3cb70f881a5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2785,7 +2850,7 @@ GameObject:
   - component: {fileID: 338720008}
   - component: {fileID: 338720010}
   - component: {fileID: 338720009}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3058,6 +3123,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3208,6 +3278,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigTorch (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 247035a290c411240a7a1b8bd6d1b8c0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3299,6 +3374,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crystal (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3634,6 +3714,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigBox (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5609e37ef5c351d4cbbac3cb70f881a5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3706,7 +3791,7 @@ GameObject:
   - component: {fileID: 415214509}
   - component: {fileID: 415214511}
   - component: {fileID: 415214510}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4025,6 +4110,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Amforav2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92ec7e1268302d446847e049e02e1873,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4040,6 +4130,37 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 348941847}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &457730523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 457730524}
+  m_Layer: 0
+  m_Name: Cutscene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &457730524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457730523}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.431518, y: 6.2110906, z: 8.744093}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &459143870 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0be2c3b02fe5255449eba076c8828e51,
@@ -4125,6 +4246,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4201,6 +4327,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LightPE
+      objectReference: {fileID: 0}
+    - target: {fileID: 2130174774914751980, guid: 57c9609e46c450a4fab036363ec132f1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4286,6 +4417,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LightPE
+      objectReference: {fileID: 0}
+    - target: {fileID: 2130174774914751980, guid: 57c9609e46c450a4fab036363ec132f1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4451,6 +4587,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigBox (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5609e37ef5c351d4cbbac3cb70f881a5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4532,6 +4673,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crystal (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4629,6 +4775,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SmallBoxv2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0c162eea20fa75c448338c3a6793612d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4900,6 +5051,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigTorch (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 247035a290c411240a7a1b8bd6d1b8c0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -5134,6 +5290,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigTorch (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 247035a290c411240a7a1b8bd6d1b8c0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -5218,7 +5379,7 @@ GameObject:
   - component: {fileID: 596452316}
   - component: {fileID: 596452318}
   - component: {fileID: 596452317}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5452,6 +5613,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightPE
       objectReference: {fileID: 0}
+    - target: {fileID: 2130174774914751980, guid: 57c9609e46c450a4fab036363ec132f1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5513,7 +5679,7 @@ GameObject:
   - component: {fileID: 653888430}
   - component: {fileID: 653888432}
   - component: {fileID: 653888431}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5647,6 +5813,103 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.4758139, y: 2.019909, z: 2.4758139}
   m_Center: {x: 0.0000009536743, y: 1.0099545, z: -0.000015258789}
+--- !u!1001 &662722264
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1245879597}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.07
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.64
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.81182426
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.58390194
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -71.451
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_Name
+      value: Crystal (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 871894424}
+  m_SourcePrefab: {fileID: 100100000, guid: 6001a69335c29804d8176889c72fbc00, type: 3}
 --- !u!1001 &673127669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5735,6 +5998,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallBox
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c6d25492d24f6904583ef4bc957fabd5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5759,7 +6027,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 683014866}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cases
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6951,7 +7219,7 @@ GameObject:
   - component: {fileID: 850292637}
   - component: {fileID: 850292639}
   - component: {fileID: 850292638}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7331,6 +7599,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7428,6 +7701,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigTorch (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 247035a290c411240a7a1b8bd6d1b8c0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -7447,6 +7725,39 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 869016401}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &871894422 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6001a69335c29804d8176889c72fbc00,
+    type: 3}
+  m_PrefabInstance: {fileID: 662722264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &871894423 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6001a69335c29804d8176889c72fbc00,
+    type: 3}
+  m_PrefabInstance: {fileID: 662722264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &871894424
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871894422}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0087357, y: 1.3707479, z: 1.2214661}
+  m_Center: {x: -0.00012588501, y: 0.5117132, z: -0.1269226}
 --- !u!1 &874826369 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 247035a290c411240a7a1b8bd6d1b8c0,
@@ -7498,6 +7809,12 @@ Transform:
   m_Father: {fileID: 43132025}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &895338047 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1594814554626796997, guid: 68260aee0298e1447a993d754dbb28ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 1095465690}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &895785676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7565,6 +7882,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LightPE
+      objectReference: {fileID: 0}
+    - target: {fileID: 2130174774914751980, guid: 57c9609e46c450a4fab036363ec132f1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7664,6 +7986,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Amfora (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da4eaf6a378a2ee499eb8b1cd8613eb0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7876,6 +8203,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SmallTorch (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca862692457581d4d8450364747b8ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8095,6 +8427,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8115,7 +8452,7 @@ GameObject:
   - component: {fileID: 997079281}
   - component: {fileID: 997079283}
   - component: {fileID: 997079282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8451,6 +8788,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Amfora
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da4eaf6a378a2ee499eb8b1cd8613eb0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8620,6 +8962,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BigBox (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5609e37ef5c351d4cbbac3cb70f881a5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9078,6 +9425,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Amfora (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da4eaf6a378a2ee499eb8b1cd8613eb0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9208,6 +9560,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigTorch (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 247035a290c411240a7a1b8bd6d1b8c0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -9284,37 +9641,37 @@ PrefabInstance:
     - target: {fileID: 3582279602476580099, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.987942
+      value: -6.987944
       objectReference: {fileID: 0}
     - target: {fileID: 3582279602476580099, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.855391
+      value: 9.855392
       objectReference: {fileID: 0}
     - target: {fileID: 3582279602476580099, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.408751
+      value: -8.408749
       objectReference: {fileID: 0}
     - target: {fileID: 3582279602476580099, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6588469
+      value: -0.6588458
       objectReference: {fileID: 0}
     - target: {fileID: 3582279602476580099, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.64744705
+      value: -0.6474458
       objectReference: {fileID: 0}
     - target: {fileID: 3582279602476580099, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.273216
+      value: 0.27321896
       objectReference: {fileID: 0}
     - target: {fileID: 3582279602476580099, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.26848865
+      value: -0.26849145
       objectReference: {fileID: 0}
     - target: {fileID: 3825667978529015559, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
@@ -9329,22 +9686,37 @@ PrefabInstance:
     - target: {fileID: 3825667978529015559, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.497477
+      value: -14.0859995
       objectReference: {fileID: 0}
     - target: {fileID: 6358106842885862428, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.000000230968
+      value: -0.0000010952353
       objectReference: {fileID: 0}
     - target: {fileID: 6358106842885862428, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.080290794
+      value: -0.08526659
       objectReference: {fileID: 0}
     - target: {fileID: 6358106842885862428, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.5618625
+      value: 6.6304703
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601019670185665147, guid: 68260aee0298e1447a993d754dbb28ef,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601019670185665147, guid: 68260aee0298e1447a993d754dbb28ef,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.7399998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601019670185665147, guid: 68260aee0298e1447a993d754dbb28ef,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.468559
       objectReference: {fileID: 0}
     - target: {fileID: 8193680589902000789, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
@@ -9799,6 +10171,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigTorch
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 247035a290c411240a7a1b8bd6d1b8c0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -9911,6 +10288,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SmallBox (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c6d25492d24f6904583ef4bc957fabd5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10244,6 +10626,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10325,6 +10712,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crystal (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10531,7 +10923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1245879597}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ornaments
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10563,6 +10955,7 @@ Transform:
   - {fileID: 378041587}
   - {fileID: 2062338896}
   - {fileID: 304980696}
+  - {fileID: 871894423}
   m_Father: {fileID: 1821421688}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10935,6 +11328,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigTorch (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 247035a290c411240a7a1b8bd6d1b8c0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -11021,6 +11419,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LightPE
+      objectReference: {fileID: 0}
+    - target: {fileID: 2130174774914751980, guid: 57c9609e46c450a4fab036363ec132f1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11128,7 +11531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1309534845}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Monuments
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11917,6 +12320,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigTorch (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 247035a290c411240a7a1b8bd6d1b8c0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -12471,6 +12879,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12491,7 +12904,7 @@ GameObject:
   - component: {fileID: 1426514273}
   - component: {fileID: 1426514275}
   - component: {fileID: 1426514274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12693,6 +13106,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightPE
       objectReference: {fileID: 0}
+    - target: {fileID: 2130174774914751980, guid: 57c9609e46c450a4fab036363ec132f1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12713,7 +13131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1451008686}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BigObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12885,6 +13303,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SmallBoxv2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0c162eea20fa75c448338c3a6793612d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13095,7 +13518,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -3919473900079759590, guid: a46e81170bcfaa84bbe3ced39546c4ca, type: 3}
 --- !u!1 &1475097202 stripped
@@ -13327,7 +13750,7 @@ GameObject:
   - component: {fileID: 1495262459}
   - component: {fileID: 1495262461}
   - component: {fileID: 1495262460}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14365,6 +14788,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallTorch
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca862692457581d4d8450364747b8ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -14570,6 +14998,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BigBox (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5609e37ef5c351d4cbbac3cb70f881a5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14923,6 +15356,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Amfora (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da4eaf6a378a2ee499eb8b1cd8613eb0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15315,7 +15753,7 @@ GameObject:
   - component: {fileID: 1766314446}
   - component: {fileID: 1766314448}
   - component: {fileID: 1766314447}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15721,7 +16159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1821421688}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ObjectsSetup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15759,7 +16197,7 @@ GameObject:
   - component: {fileID: 1836230796}
   - component: {fileID: 1836230798}
   - component: {fileID: 1836230797}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16494,6 +16932,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightPE
       objectReference: {fileID: 0}
+    - target: {fileID: 2130174774914751980, guid: 57c9609e46c450a4fab036363ec132f1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16620,7 +17063,7 @@ GameObject:
   - component: {fileID: 1907842791}
   - component: {fileID: 1907842793}
   - component: {fileID: 1907842792}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16800,6 +17243,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16923,6 +17371,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BigBox (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5609e37ef5c351d4cbbac3cb70f881a5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17080,6 +17533,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Amforav2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92ec7e1268302d446847e049e02e1873,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17363,6 +17821,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Amfora (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da4eaf6a378a2ee499eb8b1cd8613eb0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17529,6 +17992,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigTorch (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 247035a290c411240a7a1b8bd6d1b8c0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -17642,6 +18110,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6001a69335c29804d8176889c72fbc00,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17738,6 +18211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Monument
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 90879f101e15d07438ffba37e3fa62ff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17874,7 +18352,7 @@ GameObject:
   - component: {fileID: 1986030685}
   - component: {fileID: 1986030687}
   - component: {fileID: 1986030686}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18218,6 +18696,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightPE
       objectReference: {fileID: 0}
+    - target: {fileID: 2130174774914751980, guid: 57c9609e46c450a4fab036363ec132f1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18445,6 +18928,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightPE
       objectReference: {fileID: 0}
+    - target: {fileID: 2130174774914751980, guid: 57c9609e46c450a4fab036363ec132f1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18581,7 +19069,7 @@ GameObject:
   - component: {fileID: 2055037583}
   - component: {fileID: 2055037585}
   - component: {fileID: 2055037584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19188,6 +19676,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LightPE
+      objectReference: {fileID: 0}
+    - target: {fileID: 2130174774914751980, guid: 57c9609e46c450a4fab036363ec132f1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
