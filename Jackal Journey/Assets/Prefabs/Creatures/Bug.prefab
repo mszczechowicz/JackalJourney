@@ -1450,7 +1450,7 @@ Transform:
   - {fileID: 6267473026287699363}
   - {fileID: 6839052139263543238}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3888080970009393011
 MonoBehaviour:
@@ -1467,13 +1467,13 @@ MonoBehaviour:
   <CharacterController>k__BackingField: {fileID: 8827041841850055052}
   <Animator>k__BackingField: {fileID: 3612065172754662047}
   <ForceReceiver>k__BackingField: {fileID: 3779684326737049562}
-  <PlayerChasingRange>k__BackingField: 20
+  <PlayerChasingRange>k__BackingField: 30
   <Agent>k__BackingField: {fileID: 316465056110139451}
   <Health>k__BackingField: {fileID: 4232698984208939320}
   <MovementSpeed>k__BackingField: 4
   <AttackRange>k__BackingField: 0.6
   <Weapon>k__BackingField: {fileID: 9104624650618731167}
-  <AttackDamage>k__BackingField: 10
+  <AttackDamage>k__BackingField: 50
   <AttackKnockback>k__BackingField: 1
   <DissolverController>k__BackingField: {fileID: 2618796171063091557}
 --- !u!114 &3779684326737049562
