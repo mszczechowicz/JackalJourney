@@ -251,7 +251,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6121317074335850929
 Transform:
   m_ObjectHideFlags: 0
@@ -3241,10 +3241,10 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 270.01978, y: -0, z: 0}
+      - m_Value: {x: 270, y: 273.21063, z: 0}
         m_Name: Transform_angles
         m_Overridden: 1
-      - m_Value: {x: 2.066082, y: -8.100002, z: -5.110241}
+      - m_Value: {x: 10.09, y: 0.15156698, z: 25.81}
         m_Name: Transform_position
         m_Overridden: 1
       - m_Value: {x: 100, y: 100, z: 100}
@@ -4130,7 +4130,7 @@ Transform:
   - {fileID: 1707865700278564825}
   - {fileID: 8758505954825903627}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &412301989889205957
 MonoBehaviour:
