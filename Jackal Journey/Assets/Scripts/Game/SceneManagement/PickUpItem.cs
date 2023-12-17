@@ -21,8 +21,8 @@ public class PickUpItem : MonoBehaviour, IInteractable
         Debug.Log("GamveOverEventAnalitics");
         Analytics.CustomEvent("gameOver", new Dictionary<string, object>
         {
-            { "potions", totalPotions },
-            { "coins", totalCoins }
+            { "DeathCount", +1 },
+           
         });
         AnalyticsService.Instance.CustomData("gameOver");
 #endif

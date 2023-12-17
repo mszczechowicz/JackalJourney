@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Services.Analytics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class PlayerTargetingState : PlayerBaseState
 {
@@ -60,6 +62,7 @@ public class PlayerTargetingState : PlayerBaseState
     private void OnTargetCancel()
     {
         stateMachine.Targeter.CancelTargeting();
+        UnlockTargetCustomEvent();
         stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
     }
 
@@ -114,5 +117,23 @@ public class PlayerTargetingState : PlayerBaseState
 
         stateMachine.SwitchState(new PlayerDashState(stateMachine, stateMachine.InputHandler.MovementValue.normalized));
 
+    }
+
+
+    private void UnlockTargetCustomEvent()
+    {
+//#if ENABLE_CLOUD_SERVICES_ANALYTICS
+//        int UnLocksTargets = 0; // aktualna liczba œmierci (mo¿esz to pobieraæ z innego miejsca)
+//        UnLocksTargets++; // zwiêkszenie liczby œmierci o 1
+
+//        Debug.Log("DeadCounterCustomEvent()");
+//        Analytics.CustomEvent("OnTargetLockingEvent", new Dictionary<string, object>
+//        {
+//            { "UnLocksTargets", UnLocksTargets++ },
+
+//        });
+//        AnalyticsService.Instance.CustomData("OnTargetLockingEvent");
+//        AnalyticsService.Instance.Flush();
+//#endif
     }
 }

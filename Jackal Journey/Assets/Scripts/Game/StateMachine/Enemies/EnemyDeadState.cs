@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Services.Analytics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class EnemyDeadState : EnemyBaseState
 {
@@ -11,6 +13,7 @@ public class EnemyDeadState : EnemyBaseState
     private const float CrossFadeDuration = 0.1f;
     public override void Enter()
     {
+        UnlockTargetCustomEvent();
         stateMachine.Animator.CrossFadeInFixedTime(DeadHash, CrossFadeDuration);
         stateMachine.Weapon.gameObject.SetActive(false);
        
@@ -45,6 +48,23 @@ public class EnemyDeadState : EnemyBaseState
 
     }
 
-   
+
+    private void UnlockTargetCustomEvent()
+    {
+//#if ENABLE_CLOUD_SERVICES_ANALYTICS
+//        int deadCounts = 1; // aktualna liczba œmierci (mo¿esz to pobieraæ z innego miejsca)
+//        deadCounts++; // zwiêkszenie liczby œmierci o 1
+
+       
+//        Analytics.CustomEvent("CounterKilledEnemies", new Dictionary<string, object>
+//        {
+//            { "D", deadCounts++ },
+
+//        });
+//        AnalyticsService.Instance.CustomData("CounterKilledEnemies");
+//        AnalyticsService.Instance.Flush();
+//#endif
+    }
+
 }
 

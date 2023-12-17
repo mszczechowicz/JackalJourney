@@ -575,8 +575,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8777462723710187519}
-  - {fileID: 670032975645258073}
   - {fileID: 4496239006705362695}
+  - {fileID: 670032975645258073}
   - {fileID: 4117188577798414924}
   - {fileID: 1232114745066850990}
   m_Father: {fileID: 0}
@@ -2297,7 +2297,7 @@ VisualEffect:
       - m_Value: {x: 270.01978, y: -0, z: 0}
         m_Name: Transform_angles
         m_Overridden: 1
-      - m_Value: {x: -28, y: -0.0000009536743, z: 43.6}
+      - m_Value: {x: -3.949839, y: -8.100002, z: -1.8295789}
         m_Name: Transform_position
         m_Overridden: 1
       - m_Value: {x: 100, y: 100, z: 100}
@@ -2552,7 +2552,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5380652058411799972}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2579,7 +2579,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 566e519f575adf64283912a114f38c19, type: 2}
+  - {fileID: 2100000, guid: dd0f0f4e77f35fe47afd15f8ed7e1fd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

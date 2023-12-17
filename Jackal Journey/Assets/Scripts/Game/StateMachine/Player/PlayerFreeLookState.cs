@@ -2,8 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.Services.Analytics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Analytics;
 
  
 public class PlayerFreeLookState : PlayerBaseState
@@ -31,7 +33,7 @@ public class PlayerFreeLookState : PlayerBaseState
 
     public override void Enter()
     {
-
+      
         stateMachine.Animator.CrossFadeInFixedTime(FreeLookHash, CrossFadeDuration);
 
         stateMachine.InputHandler.JumpEvent += OnJump;
@@ -148,9 +150,26 @@ public class PlayerFreeLookState : PlayerBaseState
     {
 
         if (!stateMachine.Targeter.SelectTarget()) { return; }
-
+        OnTargetCustomEvent();
         stateMachine.SwitchState(new PlayerTargetingState(stateMachine));
     
     }
-    
+
+    private void OnTargetCustomEvent()
+    {
+//#if ENABLE_CLOUD_SERVICES_ANALYTICS
+//        int LocksTargets = 0; // aktualna liczba œmierci (mo¿esz to pobieraæ z innego miejsca)
+//        LocksTargets++; // zwiêkszenie liczby œmierci o 1
+
+//        Debug.Log("DeadCounterCustomEvent()");
+//        Analytics.CustomEvent("OnTargetLockingEvent", new Dictionary<string, object>
+//        {
+//            { "LocksTargets", LocksTargets++ },
+
+//        });
+//        AnalyticsService.Instance.CustomData("OnTargetLockingEvent");
+//        AnalyticsService.Instance.Flush();
+//#endif
+    }
+
 }
