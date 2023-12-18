@@ -66,6 +66,7 @@ public class Health : MonoBehaviour , IJsonSaveable
         Debug.Log("TakeDamage()");
         //--ImpactStateLogic komentujê do czas a¿ zaimplementujemy "HeavyAttack dla bossów"
         OnTakeDamage?.Invoke();
+
        
         if(healthPoints == 0)
         {
@@ -77,6 +78,8 @@ public class Health : MonoBehaviour , IJsonSaveable
 
         //Debug.Log(healthPoints);
     }
+
+   
     public JToken CaptureAsJToken()
     {
         return JToken.FromObject(healthPoints);

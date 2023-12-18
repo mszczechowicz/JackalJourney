@@ -6,6 +6,7 @@ public class DissolverController : MonoBehaviour
 
     public SkinnedMeshRenderer skinnedMesh; // ewentualnie skinned/MeshRenderer ( to co trzyma nasza teksture )
     public VisualEffect VFXGraph;
+ 
     public float dissolveRate = 0.0125f;
     public float refreshRate = 0.025f;
 
@@ -31,6 +32,7 @@ public class DissolverController : MonoBehaviour
         {
             Debug.Log("Play particle enemy");
             VFXGraph.Play();
+           
         }
         else
         {

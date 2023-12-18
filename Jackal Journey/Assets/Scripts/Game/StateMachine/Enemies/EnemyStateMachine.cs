@@ -24,13 +24,14 @@ public class EnemyStateMachine : StateMachine, IJsonSaveable
 
     [field: SerializeField] public int AttackKnockback { get; private set; }
 
+    [field: SerializeField] public PopUpDamage PopUpDamage { get; private set; }
     [field: SerializeField] public DissolverController DissolverController { get; private set; }
     public Health Player { get; private set; }
 
 
     private void Start()
     {
-
+        PopUpDamage.Create(this.transform.position, 300);
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
 
         Agent.updatePosition = false;
@@ -60,7 +61,8 @@ public class EnemyStateMachine : StateMachine, IJsonSaveable
 
 
     private void HandleTakeDamage()
-    { 
+    {
+      
         SwitchState(new EnemyImpactState(this));
     }
 

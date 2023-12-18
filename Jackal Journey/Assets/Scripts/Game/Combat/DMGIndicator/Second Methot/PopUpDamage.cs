@@ -79,7 +79,7 @@ public class PopUpDamage : MonoBehaviour
         dissapearTimer -= Time.deltaTime;
         if(dissapearTimer < 0)
         {
-            // start dissapear
+            Debug.Log("start dissapear");
             float dissapearSpeed = 3f;
             textcolor.a -= dissapearSpeed* Time.deltaTime;
             textMesh.color = textcolor;

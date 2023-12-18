@@ -2296,13 +2296,13 @@ VisualEffect:
       m_Array:
       - m_Value: {x: 270.01978, y: -0, z: 0}
         m_Name: Transform_angles
-        m_Overridden: 1
-      - m_Value: {x: -3.949839, y: -8.100002, z: -1.8295789}
+        m_Overridden: 0
+      - m_Value: {x: -2.91, y: -8.100002, z: 0.85}
         m_Name: Transform_position
-        m_Overridden: 1
+        m_Overridden: 0
       - m_Value: {x: 100, y: 100, z: 100}
         m_Name: Transform_scale
-        m_Overridden: 1
+        m_Overridden: 0
     m_Vector4f:
       m_Array:
       - m_Value: {x: 1, y: 0, z: 0, w: 1}
@@ -2375,7 +2375,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5199652439618603781}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdafc37f32b176349b1684c4455b98e9, type: 3}
   m_Name: 
