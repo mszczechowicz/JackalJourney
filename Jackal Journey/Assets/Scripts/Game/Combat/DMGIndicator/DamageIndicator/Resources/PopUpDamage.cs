@@ -6,34 +6,10 @@ using UnityEngine;
 public class PopUpDamage : MonoBehaviour
 {
     // to set up in placec where enemy is hit add : PopUpDamage.Create(enemyHandler.GetPosition(), damageAmount);
-    // Create dmg pop up
     // another way is object pooling ( hidden empty objects with pop ups that will be teleported to enemy and shown after hit and then dissapearing to empty again )
-    // to upgrade animation we can add AnimationCurves instead of valuues for Opacity,Scale and height, color to customization etc
-    // public AnimationCurve opacityCurve
-    // public AnimationCurve scaleCurve
-    // public AnimationCurve heightCurve
-
-    /*if needed for always facing camera private Camera cam;
-    private void Awake()
-    {
-
-        cam = Camera.main;
-    }
-
-    private void update()
-    {
-        transform.forward = cam.transform.forward;
-    }
-
-    */
-    public static  PopUpDamage Create(Vector3 position, int damageAmount)
-    {
-        Transform damagePopupTransform = Instantiate(GameAssets.i.DamageIndicator, position, Quaternion.identity);
-        PopUpDamage damagePopup = damagePopupTransform.GetComponent<PopUpDamage>();
-        damagePopup.Setup(damageAmount);
-
-        return damagePopup;
-    }
+    public AnimationCurve opacityCurve;
+    public AnimationCurve scaleCurve;
+    public AnimationCurve heightCurve;
 
     private static int sortingOrder;
     private const float MAX_DISAPPEAR = 1f;
@@ -41,6 +17,10 @@ public class PopUpDamage : MonoBehaviour
     private float dissapearTimer;
     private Color textcolor;
     private Vector3 moveVector;
+
+
+ 
+   
 
     private void Awake()
     {
@@ -90,4 +70,16 @@ public class PopUpDamage : MonoBehaviour
             }
         }
     }
+
+
+    public static PopUpDamage Create(Vector3 position, int damageAmount)
+    {
+        Transform damagePopupTransform = Instantiate(GameAssets.instance.DamageIndicator, position, Quaternion.identity);
+        PopUpDamage damagePopup = damagePopupTransform.GetComponent<PopUpDamage>();
+        damagePopup.Setup(damageAmount);
+
+        return damagePopup;
+    }
+
+
 }
