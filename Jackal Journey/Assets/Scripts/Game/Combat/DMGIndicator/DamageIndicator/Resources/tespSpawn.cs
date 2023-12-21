@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class tespSpawn : MonoBehaviour
@@ -11,12 +12,13 @@ public class tespSpawn : MonoBehaviour
         
     }
     public Transform test;
+    
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            PopUpDamage.Create(test.transform.position, 300);
+            PopUpDamage.Create(test.transform.position, 300, Color.red) ;
         }
     }
 }

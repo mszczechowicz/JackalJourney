@@ -10,73 +10,83 @@ public class PopUpDamage : MonoBehaviour
     public AnimationCurve opacityCurve;
     public AnimationCurve scaleCurve;
     public AnimationCurve heightCurve;
-
+  
     private static int sortingOrder;
-    private const float MAX_DISAPPEAR = 1f;
     private TextMeshPro textMesh;
-    private float dissapearTimer;
     private Color textcolor;
     private Vector3 moveVector;
+    private Vector3 initialScale;
+
+    private float time = 0;
+    private const float MAX_LIFE_TIME = 1f; // ustawienie zale¿y od d³ugoœci ¿ycia krzywej
+    private float ScaleMultiplier;
 
 
- 
-   
+
 
     private void Awake()
     {
+        ScaleMultiplier = Random.Range(1f, 3f);
         textMesh = GetComponent<TextMeshPro>();
+        
     }
-    public void Setup(int damageAmount)
+    public void Setup(int damageAmount, Color color)
     {
         // basic setup
+
         textMesh.SetText(damageAmount.ToString());
-        textcolor = textMesh.color;
-        dissapearTimer = MAX_DISAPPEAR;
-        moveVector = new Vector3(1, 1) * 30f;
+        textMesh.faceColor = color;
+        moveVector = transform.position;
         sortingOrder++;
-        textMesh.sortingOrder= sortingOrder;
+        textMesh.sortingOrder = sortingOrder;
+        initialScale = Vector3.one * ScaleMultiplier;
+        transform.localScale = initialScale;
     }
+
+
+
 
     private void Update()
     {
-        // move pop up
-        transform.position += moveVector * Time.deltaTime;
-        moveVector -= moveVector * 8f * Time.deltaTime;
-        // change scale in time
-        if (dissapearTimer > MAX_DISAPPEAR * 0.5f)
-        {
-            float increaseScaleAmount = 1f;
-            transform.localScale += Vector3.one * increaseScaleAmount * Time.deltaTime;
 
-        } else{
+        // zanikanie
+        float alpha = opacityCurve.Evaluate(time);
+        textMesh.color = new Color(textMesh.color.r, textMesh.color.g, textMesh.color.b, alpha);
 
-            float decreaseScaleAmount = 1f;
-            transform.localScale -= Vector3.one * decreaseScaleAmount * Time.deltaTime;
 
-        }
 
-        // dissapear after time
-        dissapearTimer -= Time.deltaTime;
-        if(dissapearTimer < 0)
-        {
-            Debug.Log("start dissapear");
-            float dissapearSpeed = 3f;
-            textcolor.a -= dissapearSpeed* Time.deltaTime;
-            textMesh.color = textcolor;
 
-            if(textcolor.a < 0)
+        // skalowanie pop up
+        Vector3 scale = initialScale * scaleCurve.Evaluate(time);
+        transform.localScale = scale;
+
+        //zmiana pozycji
+        transform.position = moveVector + new Vector3(0,1 + heightCurve.Evaluate(time), 0);
+
+
+        // usuñ obiekt kiedy krzywa dobiegnie koñca
+        time+= Time.deltaTime;
+
+            if(time > MAX_LIFE_TIME)
             {
                 Destroy(gameObject);
             }
         }
-    }
+    
 
 
-    public static PopUpDamage Create(Vector3 position, int damageAmount)
+    public static PopUpDamage Create(Vector3 position, int damageAmount, Color color)
     {
-        Transform damagePopupTransform = Instantiate(GameAssets.instance.DamageIndicator, position, Quaternion.identity);
+        //ró¿ny punkt spawnowania pop up
+        Vector3 randomness = new Vector3(Random.Range(0f, 2f), Random.Range(0f, 2f), Random.Range(0f, 2f));
+
+
+        Transform damagePopupTransform = Instantiate(GameAssets.instance.DamageIndicator, position + randomness, Quaternion.identity);
         PopUpDamage damagePopup = damagePopupTransform.GetComponent<PopUpDamage>();
-        damagePopup.Setup(damageAmount);
+        damagePopup.Setup(damageAmount, color);
+        
+
+
 
         return damagePopup;
     }
