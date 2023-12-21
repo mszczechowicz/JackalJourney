@@ -31,7 +31,7 @@ public class EnemyStateMachine : StateMachine, IJsonSaveable
 
     private void Start()
     {
-        PopUpDamage.Create(this.transform.position, 300);
+        PopUpDamage.Create(this.transform.position, 300, Color.yellow);
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
 
         Agent.updatePosition = false;

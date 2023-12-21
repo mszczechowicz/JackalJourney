@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using static System.Net.Mime.MediaTypeNames;
 
 public class Health : MonoBehaviour , IJsonSaveable
 {
@@ -66,9 +67,10 @@ public class Health : MonoBehaviour , IJsonSaveable
         Debug.Log("TakeDamage()");
         //--ImpactStateLogic komentujê do czas a¿ zaimplementujemy "HeavyAttack dla bossów"
         OnTakeDamage?.Invoke();
+        PopUpDamage.Create(this.transform.position, damagevalue, Color.yellow);
 
-       
-        if(healthPoints == 0)
+
+        if (healthPoints == 0)
         {
           
             Debug.Log("healthPoints == 0");
