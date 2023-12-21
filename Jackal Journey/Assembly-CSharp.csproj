@@ -76,8 +76,8 @@
     <Compile Include="Assets\Scripts\Game\Managers\Respawner.cs" />
     <Compile Include="Assets\Art\Shaders\EntireScreenShader\Blit.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\WeaponHandler.cs" />
-    <Compile Include="Assets\Scripts\Game\Combat\DMGIndicator\FirstMethod\DamageSpawner.cs" />
     <Compile Include="Assets\Scripts\Game\GameInstances\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Combat\DMGIndicator\ThirdMethod\DamagePopUpAnimation.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\PersistentObjectSpawner.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\InteractionHandler.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerJumpingState.cs" />
@@ -94,7 +94,6 @@
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyImpactState.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\DMGIndicator\DamageIndicator\Resources\PopUpDamage.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerBaseState.cs" />
-    <Compile Include="Assets\Scripts\Game\Combat\DMGIndicator\FirstMethod\GameDMG.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerDeadState.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\LookAtMainCam.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\Attack.cs" />
@@ -102,6 +101,7 @@
     <Compile Include="Assets\Scripts\Game\SceneManagement\PickUpItem.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\DMGIndicator\DamageIndicator\Resources\GameAssets.cs" />
     <Compile Include="Assets\Scripts\UI\SceneLoader.cs" />
+    <Compile Include="Assets\Scripts\Game\Combat\DMGIndicator\ThirdMethod\DamagePopUpCamera.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerDodgeState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerDashState.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\WeaponDamage.cs" />
@@ -113,7 +113,6 @@
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyAttackingState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\csHomebrewIK.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\StateMachine.cs" />
-    <Compile Include="Assets\Scripts\Game\Combat\DMGIndicator\FirstMethod\FloatingMSG.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\SaveLoadUI.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\SavingSystem\SavingWrapper.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\Target.cs" />
@@ -125,7 +124,7 @@
     <Compile Include="Assets\Scripts\Game\Managers\SavingSystem\JsonSaveableEntity.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerTargetingState.cs" />
     <Compile Include="Assets\Scripts\UI\SceneLoaderCallback.cs" />
-    <Compile Include="Assets\Scripts\Game\Combat\DMGIndicator\FirstMethod\DamageIndicatorSpawner.cs" />
+    <Compile Include="Assets\Scripts\Game\Combat\DMGIndicator\ThirdMethod\DamagePopUpGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
