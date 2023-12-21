@@ -19,7 +19,7 @@ public class DamagePopUpGenerator : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space)) { 
         
-            CreatePopUp(Vector3.one,Random.Range(0,1000).ToString(), Color.red);
+            CreatePopUp(Vector3.one,Random.Range(0,1000).ToString(), Color.blue);
 
         }
         
