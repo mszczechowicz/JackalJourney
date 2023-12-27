@@ -67,8 +67,7 @@ public class Health : MonoBehaviour , IJsonSaveable
         Debug.Log("TakeDamage()");
         //--ImpactStateLogic komentujê do czas a¿ zaimplementujemy "HeavyAttack dla bossów"
         OnTakeDamage?.Invoke();
-        PopUpDamage.Create(this.transform.position, damagevalue, Color.yellow);
-
+       
 
         if (healthPoints == 0)
         {
@@ -80,8 +79,14 @@ public class Health : MonoBehaviour , IJsonSaveable
 
         //Debug.Log(healthPoints);
     }
+    public void CreatePopUp(int damage)
+    {
+        PopUpDamage.Create(this.transform.position, damage, Color.yellow);
 
-   
+    }
+
+
+
     public JToken CaptureAsJToken()
     {
         return JToken.FromObject(healthPoints);

@@ -78,7 +78,7 @@ public class PopUpDamage : MonoBehaviour
     public static PopUpDamage Create(Vector3 position, int damageAmount, Color color)
     {
         //ró¿ny punkt spawnowania pop up
-        Vector3 randomness = new Vector3(Random.Range(0f, 2f), Random.Range(0f, 2f), Random.Range(0f, 2f));
+        Vector3 randomness = new Vector3(Random.Range(0f,0.1f), Random.Range(2f, 2.5f), Random.Range(0f, 0.1f));
 
 
         Transform damagePopupTransform = Instantiate(GameAssets.instance.DamageIndicator, position + randomness, Quaternion.identity);

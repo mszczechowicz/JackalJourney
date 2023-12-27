@@ -28,7 +28,9 @@ public class WeaponDamage : MonoBehaviour
         if (other.TryGetComponent<Health>(out Health health))
         {
             health.TakeDamage(damage);
-          
+
+            if (other.tag == "Player") { return; }
+            health.CreatePopUp(damage);
         
         }
         if (other.TryGetComponent<ForceReceiver>(out ForceReceiver forceReceiver))
@@ -43,4 +45,5 @@ public class WeaponDamage : MonoBehaviour
     this.damage = damage;
         this.knockback = knockback;
     }
+    
 }
