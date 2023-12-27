@@ -11,7 +11,7 @@ using static System.Net.Mime.MediaTypeNames;
 public class Health : MonoBehaviour , IJsonSaveable
 {
     [SerializeField] private int maxHealth = 1000;
-    [SerializeField] public int healthPoints;
+    public int healthPoints;
 
     private bool isInvulnerable;
     //--ImpactStateLogic komentujê do czas a¿ zaimplementujemy "HeavyAttack dla bossów"

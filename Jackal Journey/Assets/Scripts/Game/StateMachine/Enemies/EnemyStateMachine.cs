@@ -23,8 +23,7 @@ public class EnemyStateMachine : StateMachine, IJsonSaveable
     [field: SerializeField] public int AttackDamage { get; private set; }
 
     [field: SerializeField] public int AttackKnockback { get; private set; }
-
-    [field: SerializeField] public PopUpDamage PopUpDamage { get; private set; }
+   
     [field: SerializeField] public DissolverController DissolverController { get; private set; }
     public Health Player { get; private set; }
 
