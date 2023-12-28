@@ -48,8 +48,10 @@ public class PlayerStateMachine : StateMachine, IJsonSaveable
 
 
     [field: Header("DodgingSettings")]
-   
-    
+
+    [field: SerializeField] public Stamina Stamina { get; private set; }
+    [field: SerializeField] public float StaminaCost { get; private set; }   
+
     [field: SerializeField] public float DodgeDuration { get; private set; }
     [field: SerializeField] public float DodgeLength { get; private set; }
 

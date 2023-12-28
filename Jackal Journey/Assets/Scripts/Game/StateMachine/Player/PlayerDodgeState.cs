@@ -21,6 +21,7 @@ public class PlayerDodgeState : PlayerBaseState
 
     public override void Enter()
     {
+        stateMachine.Stamina.DrainStamina(stateMachine.StaminaCost);
         remainingDodgeTime = stateMachine.DodgeDuration;
         stateMachine.Health.SetInvulnerable(true);
        
