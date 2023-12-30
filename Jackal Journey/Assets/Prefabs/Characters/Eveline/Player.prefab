@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 6870832005693729678}
   - component: {fileID: 6888203433811934244}
   - component: {fileID: 980394895478227354}
+  - component: {fileID: 3330029687989986852}
   - component: {fileID: 5107948834946994211}
   - component: {fileID: 4220712039279473166}
   - component: {fileID: 2901449899281211478}
@@ -78,6 +79,8 @@ MonoBehaviour:
   <MidAirJumpForce>k__BackingField: 15
   <AirMovementSpeed>k__BackingField: 4
   <MomentumVFX>k__BackingField: {fileID: 5443596197543559085}
+  <Stamina>k__BackingField: {fileID: 3330029687989986852}
+  <StaminaCost>k__BackingField: 30
   <DodgeDuration>k__BackingField: 0.6
   <DodgeLength>k__BackingField: 1
   <DashForce>k__BackingField: 1
@@ -259,6 +262,22 @@ MonoBehaviour:
   Health: {fileID: 6888203433811934244}
   true_healthSlider: {fileID: 0}
   easy_healthSlider: {fileID: 0}
+  Stamina: {fileID: 3330029687989986852}
+  true_staminaSlider: {fileID: 0}
+--- !u!114 &3330029687989986852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24011024088496003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9abc35398568a734988a74cfbbcca26e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStamina: 90
+  staminaRegenRate: 7
 --- !u!114 &5107948834946994211
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -141,6 +141,7 @@ public class PlayerFreeLookState : PlayerBaseState
 
     private void OnDodge()
     {
+        if (stateMachine.Stamina.GetStamina() < stateMachine.StaminaCost) { return; }
         stateMachine.SwitchState(new PlayerDodgeState(stateMachine, stateMachine.InputHandler.MovementValue.normalized));      
     }
 
