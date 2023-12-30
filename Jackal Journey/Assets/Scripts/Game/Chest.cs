@@ -5,6 +5,7 @@ using UnityEngine;
 public class Chest : MonoBehaviour, IInteractable
 {
     [SerializeField] private GameObject Player;
+    [SerializeField] private GameObject VFX;
     private Animator animator;
     public bool isOpen;
 
@@ -14,14 +15,16 @@ public class Chest : MonoBehaviour, IInteractable
         animator = GetComponent<Animator>();
         isOpen = false;
     }
-    public  void Interact()
+    public void Interact()
     {
 
 
         if (!isOpen)
         {
-            OpenChest();
+            
             Debug.Log("Chest Opened!");
+            StartCoroutine(OpeningChest());
+           
 
         }
         else
@@ -30,7 +33,7 @@ public class Chest : MonoBehaviour, IInteractable
             Debug.Log("Chest Closed!");
         }
 
-        // Player.InteractionHandler.Isinteracting = false;
+       
 
     }
 
@@ -40,10 +43,20 @@ public class Chest : MonoBehaviour, IInteractable
         isOpen = !isOpen;
     }
 
-    private void OpenChest()
+    //private void OpenChest()
+    //{
+    //animator.SetTrigger("OpenChest");
+    //    isOpen = !isOpen;
+    //}
+
+    private IEnumerator OpeningChest()
     {
         animator.SetTrigger("OpenChest");
-        isOpen= !isOpen;
+        isOpen = !isOpen;
+        yield return new WaitForSeconds(1f);
+        this.gameObject.layer = LayerMask.NameToLayer("Ground");
+        Destroy(VFX);
+        yield return Player.GetComponent<InteractionHandler>().IsInteracting = false;       
+        CloseChest();
     }
-   
 }
