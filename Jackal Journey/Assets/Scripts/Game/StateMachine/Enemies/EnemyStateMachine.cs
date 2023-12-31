@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.VFX;
 
 public class EnemyStateMachine : StateMachine, IJsonSaveable
 {
@@ -25,6 +26,8 @@ public class EnemyStateMachine : StateMachine, IJsonSaveable
     [field: SerializeField] public int AttackKnockback { get; private set; }
    
     [field: SerializeField] public DissolverController DissolverController { get; private set; }
+
+    [field: SerializeField] public VisualEffect ImpactVFX { get; private set; }
     public Health Player { get; private set; }
 
 

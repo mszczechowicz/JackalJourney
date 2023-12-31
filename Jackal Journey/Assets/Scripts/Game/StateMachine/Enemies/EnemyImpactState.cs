@@ -15,14 +15,14 @@ public class EnemyImpactState : EnemyBaseState
 
     public override void Enter()
     {
+        stateMachine.ImpactVFX.Play();
         stateMachine.Animator.CrossFadeInFixedTime(ImpactHash, CrossFadeDuration);
         stateMachine.gameObject.GetComponentInChildren<SkinnedMeshRenderer>().material.SetFloat("_Fresnel", 1);
         
 
     }
     private float initialFresnelValue = 1.0f;
-
-  
+ 
     // Czas, który up³yn¹³ od rozpoczêcia zmniejszania wartoœci _Fresnel
     private float elapsedTime = 0.0f;
 
