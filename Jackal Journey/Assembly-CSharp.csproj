@@ -61,8 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Game\Managers\AnalyticsManager.cs" />
-    <Compile Include="Assets\Art\Shaders\SwordSlash\SlashEnable.cs" />
-    <Compile Include="Assets\Art\Shaders\Dissolve\DissolverController.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\MainMenuManager.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyBaseState.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerMidAirJumpingState.cs" />
@@ -76,7 +74,6 @@
     <Compile Include="Assets\Scripts\Game\Statistics\Health.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\DMGIndicator\ThirdMethod(LEGACY)\DamagePopUpCamera.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\Respawner.cs" />
-    <Compile Include="Assets\Art\Shaders\EntireScreenShader\Blit.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\WeaponHandler.cs" />
     <Compile Include="Assets\Scripts\Game\GameInstances\GameManager.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\PersistentObjectSpawner.cs" />
@@ -87,6 +84,7 @@
     <Compile Include="Assets\Scripts\Game\Managers\Controls.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\SavingSystem\IJsonSaveable.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\Ability.cs" />
+    <Compile Include="Assets\Art\Shaders\Styles\EntireScreenShader\Script\Blit.cs" />
     <Compile Include="Assets\Scripts\Game\Statistics\HealthBar.cs" />
     <Compile Include="Assets\Scripts\Game\SceneManagement\Portal.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyDeadState.cs" />
@@ -95,6 +93,7 @@
     <Compile Include="Assets\Scripts\Game\StateMachine\InputHandler.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\UIHandler.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyImpactState.cs" />
+    <Compile Include="Assets\Art\Shaders\EnemyEffect\Dissolve\DissolveScript\DissolverController.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\DMGIndicator\DamageIndicator\Resources\PopUpDamage.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerBaseState.cs" />
     <Compile Include="Assets\Scripts\Game\PickUpItems.cs" />
@@ -122,6 +121,7 @@
     <Compile Include="Assets\Scripts\Game\Managers\SavingSystem\SavingWrapper.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\Target.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerStateMachine.cs" />
+    <Compile Include="Assets\Art\Shaders\WeaponEffect\SwordSlash\SlashScript\SlashEnable.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\SavingSystem\JsonSavingSystem.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\ForceReceiver.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerImpactState.cs" />
@@ -135,14 +135,14 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\Art\Shaders\Ps1Style\AnimeStyle\NiloToonShader\NiloZOffset.hlsl" />
-    <None Include="Assets\Art\Shaders\Ps1Style\AnimeStyle\NiloToonShader\SimpleURPToonLitOutlineExample_Shared.hlsl" />
+    <None Include="Assets\Art\Shaders\Styles\AnimeStyle\NiloToonShader\NiloZOffset.hlsl" />
+    <None Include="Assets\Art\Shaders\Styles\AnimeStyle\NiloToonShader\SimpleURPToonLitOutlineExample_Shared.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-    <None Include="Assets\Art\Shaders\Ps1Style\AnimeStyle\NiloToonShader\NiloInvLerpRemap.hlsl" />
+    <None Include="Assets\Art\Shaders\Styles\AnimeStyle\NiloToonShader\NiloInvLerpRemap.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\Art\Shaders\Cracks\Zoff.shader" />
-    <None Include="Assets\Art\Shaders\Cracks\StencilMaskShad.shader" />
+    <None Include="Assets\Art\Shaders\environment\Cracks\Zoff.shader" />
+    <None Include="Assets\Art\Shaders\environment\Cracks\StencilMaskShad.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -151,18 +151,18 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\Art\Shaders\Ps1Style\AnimeStyle\NiloToonShader\SimpleURPToonLitOutlineExample_LightingEquation.hlsl" />
+    <None Include="Assets\Art\Shaders\Styles\AnimeStyle\NiloToonShader\SimpleURPToonLitOutlineExample_LightingEquation.hlsl" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\Art\Shaders\Ps1Style\AnimeStyle\NiloToonShader\SimpleURPToonLitOutlineExample.shader" />
-    <None Include="Assets\Art\Shaders\Ps1Style\CellShade\ToonRamp.hlsl" />
-    <None Include="Assets\Art\Shaders\Ps1Style\AnimeStyle\NiloToonShader\NiloOutlineUtil.hlsl" />
+    <None Include="Assets\Art\Shaders\Styles\AnimeStyle\NiloToonShader\SimpleURPToonLitOutlineExample.shader" />
+    <None Include="Assets\Art\Shaders\Styles\CellShade\ToonRamp.hlsl" />
+    <None Include="Assets\Art\Shaders\Styles\AnimeStyle\NiloToonShader\NiloOutlineUtil.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\Art\Shaders\Cracks\DisableZWrite.shader" />
+    <None Include="Assets\Art\Shaders\environment\Cracks\DisableZWrite.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\Art\Shaders\Sand\InteractiveSand3\InteractiveSand3.shader" />
+    <None Include="Assets\Art\Shaders\environment\Sand\InteractiveSand3\InteractiveSand3.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
