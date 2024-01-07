@@ -114,6 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 725885136039343107}
+  - component: {fileID: 4625010352695122791}
   m_Layer: 0
   m_Name: WallPillarWindowSegment
   m_TagString: Untagged
@@ -138,8 +139,29 @@ Transform:
   - {fileID: 5004223167131302537}
   - {fileID: 5683006890519771933}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &4625010352695122791
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593494810607122139}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.2160246, y: 15.325463, z: 1.5987325}
+  m_Center: {x: -5.517815, y: -7.1627316, z: 0.2993663}
 --- !u!1001 &5284026200274656502
 PrefabInstance:
   m_ObjectHideFlags: 0
