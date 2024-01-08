@@ -245,7 +245,7 @@ Transform:
   - {fileID: 8090980572964398953}
   - {fileID: 1770595040191935031}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5082557063558202876
 MonoBehaviour:
@@ -259,7 +259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54713042347dbde41bf27804863b6e3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
   VFX: {fileID: 8519916490199694815}
   isOpen: 0
 --- !u!95 &6632789097094165172

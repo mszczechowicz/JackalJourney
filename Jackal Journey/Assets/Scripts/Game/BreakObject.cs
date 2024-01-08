@@ -23,10 +23,11 @@ public class BreakObject : MonoBehaviour
 
     public void BreakTheThing()
     {
-
+        Debug.Log("breakthething");
         savefractured = Instantiate(fractured, transform.position, transform.rotation);
+        Debug.Log("makeinstant");
         Destroy(gameObject);
 
-        Destroy(savefractured, 10);
+        Destroy(savefractured, 3);
     }
 }

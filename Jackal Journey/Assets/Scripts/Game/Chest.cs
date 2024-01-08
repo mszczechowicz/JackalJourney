@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour, IInteractable
 {
-    [SerializeField] private GameObject Player;
+    private InteractionHandler Player;
     [SerializeField] private GameObject VFX;
     private Animator animator;
     public bool isOpen;
 
 
     public void Start()
-    {
+    {   
+        Player = FindAnyObjectByType<InteractionHandler>();
         animator = GetComponent<Animator>();
         isOpen = false;
     }
@@ -56,7 +57,7 @@ public class Chest : MonoBehaviour, IInteractable
         yield return new WaitForSeconds(1f);
         this.gameObject.layer = LayerMask.NameToLayer("Ground");
         Destroy(VFX);
-        yield return Player.GetComponent<InteractionHandler>().IsInteracting = false;       
+        yield return Player.IsInteracting = false;       
         CloseChest();
     }
 }
