@@ -43,10 +43,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - _Parallax: 0.005
+    - _Smoothness: 0
     m_Colors:
-    - _BaseColor: {r: 0.7169812, g: 0.5308307, b: 0.07102172, a: 1}
-    - _Color: {r: 0.7169812, g: 0.5308307, b: 0.07102168, a: 1}
+    - _BaseColor: {r: 0.754717, g: 0.7002346, b: 0.56532574, a: 1}
+    - _Color: {r: 0.75471693, g: 0.7002346, b: 0.56532574, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &6593847020641619999
 MonoBehaviour:
