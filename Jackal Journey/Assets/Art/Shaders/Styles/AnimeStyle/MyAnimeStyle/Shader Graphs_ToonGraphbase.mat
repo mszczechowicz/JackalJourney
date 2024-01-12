@@ -7,14 +7,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ScorpionDeadVFX
-  m_Shader: {fileID: -6465566751694194690, guid: 635b0846ad055994681f966adfe217fb,
+  m_Name: Shader Graphs_ToonGraphbase
+  m_Shader: {fileID: -6465566751694194690, guid: 168e9eb1245c35e4e86cde71d0e7891f,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -24,24 +24,8 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Albedo_CharacterTexture:
-        m_Texture: {fileID: 2800000, guid: 8cfde04388ca1ff4c9fca6003179cde7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _GlowEye:
-        m_Texture: {fileID: 2800000, guid: eb552caa12734ad449d5ef3f53a51bfe, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 8cfde04388ca1ff4c9fca6003179cde7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NormalMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_3d322c97401f47568f73f43b963d0f21_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: eb552caa12734ad449d5ef3f53a51bfe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -58,39 +42,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaClip: 1
-    - _AlphaToMask: 1
-    - _Blend: 0
-    - _BlendModePreserveSpecular: 0
-    - _CastShadows: 1
-    - _Cull: 2
-    - _DissolveAmmount: 0
-    - _DissolveScale: 200
-    - _DissolveWidth: 0.03
-    - _DstBlend: 0
     - _Fresnel: 0
-    - _FresnelPower: 10
-    - _Metalic: 0
-    - _NormalStrenght: 0.5
-    - _OutlineThickness: 0.001
+    - _FresnelPower: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ReceiveShadows: 1
-    - _Smoothnes: 0
-    - _SrcBlend: 1
-    - _Surface: 0
-    - _WorkflowMode: 1
-    - _ZTest: 4
-    - _ZWrite: 1
-    - _ZWriteControl: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
-    - _DissolveColor: {r: 1, g: 0.36482605, b: 0, a: 0}
     - _FresnelColor: {r: 0.1973889, g: 0.9339623, b: 0.1630028, a: 0}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
-    - _glowcolor: {r: 0.3529412, g: 0.8745099, b: 0.1607843, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &6312645520888238863
+--- !u!114 &4935019138359569150
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
