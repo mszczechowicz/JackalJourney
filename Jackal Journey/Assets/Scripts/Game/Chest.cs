@@ -52,6 +52,9 @@ public class Chest : MonoBehaviour, IInteractable
 
     private IEnumerator OpeningChest()
     {
+        AudioSource audioSource = GetComponentInChildren<AudioSource>();
+        audioSource.Play();
+
         animator.SetTrigger("OpenChest");
         isOpen = !isOpen;
         yield return new WaitForSeconds(1f);

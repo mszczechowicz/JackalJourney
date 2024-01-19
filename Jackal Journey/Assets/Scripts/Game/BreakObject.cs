@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class BreakObject : MonoBehaviour
@@ -11,17 +12,18 @@ public class BreakObject : MonoBehaviour
     public GameObject savefractured;
     public TMP_FontAsset customFont;
     public int myLayer;
+    public UnityEvent onDestroy_UnityEvent;
 
 
 
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
-        if(other.transform.gameObject.layer == myLayer)
+        
+        if (other.transform.gameObject.layer == myLayer)
         {
             CreatePopUpObtainedItem();
             BreakTheThing();
-
         }
     }
 
@@ -29,13 +31,13 @@ public class BreakObject : MonoBehaviour
 
     public void BreakTheThing()
     {
-       
+        
         Debug.Log("breakthething");
         savefractured = Instantiate(fractured, transform.position, transform.rotation);
         savefractured.transform.localScale = gameObject.transform.localScale; // change its local scale to match object
+        savefractured.GetComponentInChildren<AudioSource>().Play();
         Debug.Log("makeinstant");
-        Destroy(gameObject);
-
+        Destroy(gameObject);    
         Destroy(savefractured, 3f);
         
     }

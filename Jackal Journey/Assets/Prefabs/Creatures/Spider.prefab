@@ -588,7 +588,8 @@ GameObject:
   - component: {fileID: 2850476419529541297}
   - component: {fileID: 8345746607152755075}
   - component: {fileID: 2180166884241302442}
-  m_Layer: 0
+  - component: {fileID: 393414480063823754}
+  m_Layer: 11
   m_Name: Spider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,6 +821,18 @@ MonoBehaviour:
   Health: {fileID: 386725315527438162}
   true_healthSlider: {fileID: 6857415826743379980}
   easy_healthSlider: {fileID: 3505690696693604798}
+--- !u!114 &393414480063823754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378928488918808988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e2951de6d598f43a4a4b42b45ea0ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1406598938447021193
 GameObject:
   m_ObjectHideFlags: 0
