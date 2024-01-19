@@ -11,6 +11,7 @@ using static System.Net.Mime.MediaTypeNames;
 public class Health : MonoBehaviour , IJsonSaveable
 {
     [SerializeField] private int maxHealth = 1000;
+    
     public int healthPoints;
 
     private bool isInvulnerable;
@@ -20,7 +21,8 @@ public class Health : MonoBehaviour , IJsonSaveable
 
     public event Action OnDie;
     
-    [HideInInspector] public UnityEvent onDie_UnityEvent;
+    public UnityEvent onDie_UnityEvent;
+    public UnityEvent onTakeDmg_UnityEvent;
  
 
     public bool IsDead => GetHealthPoints() == 0;
@@ -38,8 +40,10 @@ public class Health : MonoBehaviour , IJsonSaveable
 
     private void Awake()
     {
-       if(healthPoints == 0)
-            OnDie?.Invoke();
+
+        //Do testów czy to jest potrzene
+       //if(healthPoints == 0)
+       //     OnDie?.Invoke();
 
 
         healthPoints = maxHealth;
@@ -67,6 +71,7 @@ public class Health : MonoBehaviour , IJsonSaveable
         Debug.Log("TakeDamage()");
         //--ImpactStateLogic komentujê do czas a¿ zaimplementujemy "HeavyAttack dla bossów"
         OnTakeDamage?.Invoke();
+        onTakeDmg_UnityEvent?.Invoke();
        
 
         if (healthPoints == 0)

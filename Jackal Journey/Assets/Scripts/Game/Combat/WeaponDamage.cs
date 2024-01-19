@@ -25,12 +25,12 @@ public class WeaponDamage : MonoBehaviour
 
         alreadyCollideWith.Add(other);
 
-        if (other.TryGetComponent<Health>(out Health health))
+        if (other.TryGetComponent(out Health health))
         {
             health.TakeDamage(damage);
 
-            if (other.tag == "Player") { return; }
-            health.CreatePopUp(damage);
+           if (other.tag == "Player") { return; }
+           health.CreatePopUp(damage);
         
         }
         if (other.TryGetComponent<ForceReceiver>(out ForceReceiver forceReceiver))

@@ -3,35 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class AudioRandomizer : MonoBehaviour
-{
-    public AudioClip[] sounds;
-    private AudioSource audioSource;
-    [Range(0.1f, 0.5f)]
-    public float volumeChangeMulitplier = 0.2f;
-    public float pitchChangeMulptiplier = 0.2f;
 
-
-    void Start()
+    public class AudioRandomizer : MonoBehaviour
     {
-        audioSource = GetComponent<AudioSource>();
+        [SerializeField] float lowerPitchRange = 0.8f;
+        [SerializeField] float upperPitchRange = 1.2f;
+        [SerializeField] float volumeChangeMulitplier = 0.2f;
+        [SerializeField] AudioClip[] soundSet = null;
+        AudioSource audioSource = null;
 
-    }
-
-    private void Update()
-    {
-        RandomizeSounds();
-    }
-
-    public void RandomizeSounds()
-    {
-        if (!audioSource.isPlaying)  
+        private void Awake()
         {
-            audioSource.clip = sounds[Random.Range(0, sounds.Length)];
-            audioSource.volume = Random.Range(1 - volumeChangeMulitplier, 1);
-            audioSource.pitch = Random.Range(1 - pitchChangeMulptiplier, 1 + pitchChangeMulptiplier);
-            
+            audioSource = GetComponent<AudioSource>();
         }
 
+        public void PlayRandomisedSound()
+        {
+            // Set the clip to be a random one from the set
+            audioSource.clip = soundSet[Mathf.RoundToInt(Random.Range(0, soundSet.Length - 1))];
+            audioSource.volume = Random.Range(1 - volumeChangeMulitplier, 1);
+            // Set the pitch to a random value within the specified range.
+            audioSource.pitch = Random.Range(lowerPitchRange, upperPitchRange);
+
+            audioSource.Play();
+        }
     }
-}
