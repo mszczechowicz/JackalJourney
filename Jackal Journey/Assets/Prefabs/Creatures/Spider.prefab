@@ -588,7 +588,7 @@ GameObject:
   - component: {fileID: 2850476419529541297}
   - component: {fileID: 8345746607152755075}
   - component: {fileID: 2180166884241302442}
-  - component: {fileID: 393414480063823754}
+  - component: {fileID: 7831746904478569463}
   m_Layer: 11
   m_Name: Spider
   m_TagString: Untagged
@@ -639,7 +639,7 @@ MonoBehaviour:
   <MovementSpeed>k__BackingField: 3
   <AttackRange>k__BackingField: 1
   <Weapon>k__BackingField: {fileID: 2086364184731437014}
-  <AttackDamage>k__BackingField: 100
+  <AttackDamage>k__BackingField: 80
   <AttackKnockback>k__BackingField: 4
   <DissolverController>k__BackingField: {fileID: 6363004586487064926}
   <ImpactVFX>k__BackingField: {fileID: 194996613011805088}
@@ -821,7 +821,7 @@ MonoBehaviour:
   Health: {fileID: 386725315527438162}
   true_healthSlider: {fileID: 6857415826743379980}
   easy_healthSlider: {fileID: 3505690696693604798}
---- !u!114 &393414480063823754
+--- !u!114 &7831746904478569463
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
