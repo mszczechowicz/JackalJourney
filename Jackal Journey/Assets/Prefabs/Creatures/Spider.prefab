@@ -724,9 +724,9 @@ MonoBehaviour:
   onTakeDmg_UnityEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2400266730741768353}
-        m_TargetAssemblyTypeName: LockingAudioSource, Assembly-CSharp
-        m_MethodName: PlayClip
+      - m_Target: {fileID: 7078612327075512258}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3820,7 +3820,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2694483514388598738}
   - component: {fileID: 7078612327075512258}
-  - component: {fileID: 2400266730741768353}
   m_Layer: 0
   m_Name: TakeDamageSound
   m_TagString: Untagged
@@ -3939,23 +3938,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2400266730741768353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7306365063865329095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 579308b56e0716f449965ec3e6452051, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  source: {fileID: 7078612327075512258}
-  lowerPitchRange: 0.8
-  upperPitchRange: 1.1
-  soundSet:
-  - {fileID: 8300000, guid: f9bed3f1e4cbfde49b192477dbeb2304, type: 3}
 --- !u!1 &7408899118686349914
 GameObject:
   m_ObjectHideFlags: 0

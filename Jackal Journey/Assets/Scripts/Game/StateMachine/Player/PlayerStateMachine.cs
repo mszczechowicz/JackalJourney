@@ -4,9 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-
-
-
+using UnityEngine.Events;
 
 public class PlayerStateMachine : StateMachine, IJsonSaveable
 {
@@ -108,8 +106,9 @@ public class PlayerStateMachine : StateMachine, IJsonSaveable
     {
         SwitchState(new PlayerDeadState(this));
     }
-    
-    
+
+    public UnityEvent onAttackSound_UnityEvent;
+
     
     public JToken CaptureAsJToken()
     {

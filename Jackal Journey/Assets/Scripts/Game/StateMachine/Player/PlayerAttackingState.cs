@@ -23,6 +23,7 @@ public class PlayerAttackingState : PlayerBaseState
     {
         stateMachine.Weapon.SetAttack(attack.Damage,attack.KnockBack);
         stateMachine.Animator.CrossFadeInFixedTime(attack.AnimationName, attack.TransitionDuration);
+        stateMachine.onAttackSound_UnityEvent?.Invoke();
     }
 
     public override void Tick(float deltaTime)
