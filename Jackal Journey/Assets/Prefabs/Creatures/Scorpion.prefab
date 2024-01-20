@@ -3363,13 +3363,13 @@ VisualEffect:
       m_Array:
       - m_Value: {x: 270, y: 273.21063, z: 0}
         m_Name: Transform_angles
-        m_Overridden: 1
+        m_Overridden: 0
       - m_Value: {x: 10.09, y: 0.15156698, z: 25.81}
         m_Name: Transform_position
-        m_Overridden: 1
+        m_Overridden: 0
       - m_Value: {x: 100, y: 100, z: 100}
         m_Name: Transform_scale
-        m_Overridden: 1
+        m_Overridden: 0
     m_Vector4f:
       m_Array:
       - m_Value: {x: 1, y: 0, z: 0, w: 1}
@@ -3442,7 +3442,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6765847704698658878}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdafc37f32b176349b1684c4455b98e9, type: 3}
   m_Name: 
@@ -4251,7 +4251,7 @@ Transform:
   - {fileID: 8758505954825903627}
   - {fileID: 5947422980403576065}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &412301989889205957
 MonoBehaviour:
@@ -4386,6 +4386,9 @@ MonoBehaviour:
   maxHealth: 1000
   healthPoints: 0
   onDie_UnityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onTakeDmg_UnityEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &619817579501785453

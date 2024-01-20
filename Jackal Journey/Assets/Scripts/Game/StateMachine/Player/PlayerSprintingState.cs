@@ -38,7 +38,7 @@ public class PlayerSprintingState : PlayerBaseState
             return;
         }
 
-        if (stateMachine.Stamina.GetStamina() <= 5)
+        if ((stateMachine.Stamina.GetStamina() <=0 )|| (stateMachine.Stamina.GetStamina() < stateMachine.SprintStaminaCost))
         {
             stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
             return;

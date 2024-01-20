@@ -47,7 +47,6 @@ public class Stamina : MonoBehaviour
     {
         if (staminaToUse> stamina)
         {
-
             return false;
         }
         stamina -= staminaToUse * Time.deltaTime;

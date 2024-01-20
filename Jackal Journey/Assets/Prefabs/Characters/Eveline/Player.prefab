@@ -77,7 +77,7 @@ MonoBehaviour:
   <Targeter>k__BackingField: {fileID: 598241623789922124}
   <FreeLookMovementSpeed>k__BackingField: 0.5
   <TargetingLookMovementSpeed>k__BackingField: 0.5
-  <SprintingMovementSpeed>k__BackingField: 7
+  <SprintingMovementSpeed>k__BackingField: 2
   <RotationDamping>k__BackingField: 13
   <JumpForce>k__BackingField: 13
   <MidAirJumpForce>k__BackingField: 15
@@ -85,7 +85,7 @@ MonoBehaviour:
   <MomentumVFX>k__BackingField: {fileID: 5443596197543559085}
   <Stamina>k__BackingField: {fileID: 3330029687989986852}
   <StaminaCost>k__BackingField: 30
-  <SprintStaminaCost>k__BackingField: 5
+  <SprintStaminaCost>k__BackingField: 10
   <DodgeDuration>k__BackingField: 0.6
   <DodgeLength>k__BackingField: 1
   <DashForce>k__BackingField: 1
@@ -6352,7 +6352,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3131528937712143173}
   m_LocalRotation: {x: -0.018740047, y: -0, z: -0, w: 0.9998244}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: -0.0000021457672, y: -1.0255803e-14, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6403,7 +6403,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3190027811691328935}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.182174, y: 3.693127, z: -20.574558}
+  m_LocalPosition: {x: -13.182173, y: 3.693127, z: -20.574558}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7343,8 +7343,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5700475318055051600}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.182174, y: 3.2931268, z: -22.574558}
+  m_LocalRotation: {x: -5.1279015e-16, y: -0.00000017881393, z: -5.293956e-23, w: 1}
+  m_LocalPosition: {x: -14.182168, y: 3.2931268, z: -22.574558}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
