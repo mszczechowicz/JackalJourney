@@ -79,8 +79,8 @@ MonoBehaviour:
   <TargetingLookMovementSpeed>k__BackingField: 0.5
   <SprintingMovementSpeed>k__BackingField: 2
   <RotationDamping>k__BackingField: 13
-  <JumpForce>k__BackingField: 13
-  <MidAirJumpForce>k__BackingField: 15
+  <JumpForce>k__BackingField: 9
+  <MidAirJumpForce>k__BackingField: 12
   <AirMovementSpeed>k__BackingField: 4
   <MomentumVFX>k__BackingField: {fileID: 5443596197543559085}
   <Stamina>k__BackingField: {fileID: 3330029687989986852}
@@ -7343,7 +7343,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5700475318055051600}
-  m_LocalRotation: {x: -5.1279015e-16, y: -0.00000017881393, z: -5.293956e-23, w: 1}
+  m_LocalRotation: {x: 5.1279015e-16, y: -0.00000017881393, z: 5.293956e-23, w: 1}
   m_LocalPosition: {x: -14.182168, y: 3.2931268, z: -22.574558}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
