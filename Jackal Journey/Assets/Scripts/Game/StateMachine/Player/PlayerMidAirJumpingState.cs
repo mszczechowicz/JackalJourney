@@ -18,6 +18,7 @@ public class PlayerMidAirJumpingState : PlayerBaseState
         IsMidAirJumped = true;
      
         stateMachine.MomentumVFX.Play();
+        stateMachine.onDashSound_UnityEvent.Invoke();
         stateMachine.ForceReceiver.VerticalVelocity = 0f;
 
         stateMachine.ForceReceiver.AddForce(stateMachine.transform.forward * 10f);

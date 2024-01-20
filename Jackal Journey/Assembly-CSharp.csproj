@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\Game\Combat\DMGIndicator\ThirdMethod(LEGACY)\DamagePopUpCamera.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\Respawner.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\WeaponHandler.cs" />
+    <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerSprintingState.cs" />
     <Compile Include="Assets\Scripts\Game\GameInstances\GameManager.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\PersistentObjectSpawner.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\InteractionHandler.cs" />

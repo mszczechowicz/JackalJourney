@@ -42,7 +42,7 @@ Material:
     m_TexEnvs:
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: ecf375e4a6468094791ef493bac5cecc, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 10, y: 10}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: 98dd0e06393efae49b61a7db83cd47cb, type: 3}
@@ -66,7 +66,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: ecf375e4a6468094791ef493bac5cecc, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 10, y: 10}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 2800000, guid: a4fb4ec8aaf205e46a590d4c469647d1, type: 3}
@@ -130,12 +130,13 @@ Material:
     - _Metallic: 0
     - _OcclusionRemapEnd: 1
     - _OcclusionRemapStart: 0
-    - _OcclusionStrength: 1
+    - _OcclusionStrength: 0.465
     - _OutlineWidth: 1
     - _OutlineZOffset: 0.0001
     - _OutlineZOffsetMaskRemapEnd: 1
     - _OutlineZOffsetMaskRemapStart: 0
     - _Parallax: 0.005
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadowMappingAmount: 0.65
     - _ReceiveShadowMappingPosOffset: 0

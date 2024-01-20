@@ -25,7 +25,8 @@ public class PlayerDashState : PlayerBaseState
         remainingDashTime = stateMachine.DashDuration;
         stateMachine.Health.SetInvulnerable(true);
         stateMachine.IK.enabled = false;
-     
+
+        stateMachine.onDashSound_UnityEvent.Invoke();
         stateMachine.MomentumVFX.Play();
        
      

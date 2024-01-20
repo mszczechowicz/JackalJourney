@@ -6,6 +6,7 @@ using Unity.Services.Analytics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Analytics;
+using UnityEngine.Events;
 
  
 public class PlayerFreeLookState : PlayerBaseState
@@ -35,8 +36,8 @@ public class PlayerFreeLookState : PlayerBaseState
     {
       
         stateMachine.Animator.CrossFadeInFixedTime(FreeLookHash, CrossFadeDuration);
-
-        stateMachine.InputHandler.JumpEvent += OnJump;
+       
+    stateMachine.InputHandler.JumpEvent += OnJump;
         stateMachine.InputHandler.DashEvent += OnDodge;
         stateMachine.InputHandler.TargetEvent += OnTarget;
     }
@@ -85,6 +86,7 @@ public class PlayerFreeLookState : PlayerBaseState
             stateMachine.IK.enabled = true;
             return;
         }
+        stateMachine.onMoveSound_UnityEvent.Invoke();
         stateMachine.Animator.SetFloat(VelocityHash, 1, AnimatorDampTime, deltaTime);
         stateMachine.IK.enabled = false;
 

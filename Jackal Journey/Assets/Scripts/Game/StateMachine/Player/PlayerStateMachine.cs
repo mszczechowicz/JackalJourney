@@ -31,6 +31,8 @@ public class PlayerStateMachine : StateMachine, IJsonSaveable
     [field: Header("MovementSettings")]
     [field: SerializeField] public float FreeLookMovementSpeed { get; private set; }
     [field: SerializeField] public float TargetingLookMovementSpeed { get; private set; }
+
+    [field: SerializeField] public float SprintingMovementSpeed { get; private set; }
     [field: SerializeField] public float RotationDamping { get; private set; }
 
 
@@ -48,7 +50,9 @@ public class PlayerStateMachine : StateMachine, IJsonSaveable
     [field: Header("DodgingSettings")]
 
     [field: SerializeField] public Stamina Stamina { get; private set; }
-    [field: SerializeField] public float StaminaCost { get; private set; }   
+    [field: SerializeField] public float StaminaCost { get; private set; }
+
+    [field: SerializeField] public float SprintStaminaCost { get; private set; }
 
     [field: SerializeField] public float DodgeDuration { get; private set; }
     [field: SerializeField] public float DodgeLength { get; private set; }
@@ -108,8 +112,9 @@ public class PlayerStateMachine : StateMachine, IJsonSaveable
     }
 
     public UnityEvent onAttackSound_UnityEvent;
-
-    
+    public UnityEvent onJumpSound_UnityEvent;
+    public UnityEvent onDashSound_UnityEvent;
+    public UnityEvent onMoveSound_UnityEvent;
     public JToken CaptureAsJToken()
     {
         return transform.position.ToToken();

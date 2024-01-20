@@ -18,7 +18,7 @@ public class PlayerJumpingState : PlayerBaseState
         IsMidAirJumped = false;
        
         stateMachine.ForceReceiver.Jump(stateMachine.JumpForce);
-        
+        stateMachine.onJumpSound_UnityEvent.Invoke();
         stateMachine.Animator.CrossFadeInFixedTime(JumpHash, CrossFadeDuration);
 
         stateMachine.InputHandler.JumpEvent += OnJump;

@@ -17,6 +17,8 @@ public class Stamina : MonoBehaviour
     {
         if(stamina< maxStamina )
         {
+            if (IsSprinting)
+            { return; }
             stamina += staminaRegenRate * Time.deltaTime;
             if (stamina > maxStamina) { stamina = maxStamina; }
         }
@@ -40,4 +42,17 @@ public class Stamina : MonoBehaviour
         stamina -=staminaToUse;
         return true;
     }
+
+    public bool DrainStaminaPerSecond(float staminaToUse)
+    {
+        if (staminaToUse> stamina)
+        {
+
+            return false;
+        }
+        stamina -= staminaToUse * Time.deltaTime;
+        return true;
+    
+    }
+    public bool IsSprinting;
 }

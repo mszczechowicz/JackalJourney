@@ -2846,37 +2846,37 @@ PrefabInstance:
     - target: {fileID: 3582279602476580099, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.221937
+      value: -14.221805
       objectReference: {fileID: 0}
     - target: {fileID: 3582279602476580099, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.203021
+      value: 11.203022
       objectReference: {fileID: 0}
     - target: {fileID: 3582279602476580099, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.577429
+      value: -12.570219
       objectReference: {fileID: 0}
     - target: {fileID: 3582279602476580099, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5221776
+      value: 0.47612575
       objectReference: {fileID: 0}
     - target: {fileID: 3582279602476580099, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5131424
+      value: 0.4678873
       objectReference: {fileID: 0}
     - target: {fileID: 3582279602476580099, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.48585677
+      value: 0.5310656
       objectReference: {fileID: 0}
     - target: {fileID: 3582279602476580099, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.47745004
+      value: -0.5218765
       objectReference: {fileID: 0}
     - target: {fileID: 3825667978529015559, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
@@ -2885,8 +2885,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3825667978529015559, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.693127
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825667978529015559, guid: 68260aee0298e1447a993d754dbb28ef,
+        type: 3}
       propertyPath: m_LocalPosition.z
       value: -20.574558
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825667978529015559, guid: 68260aee0298e1447a993d754dbb28ef,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825667978529015559, guid: 68260aee0298e1447a993d754dbb28ef,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3850655098898258277, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
@@ -2916,12 +2931,12 @@ PrefabInstance:
     - target: {fileID: 6358106842885862428, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000013699755
+      value: -0.00000074179843
       objectReference: {fileID: 0}
     - target: {fileID: 6358106842885862428, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.09818745
+      value: -0.09818697
       objectReference: {fileID: 0}
     - target: {fileID: 6358106842885862428, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
@@ -2972,6 +2987,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.020000458
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601019670185665147, guid: 68260aee0298e1447a993d754dbb28ef,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601019670185665147, guid: 68260aee0298e1447a993d754dbb28ef,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6733321858672889765, guid: 68260aee0298e1447a993d754dbb28ef,
         type: 3}
@@ -6890,6 +6915,7 @@ MonoBehaviour:
   <Targeter>k__BackingField: {fileID: 3699579536316960762}
   <FreeLookMovementSpeed>k__BackingField: 5
   <TargetingLookMovementSpeed>k__BackingField: 1
+  <SprintingMovementSpeed>k__BackingField: 0
   <RotationDamping>k__BackingField: 13
   <JumpForce>k__BackingField: 13
   <MidAirJumpForce>k__BackingField: 15
@@ -6897,6 +6923,7 @@ MonoBehaviour:
   <MomentumVFX>k__BackingField: {fileID: 8111373859315504923}
   <Stamina>k__BackingField: {fileID: 0}
   <StaminaCost>k__BackingField: 0
+  <SprintStaminaCost>k__BackingField: 0
   <DodgeDuration>k__BackingField: 0.6
   <DodgeLength>k__BackingField: 1
   <DashForce>k__BackingField: 1
@@ -6934,6 +6961,15 @@ MonoBehaviour:
   <respawnDelay>k__BackingField: 3
   <fadeTime>k__BackingField: 1
   onAttackSound_UnityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onJumpSound_UnityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onDashSound_UnityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onMoveSound_UnityEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!4 &2078583567994474483
@@ -9220,6 +9256,7 @@ MonoBehaviour:
   <Targeter>k__BackingField: {fileID: 251929300735480245}
   <FreeLookMovementSpeed>k__BackingField: 5
   <TargetingLookMovementSpeed>k__BackingField: 1
+  <SprintingMovementSpeed>k__BackingField: 0
   <RotationDamping>k__BackingField: 13
   <JumpForce>k__BackingField: 13
   <MidAirJumpForce>k__BackingField: 15
@@ -9227,6 +9264,7 @@ MonoBehaviour:
   <MomentumVFX>k__BackingField: {fileID: 4664005373437413716}
   <Stamina>k__BackingField: {fileID: 0}
   <StaminaCost>k__BackingField: 0
+  <SprintStaminaCost>k__BackingField: 0
   <DodgeDuration>k__BackingField: 0.6
   <DodgeLength>k__BackingField: 1
   <DashForce>k__BackingField: 1
@@ -9264,6 +9302,15 @@ MonoBehaviour:
   <respawnDelay>k__BackingField: 3
   <fadeTime>k__BackingField: 1
   onAttackSound_UnityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onJumpSound_UnityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onDashSound_UnityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onMoveSound_UnityEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &3222934344743559946

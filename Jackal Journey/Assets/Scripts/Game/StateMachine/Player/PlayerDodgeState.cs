@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerDodgeState : PlayerBaseState
 {
@@ -24,7 +25,7 @@ public class PlayerDodgeState : PlayerBaseState
         stateMachine.Stamina.DrainStamina(stateMachine.StaminaCost);
         remainingDodgeTime = stateMachine.DodgeDuration;
         stateMachine.Health.SetInvulnerable(true);
-       
+        stateMachine.onDashSound_UnityEvent.Invoke();
         stateMachine.MomentumVFX.Play();
         stateMachine.Animator.CrossFadeInFixedTime(DodgeHash, CrossFadeDuration);
 
@@ -53,6 +54,12 @@ public class PlayerDodgeState : PlayerBaseState
         remainingDodgeTime -= deltaTime;
         if (remainingDodgeTime <= 0f)
         {
+            var keyboard = InputSystem.GetDevice<Keyboard>();
+            if (keyboard != null && keyboard.leftShiftKey.isPressed)
+            { stateMachine.SwitchState(new PlayerSprintingState(stateMachine));
+                return;
+            }
+
             stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
         }
     }
