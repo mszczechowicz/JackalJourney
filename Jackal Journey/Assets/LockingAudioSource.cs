@@ -13,7 +13,7 @@ public class LockingAudioSource : MonoBehaviour
         isPlaying = true;
         source.Play();
         StartCoroutine(ClearWhenClipPlayed());
-        Debug.Log(" StartCoroutine(ClearWhenClipPlayed());");
+       
     }
 
     private IEnumerator ClearWhenClipPlayed()
@@ -21,7 +21,7 @@ public class LockingAudioSource : MonoBehaviour
         while (source.isPlaying)
         {
             yield return null;
-            Debug.Log("Return nULL");
+           
         }
         isPlaying = false;
     }

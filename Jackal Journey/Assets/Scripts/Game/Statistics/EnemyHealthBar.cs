@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class EnemyHealthBar : MonoBehaviour
 {
     [SerializeField] Health Health;
+    [SerializeField] GameObject HealtbarParentUI;
     [SerializeField] private Slider true_healthSlider;
     [SerializeField] private Slider easy_healthSlider;
 
@@ -45,7 +46,7 @@ public class EnemyHealthBar : MonoBehaviour
 
         //}
 
-        transform.GetChild(0).gameObject.SetActive(true);
+        HealtbarParentUI.SetActive(true);
 
         if (Health.GetHealthPoints()<=0)
         {
@@ -69,7 +70,7 @@ public class EnemyHealthBar : MonoBehaviour
 
     void DeactivateHealthBar()
     {
-        transform.GetChild(0).gameObject.SetActive(false);
+        HealtbarParentUI.SetActive(false);
 
     }
 

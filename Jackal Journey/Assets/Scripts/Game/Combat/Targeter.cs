@@ -24,7 +24,7 @@ public class Targeter : MonoBehaviour
         if (!other.TryGetComponent(out Target target)) { return; }
         targets.Add(target);
         target.OnDestroyed += RemoveTarget;
-        Debug.Log("adtarget");
+        //Debug.Log("adtarget");
     }
 
     private void OnTriggerExit(Collider other)
@@ -32,7 +32,7 @@ public class Targeter : MonoBehaviour
         if (!other.TryGetComponent(out Target target)) { return; }
        
         RemoveTarget(target);
-        Debug.Log("removetarget");
+        //Debug.Log("removetarget");
     }
 
     public bool SelectTarget()
@@ -68,6 +68,7 @@ public class Targeter : MonoBehaviour
         Debug.Log(" CurrentTarget = closestTarget;");
 
         cineTargetGroup.AddMember(CurrentTarget.transform, targetCameraMemberWeight,targetCameraMemberRadius);
+        CurrentTarget.GetComponent<Target>().TargetImage.SetActive(true);
         Debug.Log("  cineTargetGroup.AddMember(CurrentTarget.transform, targetCameraMemberWeight,targetCameraMemberRadius);");
         return true;
     }
@@ -77,7 +78,7 @@ public class Targeter : MonoBehaviour
         Debug.Log("CancelTargeting()");
         if (CurrentTarget == null) { return; }
         cineTargetGroup.RemoveMember(CurrentTarget.transform);
-        
+        CurrentTarget.GetComponent<Target>().TargetImage.SetActive(false);
         CurrentTarget = null;
     }
 

@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {   
-    public event Action<Target> OnDestroyed; 
-
+    public event Action<Target> OnDestroyed;
+    [SerializeField] public GameObject TargetImage;
     private void OnDestroy()
     {
         OnDestroyed?.Invoke(this);

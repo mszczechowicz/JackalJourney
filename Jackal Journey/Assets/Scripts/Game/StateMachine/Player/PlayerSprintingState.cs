@@ -106,6 +106,7 @@ public class PlayerSprintingState : PlayerBaseState
         stateMachine.InputHandler.JumpEvent -= OnJump;
         stateMachine.InputHandler.DashEvent -= OnDodge;
         stateMachine.Stamina.IsSprinting = false;
+        stateMachine.MomentumVFX.Stop();
     }
 
     private void OnJump()

@@ -28,6 +28,7 @@ public class PlayerDodgeState : PlayerBaseState
         stateMachine.onDashSound_UnityEvent.Invoke();
         stateMachine.MomentumVFX.Play();
         stateMachine.Animator.CrossFadeInFixedTime(DodgeHash, CrossFadeDuration);
+        stateMachine.CharacterController.excludeLayers += LayerMask.GetMask("Spider");
 
     }
 
@@ -68,7 +69,8 @@ public class PlayerDodgeState : PlayerBaseState
     {
         stateMachine.Health.SetInvulnerable(false);
         stateMachine.MomentumVFX.Stop();
-       
+        stateMachine.CharacterController.excludeLayers -= LayerMask.GetMask("Spider");
+
     }
     
 
