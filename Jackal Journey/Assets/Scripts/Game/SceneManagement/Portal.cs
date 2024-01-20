@@ -2,7 +2,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Services.Analytics;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour, IInteractable
@@ -10,6 +12,7 @@ public class Portal : MonoBehaviour, IInteractable
     public void Interact()
     {
         if (destinationMap == Map.None) return;
+        VisitedLocationCustomEvent();
         StartCoroutine(GoToNextScene());
     }
 
@@ -98,6 +101,18 @@ public class Portal : MonoBehaviour, IInteractable
         }
         return null;
     }
-   
 
+    private void VisitedLocationCustomEvent()
+    {
+
+#if ENABLE_CLOUD_SERVICES_ANALYTICS
+
+        Dictionary<string, object> parameters = new Dictionary<string, object>()
+        {
+            {"Visited_location", destinationMap.ToString()},
+        };
+        AnalyticsService.Instance.CustomData("VisitedLocation_counter",parameters);
+        AnalyticsService.Instance.Flush();
+#endif
+    }
 }

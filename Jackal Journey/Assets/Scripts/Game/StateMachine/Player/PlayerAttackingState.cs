@@ -21,6 +21,7 @@ public class PlayerAttackingState : PlayerBaseState
 
     public override void Enter()
     {
+       
         stateMachine.Weapon.SetAttack(attack.Damage,attack.KnockBack);
         stateMachine.Animator.CrossFadeInFixedTime(attack.AnimationName, attack.TransitionDuration);
         stateMachine.onAttackSound_UnityEvent?.Invoke();
@@ -30,9 +31,9 @@ public class PlayerAttackingState : PlayerBaseState
     {
        
         Move(deltaTime);
-
-        CalculateAttackDirection(deltaTime);
         
+        CalculateAttackDirection(deltaTime);
+
 
         float normalizedTime = GetNormalizedTime(stateMachine.Animator);
 
@@ -107,8 +108,18 @@ public class PlayerAttackingState : PlayerBaseState
         
       
     }
+    private void CalculateAttackDirectionPlayerForward()
+    {
 
-    
+        Vector3 faceMove = stateMachine.transform.forward;
+        faceMove.y = 0f;
+        faceMove.Normalize();
+
+        stateMachine.transform.rotation = Quaternion.Lerp(stateMachine.transform.rotation, Quaternion.LookRotation(faceMove), stateMachine.RotationDamping);
+
+
+    }
+
 
     public void PlayVFXSlash()
     {
