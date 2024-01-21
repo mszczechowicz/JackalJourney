@@ -616,7 +616,7 @@ Transform:
   - {fileID: 8901344039533173232}
   - {fileID: 6455317682800707004}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7059745865420459451
 MonoBehaviour:
@@ -636,7 +636,8 @@ MonoBehaviour:
   <PlayerChasingRange>k__BackingField: 10
   <Agent>k__BackingField: {fileID: 1476775962889148204}
   <Health>k__BackingField: {fileID: 386725315527438162}
-  <MovementSpeed>k__BackingField: 3
+  <MovementSpeed>k__BackingField: 4
+  <RotationSpeed>k__BackingField: 5
   <AttackRange>k__BackingField: 1
   <Weapon>k__BackingField: {fileID: 2086364184731437014}
   <AttackDamage>k__BackingField: 100
@@ -775,7 +776,7 @@ NavMeshAgent:
   m_StoppingDistance: 0.1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
-  m_AutoRepath: 1
+  m_AutoRepath: 0
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295

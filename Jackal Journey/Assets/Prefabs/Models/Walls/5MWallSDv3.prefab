@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2841931067497168664}
   - component: {fileID: 1301834978725006964}
   - component: {fileID: 3168481566884879958}
+  - component: {fileID: 2629187165789023487}
   m_Layer: 8
   m_Name: 5MWallSDv3
   m_TagString: Untagged
@@ -106,3 +107,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4737404222284553049, guid: 1af8fe6b4f9f763498ed7a7b219e7d93, type: 3}
+--- !u!208 &2629187165789023487
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767006448581926984}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 2.5010002, z: 1.6}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -5, y: 2.499, z: 1.1}
+  m_TimeToStationary: 0.5

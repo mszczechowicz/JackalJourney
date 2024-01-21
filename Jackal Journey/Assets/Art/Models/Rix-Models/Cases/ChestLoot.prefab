@@ -140,7 +140,8 @@ GameObject:
   - component: {fileID: 7674852376124822797}
   - component: {fileID: 5396579499359556359}
   - component: {fileID: 1973264062479842898}
-  m_Layer: 0
+  - component: {fileID: 2751862711689159430}
+  m_Layer: 8
   m_Name: Casev2Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,6 +234,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.166834, y: 2.061198, z: 2.6535947}
   m_Center: {x: 0.0000035762787, y: 1.0305988, z: -0.028590083}
+--- !u!208 &2751862711689159430
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2707102446333354483}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.5830002, y: 1.031, z: 1.327}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.031, z: -0.029000001}
+  m_TimeToStationary: 0.5
 --- !u!1 &3628878694272753428
 GameObject:
   m_ObjectHideFlags: 0

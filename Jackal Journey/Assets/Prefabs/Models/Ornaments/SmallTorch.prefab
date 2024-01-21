@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5261108838225856334}
   - component: {fileID: 7230120419266781862}
   - component: {fileID: 3327470259903124982}
+  - component: {fileID: 7914373203764704944}
   m_Layer: 0
   m_Name: SmallTorch
   m_TagString: Untagged
@@ -106,6 +107,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.762447, y: 1.3373728, z: 3.762446}
   m_Center: {x: 0.0000038146973, y: 0.6523429, z: -0.000022530556}
+--- !u!208 &7914373203764704944
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3198299402091792411}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.8850001, y: 0.67200005, z: 1.8850001}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.66800004, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &3773715065486380528
 GameObject:
   m_ObjectHideFlags: 0

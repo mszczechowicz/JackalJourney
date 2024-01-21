@@ -25,5 +25,4 @@ public class Attack
 
     [field: SerializeField] public VisualEffect VFXAttack { get; private set; }
 
-
 }

@@ -1593,6 +1593,7 @@ MonoBehaviour:
   <Agent>k__BackingField: {fileID: 316465056110139451}
   <Health>k__BackingField: {fileID: 4232698984208939320}
   <MovementSpeed>k__BackingField: 4
+  <RotationSpeed>k__BackingField: 5
   <AttackRange>k__BackingField: 0.6
   <Weapon>k__BackingField: {fileID: 9104624650618731167}
   <AttackDamage>k__BackingField: 50
@@ -1665,13 +1666,25 @@ MonoBehaviour:
   healthPoints: 0
   onDie_UnityEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6724797646460333399}
+        m_TargetAssemblyTypeName: AudioRandomizer, Assembly-CSharp
+        m_MethodName: PlayRandomisedSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onTakeDmg_UnityEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6701322046402208824}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 6724797646460333399}
+        m_TargetAssemblyTypeName: AudioRandomizer, Assembly-CSharp
+        m_MethodName: PlayRandomisedSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3462,6 +3475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7987758950880264592}
   - component: {fileID: 6701322046402208824}
+  - component: {fileID: 6724797646460333399}
   m_Layer: 11
   m_Name: AudioSource
   m_TagString: Untagged
@@ -3496,8 +3510,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ef564502813a2774e85429717d085503, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 0.6
+  m_Volume: 0.5
+  m_Pitch: 1.44
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -3580,6 +3594,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6724797646460333399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9182678470941323941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce60c2f99c0f084a813ac3b88e180c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lowerPitchRange: 1.2
+  upperPitchRange: 1.5
+  volumeChangeMulitplier: 0.2
+  soundSet:
+  - {fileID: 8300000, guid: ef564502813a2774e85429717d085503, type: 3}
+  - {fileID: 8300000, guid: 301c3acde073a0c4fba30a035ddc33e8, type: 3}
+  - {fileID: 8300000, guid: 775fbc81c7d75c944b4ab7263a4d6013, type: 3}
 --- !u!1 &9190703723116569019
 GameObject:
   m_ObjectHideFlags: 0

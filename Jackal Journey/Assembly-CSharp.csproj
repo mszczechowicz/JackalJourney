@@ -123,6 +123,7 @@
     <Compile Include="Assets\Scripts\Game\StateMachine\StateMachine.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\SaveLoadUI.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\SavingSystem\SavingWrapper.cs" />
+    <Compile Include="Assets\Scripts\Game\StateMachine\Enemies\EnemyIdleWaitState.cs" />
     <Compile Include="Assets\Scripts\Game\Combat\Target.cs" />
     <Compile Include="Assets\Scripts\Game\StateMachine\Player\PlayerStateMachine.cs" />
     <Compile Include="Assets\Art\Shaders\WeaponEffect\SwordSlash\SlashScript\SlashEnable.cs" />

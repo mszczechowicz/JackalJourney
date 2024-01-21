@@ -10,7 +10,7 @@ public class EnemyAttackingState : EnemyBaseState
     private const float CrossFadeDuration = 0.1f;
     public override void Enter()
     {
-        FacePlayer();
+        //FacePlayer();
 
         stateMachine.Weapon.SetAttack(stateMachine.AttackDamage, stateMachine.AttackKnockback);
 
@@ -20,7 +20,7 @@ public class EnemyAttackingState : EnemyBaseState
     {
         if (GetNormalizedTime(stateMachine.Animator) >= 1)
         {
-            stateMachine.SwitchState(new EnemyChasingState(stateMachine));
+            stateMachine.SwitchState(new EnemyIdleWaitState(stateMachine));
         }
     }
     public override void Exit()

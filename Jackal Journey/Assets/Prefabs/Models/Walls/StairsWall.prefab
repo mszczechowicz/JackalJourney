@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7610278165620921080}
   - component: {fileID: 9002209020337684830}
   - component: {fileID: 1700913458767473808}
+  - component: {fileID: 2553614159562882804}
   m_Layer: 8
   m_Name: StairsWall
   m_TagString: Untagged
@@ -106,3 +107,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6742378866590422481, guid: 9f63126f0cb643543ba50e8b1c1d892c, type: 3}
+--- !u!208 &2553614159562882804
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7837720017236659506}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 7.5000005, y: 3.5700002, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.0050000004, y: 3.5700002, z: 0}
+  m_TimeToStationary: 0.5

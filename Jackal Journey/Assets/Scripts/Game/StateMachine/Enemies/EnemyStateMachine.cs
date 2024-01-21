@@ -18,6 +18,8 @@ public class EnemyStateMachine : StateMachine, IJsonSaveable
     [field: SerializeField] public Health Health { get; private set; }
     [field: SerializeField] public float MovementSpeed { get; private set; }
 
+    [field: SerializeField] public float RotationSpeed { get; private set; }
+
     [field: SerializeField] public float AttackRange { get; private set; }
 
     [field: SerializeField] public WeaponDamage Weapon { get; private set; }
@@ -96,5 +98,5 @@ public class EnemyStateMachine : StateMachine, IJsonSaveable
     {
         Destroy(this.gameObject);
     }
-
+    
 }

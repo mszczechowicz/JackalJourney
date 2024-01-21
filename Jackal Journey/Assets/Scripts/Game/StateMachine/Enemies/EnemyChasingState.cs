@@ -37,7 +37,7 @@ public class EnemyChasingState : EnemyBaseState
 
 
         MoveToPlayer(deltaTime);
-        FacePlayer();
+        
 
         stateMachine.Animator.SetFloat(SpeedHash, 1f, AnimatorDampTime, deltaTime);
     }
@@ -49,21 +49,43 @@ public class EnemyChasingState : EnemyBaseState
         }
         stateMachine.Agent.velocity = Vector3.zero;
     }
-    
 
-    private void MoveToPlayer(float deltatime)
+    //Old withoud rotation to PLayer whhen chasing
+    //private void MoveToPlayer(float deltatime)
+    //{
+    //    if (stateMachine.Agent.isOnNavMesh)
+    //    {
+    //        stateMachine.Agent.destination = stateMachine.Player.transform.position;
+
+    //        Move(stateMachine.Agent.desiredVelocity.normalized * stateMachine.MovementSpeed, deltatime);
+    //    }
+
+
+    //    stateMachine.Agent.nextPosition = stateMachine.transform.position;
+    //    stateMachine.Agent.velocity = stateMachine.CharacterController.velocity;
+    //}
+    private void MoveToPlayer(float deltaTime)
     {
         if (stateMachine.Agent.isOnNavMesh)
         {
+            Vector3 desiredDirection = stateMachine.Agent.desiredVelocity.normalized;
             stateMachine.Agent.destination = stateMachine.Player.transform.position;
 
-            Move(stateMachine.Agent.desiredVelocity.normalized * stateMachine.MovementSpeed, deltatime);
-        }
 
+            if (desiredDirection != Vector3.zero)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(desiredDirection, Vector3.up);
+                stateMachine.transform.rotation = Quaternion.Slerp(stateMachine.transform.rotation, targetRotation, stateMachine.RotationSpeed * deltaTime);
+            }
+
+            Move(desiredDirection * stateMachine.MovementSpeed, deltaTime);
+        }
 
         stateMachine.Agent.nextPosition = stateMachine.transform.position;
         stateMachine.Agent.velocity = stateMachine.CharacterController.velocity;
     }
+
+
 
     private bool IsInAttackingRange()
     {

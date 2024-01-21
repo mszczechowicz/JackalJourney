@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5028491789860862305}
   - component: {fileID: 892802352550962518}
   - component: {fileID: 2605037210967399120}
+  - component: {fileID: 4423414383498043087}
   m_Layer: 9
   m_Name: 5mDoorV4
   m_TagString: Untagged
@@ -149,3 +150,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.8881598, y: 1.4514303, z: 1.399993}
   m_Center: {x: -4.715834, y: 4.274285, z: 0.00045585632}
+--- !u!208 &4423414383498043087
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6320384251544120360}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 2.5, z: 0.70000005}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -5, y: 2.5, z: 0}
+  m_TimeToStationary: 0.5

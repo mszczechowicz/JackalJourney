@@ -4328,7 +4328,7 @@ Transform:
   - {fileID: 8758505954825903627}
   - {fileID: 5947422980403576065}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &412301989889205957
 MonoBehaviour:
@@ -4349,6 +4349,7 @@ MonoBehaviour:
   <Agent>k__BackingField: {fileID: 390232546469493619}
   <Health>k__BackingField: {fileID: 7136979843759836383}
   <MovementSpeed>k__BackingField: 2
+  <RotationSpeed>k__BackingField: 5
   <AttackRange>k__BackingField: 3
   <Weapon>k__BackingField: {fileID: 3273010353137722352}
   <AttackDamage>k__BackingField: 300
