@@ -29,6 +29,7 @@ public class PlayerDodgeState : PlayerBaseState
         stateMachine.MomentumVFX.Play();
         stateMachine.Animator.CrossFadeInFixedTime(DodgeHash, CrossFadeDuration);
         stateMachine.CharacterController.excludeLayers += LayerMask.GetMask("Spider");
+        CalculateDodgeDirectionPlayer();
 
     }
 
@@ -72,7 +73,36 @@ public class PlayerDodgeState : PlayerBaseState
         stateMachine.CharacterController.excludeLayers -= LayerMask.GetMask("Spider");
 
     }
-    
 
-   
+  
+    private void CalculateDodgeDirectionPlayer()
+    {
+        // Pobierz oryginaln¹ rotacjê postaci
+        Quaternion originalRotation = stateMachine.transform.rotation;
+
+        // SprawdŸ, czy jest wprowadzenie z klawiatury
+        if (!Mathf.Approximately(stateMachine.InputHandler.MovementValue.sqrMagnitude, 0f))
+        {
+            // Pobierz kierunek forward z kamery, zresetuj sk³adow¹ y, aby uzyskaæ tylko obroty w p³aszczyŸnie poziomej
+            Vector3 faceMove = stateMachine.MainCameraTransform.forward;
+            faceMove.y = 0f;
+            faceMove.Normalize();
+
+            // Pobierz wejœcie z klawiatury i znormalizuj je
+            Vector3 inputDirection = new Vector3(stateMachine.InputHandler.MovementValue.x, 0f, stateMachine.InputHandler.MovementValue.y);
+            inputDirection.Normalize();
+
+            // Oblicz now¹ rotacjê na podstawie sumy kierunku wejœcia i kierunku patrzenia kamery
+            Quaternion targetRotation = Quaternion.LookRotation(faceMove, Vector3.up) * Quaternion.LookRotation(inputDirection, Vector3.up);
+
+            // Interpolacja pomiêdzy oryginaln¹ a docelow¹ rotacj¹ z u¿yciem RotationDamping
+            Quaternion newRotation = Quaternion.Lerp(originalRotation, targetRotation, stateMachine.RotationDamping);
+
+            // Zastosuj now¹ rotacjê do postaci
+            stateMachine.transform.rotation = newRotation;
+        }
+
+    }
+
+
 }

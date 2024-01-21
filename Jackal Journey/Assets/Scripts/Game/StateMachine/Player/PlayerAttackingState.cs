@@ -28,7 +28,7 @@ public class PlayerAttackingState : PlayerBaseState
         stateMachine.Weapon.SetAttack(attack.Damage,attack.KnockBack);
         stateMachine.Animator.CrossFadeInFixedTime(attack.AnimationName, attack.TransitionDuration);
         stateMachine.onAttackSound_UnityEvent?.Invoke();
-        CalculateAttackDirectionPlayerForward();
+      
 
     }
 
@@ -37,7 +37,7 @@ public class PlayerAttackingState : PlayerBaseState
        
         Move(deltaTime);
         
-        //CalculateAttackDirection(deltaTime);
+        CalculateAttackDirection(deltaTime);
 
 
 
@@ -124,35 +124,8 @@ public class PlayerAttackingState : PlayerBaseState
         
       
     }
-    private void CalculateAttackDirectionPlayerForward()
-    {
-        // Pobierz oryginaln¹ rotacjê postaci
-        Quaternion originalRotation = stateMachine.transform.rotation;
-
-        // SprawdŸ, czy jest wprowadzenie z klawiatury
-        if (!Mathf.Approximately(stateMachine.InputHandler.MovementValue.sqrMagnitude, 0f))
-        {
-            // Pobierz kierunek forward z kamery, zresetuj sk³adow¹ y, aby uzyskaæ tylko obroty w p³aszczyŸnie poziomej
-            Vector3 faceMove = stateMachine.MainCameraTransform.forward;
-            faceMove.y = 0f;
-            faceMove.Normalize();
-
-            // Pobierz wejœcie z klawiatury i znormalizuj je
-            Vector3 inputDirection = new Vector3(stateMachine.InputHandler.MovementValue.x, 0f, stateMachine.InputHandler.MovementValue.y);
-            inputDirection.Normalize();
-
-            // Oblicz now¹ rotacjê na podstawie sumy kierunku wejœcia i kierunku patrzenia kamery
-            Quaternion targetRotation = Quaternion.LookRotation(faceMove, Vector3.up) * Quaternion.LookRotation(inputDirection, Vector3.up);
-
-            // Interpolacja pomiêdzy oryginaln¹ a docelow¹ rotacj¹ z u¿yciem RotationDamping
-            Quaternion newRotation = Quaternion.Lerp(originalRotation, targetRotation, stateMachine.RotationDamping);
-
-            // Zastosuj now¹ rotacjê do postaci
-            stateMachine.transform.rotation = newRotation;
-        }
-
-    }
-
+   
+    
     private void OnDodge()
     {
         if (!canDashDuringAttack) { return; }
@@ -164,13 +137,11 @@ public class PlayerAttackingState : PlayerBaseState
 
         stateMachine.SwitchState(new PlayerDodgeState(stateMachine, stateMachine.InputHandler.MovementValue.normalized));
     }
-    private void OnDashEvent()
-    {
-        canDashDuringAttack = true;
-    }
+
     public void PlayVFXSlash()
     {
         attack.VFXAttack.Play();
     }
+
 
 }
