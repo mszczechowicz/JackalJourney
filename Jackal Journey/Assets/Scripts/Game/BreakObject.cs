@@ -77,6 +77,8 @@ public class BreakObject : MonoBehaviour
         canvasScaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
         canvasScaler.referenceResolution = new Vector2(1920, 1080); // Dostosuj do rozmiarów Twojego ekranu
 
+        textComponent.GetComponent<RectTransform>().sizeDelta = new Vector2(700f, rectTransform.sizeDelta.y);
+
 
 
         textComponent.font = customFont;

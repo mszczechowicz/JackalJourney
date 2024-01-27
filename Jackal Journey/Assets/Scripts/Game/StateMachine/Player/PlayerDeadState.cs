@@ -16,7 +16,7 @@ public class PlayerDeadState : PlayerBaseState
     
     public override void Enter()
     {
-        DeadCounterCustomEvent();
+        //DeadCounterCustomEvent();
         stateMachine.Animator.CrossFadeInFixedTime(DeadHash, CrossFadeDuration);
         stateMachine.Weapon.gameObject.SetActive(false);
         stateMachine.Health.onDie_UnityEvent.AddListener(Respawn);
@@ -58,22 +58,22 @@ public class PlayerDeadState : PlayerBaseState
         stateMachine.StartCoroutine(RespawnRoutine());
     }
 
-    private void DeadCounterCustomEvent()
-    {
+//    private void DeadCounterCustomEvent()
+//    {
 
-#if ENABLE_CLOUD_SERVICES_ANALYTICS
-        int currentDeathCount = 1; // aktualna liczba œmierci (mo¿esz to pobieraæ z innego miejsca)
-        currentDeathCount++; // zwiêkszenie liczby œmierci o 1
+//#if ENABLE_CLOUD_SERVICES_ANALYTICS
+//        int currentDeathCount = 1; // aktualna liczba œmierci (mo¿esz to pobieraæ z innego miejsca)
+//        currentDeathCount++; // zwiêkszenie liczby œmierci o 1
 
 
-        Debug.Log("DeadCounterCustomEvent()");
-        Analytics.CustomEvent("DeathCounter_Player", new Dictionary<string, object>
-        {
-            { "DeathCount", +1 },
+//        Debug.Log("DeadCounterCustomEvent()");
+//        Analytics.CustomEvent("DeathCounter_Player", new Dictionary<string, object>
+//        {
+//            { "DeathCount", +1 },
 
-        });
-        AnalyticsService.Instance.CustomData("DeathCounter_Player");
-        AnalyticsService.Instance.Flush();
-#endif
-    }
+//        });
+//        AnalyticsService.Instance.CustomData("DeathCounter_Player");
+//        AnalyticsService.Instance.Flush();
+//#endif
+//    }
 }
