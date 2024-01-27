@@ -43,7 +43,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f05b496e1eeb6ae47953ce5fcf309355, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -201,6 +201,8 @@ MonoBehaviour:
   dialogDuration: 2
   quotePrefab: {fileID: 383647465756435897, guid: a485aa2e460dfe949b3b6da971725b35,
     type: 3}
+  characterName: "Wprowad\u017A nazwe"
+  characternamedisplaycolor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &835830814745385415
 MonoBehaviour:
   m_ObjectHideFlags: 0

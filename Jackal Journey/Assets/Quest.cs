@@ -12,25 +12,13 @@ public class Quest : MonoBehaviour, IInteractable
     {
         if (!isReading)
         {
-
             Debug.Log("Chest Opened!");
             StartCoroutine(ReadingQuote());
-
-
         }
-
         else
         {
-            CloseDialog();
-           
+            CloseDialog();          
         }
-        
-        
-
-
-
-
-
     }
     public void Start()
     {
