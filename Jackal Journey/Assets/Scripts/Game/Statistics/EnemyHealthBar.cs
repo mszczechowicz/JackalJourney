@@ -23,6 +23,7 @@ public class EnemyHealthBar : MonoBehaviour
         if (Health.GetHealthPoints() == Health.GetMaxHealthPoints())
         {
            transform.GetChild(0).gameObject.SetActive(false);
+            return;
         }
     }
 
@@ -51,6 +52,8 @@ public class EnemyHealthBar : MonoBehaviour
         if (Health.GetHealthPoints()<=0)
         {
             DeactivateHealthBar();
+           
+            return;
         }
 
     }
