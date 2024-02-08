@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: StoryWallMaterial
+  m_Name: StoryWallMaterialV4
   m_Shader: {fileID: -6465566751694194690, guid: 183f9e085bdc8e848a0dde7e7aae4e8b,
     type: 3}
   m_Parent: {fileID: 0}
@@ -30,11 +30,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mask:
-        m_Texture: {fileID: 2800000, guid: 1147e7283683840418e618e183c01867, type: 3}
+        m_Texture: {fileID: 2800000, guid: 697f44636a018784388a3be0d83cd1ee, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 730de943d84e5864abc252fadba1ebad, type: 3}
+        m_Texture: {fileID: 2800000, guid: 95050172f8f536c4baca9cd6f19fd1fe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SceneGrid:
@@ -63,6 +63,7 @@ Material:
     - _Cull: 2
     - _DstBlend: 0
     - _Metalic: 0
+    - _OnOffMask: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -76,8 +77,9 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _MaskColor: {r: 3.592157, g: 2.955557, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &1226549192199466168
+--- !u!114 &1862029037989415136
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
