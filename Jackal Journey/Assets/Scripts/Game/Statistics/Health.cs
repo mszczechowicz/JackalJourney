@@ -15,7 +15,7 @@ public class Health : MonoBehaviour , IJsonSaveable
     public int healthPoints;
 
     private bool isInvulnerable;
-    //--ImpactStateLogic komentujê do czas a¿ zaimplementujemy "HeavyAttack dla bossów"
+
     public event Action OnTakeDamage;
     
 
@@ -63,27 +63,20 @@ public class Health : MonoBehaviour , IJsonSaveable
 
 
     public void TakeDamage(int damagevalue)
-    {
-       
+    {       
         if (healthPoints == 0)  {return;}
         if (isInvulnerable)     {return;}
 
         healthPoints = Mathf.Max(healthPoints - damagevalue, 0);
        
-        //--ImpactStateLogic komentujê do czas a¿ zaimplementujemy "HeavyAttack dla bossów"
         OnTakeDamage?.Invoke();
-        onTakeDmg_UnityEvent?.Invoke();
-       
+        onTakeDmg_UnityEvent?.Invoke();       
 
         if (healthPoints == 0)
         {
-          
-            Debug.Log("healthPoints == 0");
             OnDie?.Invoke();
             onDie_UnityEvent.Invoke();
         }
-
-        //Debug.Log(healthPoints);
     }
     public void CreatePopUp(int damage)
     {
